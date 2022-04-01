@@ -1,0 +1,844 @@
+body{
+    font-family: 'Prompt', sans-serif;
+    background: rgb(230, 230, 241);
+}
+
+/******************************* Header-indexTutor *****************************/
+
+.bg-imgTutor {
+    background: url('/static/pic/BGHeader-tutor.jpg') no-repeat center center;
+    background-size: cover;
+    height: 800px;
+}
+
+/******************************* Header-index *****************************/
+
+.bg-img {
+    background: url('/static/pic/BGHeader.jpg') no-repeat center center;
+    background-size: cover;
+    height: 800px;
+}
+
+.navbar-brand{
+    color: white;
+    letter-spacing: 5px;
+}
+
+.nav-link{
+    color: white;
+}
+
+/* #welcometext{
+    margin-top: 100px;
+} */
+
+.textheaderwelcome{
+    color: white;
+    letter-spacing: 3px;
+}
+
+.textheader{
+    color: white;
+    letter-spacing: 5px;
+    padding-top: 10px;
+}
+
+.searchtutor{
+    padding-top: 10px;
+}
+
+.textsearch{
+    color: rgb(248, 241, 241);
+}
+
+/******************************* Section whyuse *****************************/
+
+.circle{
+    color: #35a1aa;
+    font-size: 70px;
+    position: absolute;
+    bottom: 120px;
+}
+
+.textwhyuse{
+    color: rgb(92, 83, 83);
+    letter-spacing: 2px;
+    padding-top: 100px;
+}
+
+.Secwhyuse{
+    border-radius: 20px;
+    padding-bottom: 50px;
+}
+
+/******************************* Section Stepsearch *****************************/
+
+.circle1{
+    color: #35a1aa;
+    font-size: 70px;
+    position: absolute;
+    margin-top: 30px;
+}
+
+.Secstepsearch{
+    margin-top: 80px;
+    border-radius: 20px;
+    padding-bottom: 50px;
+}
+
+.textstepsearch{
+    padding-top: 30px;
+    color: rgb(92, 83, 83);
+}
+
+.allstepsearch{
+    margin-left: 100px;
+    color: rgb(92, 83, 83);
+}
+
+.textstep{
+    color: rgb(180, 161, 161);
+}
+
+.stepsearch{
+    margin-top: 50px;
+}
+
+/******************************* Section Feedback *****************************/
+
+.circle2{
+    color: #35a1aa;
+    font-size: 70px;
+    position: absolute;
+    margin-top: 30px;
+}
+
+.Secfeedback{
+    margin-top: 80px;
+    border-radius: 20px;
+    padding-bottom: 80px;
+}
+
+.textfeedback{
+    padding-top: 30px;
+    color: rgb(92, 83, 83);
+    margin-bottom: 50px;
+}
+
+.feedback{
+    margin-top: 50px;
+}
+
+.testimonials .testimonials-item img{
+    max-width: 15rem;
+}
+
+/******************************* banner footer *****************************/
+
+.banner-footer{
+    margin-top: 40px;
+}
+
+.img-banner{
+    background: url('/static/pic/BGfooter.jpeg') no-repeat center center;
+    background-size: cover;
+    padding-top: 7rem;
+    height: 500px;
+    border-radius: 20px;
+}
+
+.textbanner{
+    height: 100px;
+}
+
+.textbanner h1{
+    padding-top: 100px;
+    color: white;
+    font-size: 40px;
+}
+.textregister-banner{
+    color: #35a1aa;
+}
+
+/******************************* footer *****************************/
+
+footer{
+    background-color: #35a1aa;
+    color: white;
+    height: auto;
+    padding-top: 20px;
+    margin-top: 62px;
+}
+
+.list-footer{
+    line-height: 40px;
+}
+
+.list-footer li a{
+    text-decoration: none;
+}
+
+/******************************* Register Student *****************************/
+
+.SecregisterSTU{
+    margin-top: 52px;
+    border-radius: 20px;
+    margin-bottom: 54px;
+}
+
+.picregisterSTU img{
+    height: 500px;
+    padding: 70px;
+}
+
+.vertical-line{
+    border-right: 2px solid #35a1aa;
+    height: 350px;
+    position: absolute;
+    margin-top: 75px;
+    margin-left: 500px;
+}
+
+.textregisterSTU{
+    margin-top: 50px;
+    color: rgb(92, 83, 83);
+}
+
+.textregisterSTU span{
+    color: #35a1aa;
+}
+
+.register-student p{
+    margin-top: 15px;
+    color: #35a1aa;
+    text-align: center;
+}
+
+.form-registerSTU{
+    margin-top: 30px;
+}
+
+.form-registerSTU input{
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 13px;
+    margin-top: 20px;
+}
+
+.form-registerSTU button{
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 13px;
+    margin-top: 20px;
+}
+
+/******************************* Register Tutor *****************************/
+
+.body-TUTOR{
+    background-color: #767e8a;
+}
+
+.SecregisterTUTOR{
+    margin-top: 52px;
+    border-radius: 20px;
+    margin-bottom: 54px;
+}
+
+.picregisterTUTOR img{
+    height: 500px;
+    padding: 70px;
+}
+
+.vertical-line{
+    border-right: 2px solid #35a1aa;
+    height: 350px;
+    position: absolute;
+    margin-top: 75px;
+    margin-left: 500px;
+}
+
+.textregisterTUTOR{
+    margin-top: 50px;
+    color: rgb(92, 83, 83);
+}
+
+.textregisterTUTOR span{
+    color: #35a1aa;
+}
+
+.register-TUTOR p{
+    margin-top: 15px;
+    color: #35a1aa;
+    text-align: center;
+}
+
+.form-registerTUTOR{
+    margin-top: 30px;
+}
+
+.form-registerTUTOR input{
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 13px;
+    margin-top: 20px;
+}
+
+.form-registerTUTOR button{
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 13px;
+    margin-top: 20px;
+}
+
+/******************************* LOGIN *****************************/
+
+.body-LOGIN{
+    background-color: #4a515c;
+}
+
+.SecLOGIN{
+    margin-top: 52px;
+    border-radius: 20px;
+    margin-bottom: 54px;
+}
+
+.picLOGIN img{
+    height: 500px;
+    padding: 70px;
+}
+
+.vertical-line{
+    border-right: 2px solid #35a1aa;
+    height: 350px;
+    position: absolute;
+    margin-top: 75px;
+    margin-left: 500px;
+}
+
+.textLOGIN{
+    margin-top: 85px;
+    color: rgb(92, 83, 83);
+}
+
+.textLOGIN span{
+    color: #35a1aa;
+}
+
+.allform-LOGIN p{
+    margin-top: 15px;
+    color: #35a1aa;
+    text-align: center;
+}
+
+.form-LOGIN{
+    margin-top: 30px;
+}
+
+.form-LOGIN input{
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 13px;
+    margin-top: 20px;
+}
+
+.form-LOGIN button{
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 13px;
+    margin-top: 20px;
+}
+
+/******************************* Tutor-Form1 *****************************/
+
+.Secform1{
+    border-radius: 10px;
+    padding-bottom: 20px;
+}
+
+.form1{
+    margin-top: 20px;
+}
+
+.form1 input{
+    width: 95%;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 13px;
+    margin-top: 20px;
+}
+
+.textIDCard{
+    padding-left: 45px;
+    margin-top: 20px;
+}
+
+.fileIDCard{
+    width: 95%;
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding-left: 13px;
+    padding-right: 13px;
+}
+
+.gonextForm1{
+    margin-top: 20px;
+    text-align: end;
+    padding-right: 46px;
+}
+
+.gonextForm1 button{
+   padding: 15px 40px 15px 40px;
+   font-size: 18px;
+}
+
+/******************************* Tutor-Form2 *****************************/
+
+.gonextForm2{
+    margin-top: 20px;
+    text-align: end;
+    padding-right: 46px;
+}
+
+.gonextForm2 button{
+   padding: 15px 40px 15px 40px;
+   font-size: 18px;
+}
+
+
+.gobackForm2{
+    margin-top: 20px;
+    text-align: start;
+    padding-left: 44px;
+}
+
+.gobackForm2 button{
+   padding: 15px 40px 15px 40px;
+   font-size: 18px;
+}
+
+.yearstudy{
+    margin-left: 27px;
+}
+
+.yearstudy input{
+    width: 100%;
+}
+
+.minusYEARSTUDY{
+    margin-top: 40px;
+}
+
+/******************************* Tutor-Form3 *****************************/
+
+.gonextForm3{
+    margin-top: 20px;
+    text-align: end;
+    padding-right: 46px;
+}
+
+.gonextForm3 button{
+    padding: 15px 40px 15px 40px;
+    font-size: 18px;
+}
+
+.gobackForm3{
+    margin-top: 20px;
+    text-align: start;
+    padding-left: 44px;
+}
+
+.gobackForm3 button{
+   padding: 15px 40px 15px 40px;
+   font-size: 18px;
+}
+
+.add_form_field{
+    width: 15%;
+    font-size: 18px;
+}
+
+.AddOnCourse{
+    padding-left: 32px;
+    margin-top: 20px;
+}
+
+.delete{
+    margin-left: 35px;
+    text-decoration: none;
+    color: rgb(238, 180, 180);
+}
+
+/******************************* Tutor-Form4 *****************************/
+
+.form4{
+    margin-top: 20px;
+}
+
+.form4 input{  
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 13px;
+    margin-top: 20px;
+}
+
+.gonextForm4{
+    margin-top: 20px;
+    text-align: end;
+    padding-right: 46px;
+}
+
+.gonextForm4 button{
+    padding: 15px 40px 15px 40px;
+    font-size: 18px;
+}
+
+.gobackForm4{
+    margin-top: 20px;
+    text-align: start;
+    padding-left: 44px;
+}
+
+.gobackForm4 button{
+   padding: 15px 40px 15px 40px;
+   font-size: 18px;
+}
+
+.form4 h6{
+    margin-left: 30px;
+}
+
+.DayCheck{
+    margin-left: 27px;
+}
+
+.TextDay{
+    margin-top: 21px;
+    margin-left: 10px;
+}
+
+/* Monday */
+
+.dayTIMEMonday{
+    margin-left: 27px;
+    margin-bottom: 10px;
+}
+
+.dayTIMEMonday input{
+    width: 100%;
+}
+
+.minusTIMEMonday{
+    margin-top: 40px;
+}
+
+.AddOnTimeMonday{
+    margin-top: 40px;
+}
+
+.EmptydayTIMEMonday{
+    visibility: hidden;
+}
+
+/* Tuesday */
+
+.dayTIMETuesday{
+    margin-left: 27px;
+    margin-bottom: 10px;
+}
+
+.dayTIMETuesday input{
+    width: 100%;
+}
+
+.minusTIMETuesday{
+    margin-top: 40px;
+}
+
+.AddOnTimeTuesday{
+    margin-top: 40px;
+}
+
+/* Wednesday */
+
+.dayTIMEWednesday{
+    margin-left: 27px;
+    margin-bottom: 10px;
+}
+
+.dayTIMEWednesday input{
+    width: 100%;
+}
+
+.minusTIMEWednesday{
+    margin-top: 40px;
+}
+
+.AddOnTimeWednesday{
+    margin-top: 40px;
+}
+
+/* Thursday */
+
+.dayTIMEThursday{
+    margin-left: 27px;
+    margin-bottom: 10px;
+}
+
+.dayTIMEThursday input{
+    width: 100%;
+}
+
+.minusTIMEThursday{
+    margin-top: 40px;
+}
+
+.AddOnTimeThursday{
+    margin-top: 40px;
+}
+
+/* Friday */
+
+.dayTIMEFriday{
+    margin-left: 27px;
+    margin-bottom: 10px;
+}
+
+.dayTIMEFriday input{
+    width: 100%;
+}
+
+.minusTIMEFriday{
+    margin-top: 40px;
+}
+
+.AddOnTimeFriday{
+    margin-top: 40px;
+}
+
+/* Saturday */
+
+.dayTIMESaturday{
+    margin-left: 27px;
+    margin-bottom: 10px;
+}
+
+.dayTIMESaturday input{
+    width: 100%;
+}
+
+.minusTIMESaturday{
+    margin-top: 40px;
+}
+
+.AddOnTimeSaturday{
+    margin-top: 40px;
+}
+
+/* Sunday */
+
+.dayTIMESunday{
+    margin-left: 27px;
+    margin-bottom: 10px;
+}
+
+.dayTIMESunday input{
+    width: 100%;
+}
+
+.minusTIMESunday{
+    margin-top: 40px;
+}
+
+.AddOnTimeSunday{
+    margin-top: 40px;
+}
+
+/******************************* Tutor-Form5 *****************************/
+
+.gonextForm5{
+    margin-top: 40px;
+    text-align: end;
+    padding-right: 46px;
+}
+
+.gonextForm5 button{
+    padding: 15px 40px 15px 40px;
+    font-size: 18px;
+}
+
+.gobackForm5{
+    margin-top: 40px;
+    text-align: start;
+    padding-left: 44px;
+}
+
+.gobackForm5 button{
+   padding: 15px 40px 15px 40px;
+   font-size: 18px;
+}
+
+.form5-left{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;  
+    justify-content: center;
+}
+
+.avatar-pic{
+    width: 150px;
+}
+
+.input-file-pic{
+    margin: 0 auto;
+}
+
+.form5-right{
+    margin-top: 40px;
+}
+
+.about-me textarea{
+    border-radius: 10px;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.input-video-test{
+    margin-top: 30px;
+}
+
+.input-video-test h6{
+    width: 85%;
+    margin: 0 auto;
+}
+
+.input-video-test input{
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+/******************************* finding-tutor *****************************/
+
+.form-select.form-control{
+    border: none;
+}
+
+.filter{
+    border-radius: 20px;
+}
+
+.tutor{
+    border-radius: 20px;
+}
+
+/******************************* tutor-data *****************************/
+
+.tutor-data{
+    border-radius: 20px;
+}
+
+/******************************* study *****************************/
+
+.study-bg{
+    border-radius: 20px;
+    margin-top: 50px;
+    padding-top: 149px;
+    padding-bottom: 148px;
+}
+
+/******************************* profile-student *****************************/
+
+.sex{
+    width: 95%;
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding-left: 13px;
+    padding-right: 13px;
+}
+
+/******************************* profile *****************************/
+
+.profile-bg{
+    border-radius: 20px;
+    margin-top: 50px;
+}
+
+.approve-bg{
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+/******************************* profile-tutor *****************************/
+
+.profile-bg ul{
+    list-style-type: none;
+}
+
+/******************************* calendar ********************************/
+
+.calendar {
+    width: 100%;
+    margin: auto;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+  
+.calendar tr, .calendar td {
+    border: 1px solid black;
+}
+  
+.calendar th {
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+  
+.calendar td {
+    width: 200px;
+    height: 150px;
+    padding: 20px 0px 0px 5px;
+}
+  
+.month {
+    font-size: 25px;
+}
+  
+.date {
+    font-size: 16px;
+}
+  
+a {
+    color: #17a2b8;
+}
+
+.left {
+    float: left;
+}
+  
+.right {
+    float: right;
+}
+
+.clearfix {
+    margin: 15px;
+}
+
+.form-calendar .form{
+    margin: auto;
+}
+
+.form-calendar.form input,.form-calendar.form select,.form-calendar.form textarea {
+    border-radius: 5px;
+    border: 1px solid #17a2b8;
+    outline: none;
+    padding: 5px;
+    width: 100%;
+}

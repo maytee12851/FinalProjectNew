@@ -1,0 +1,550 @@
+{% extends 'app/base.html' %}
+{% block content %}
+{% load static %}
+
+<body>
+
+    <!-- Number Form -->
+
+    <div class="col-xl-10 ms-auto">
+        <div class="container">
+            <div class="row xl-10 ms-auto mt-3">
+                <div class="col-sm-1 text-center">
+                    <span class="fa-stack fa-1x">
+                        <i class="fa fa-circle fa-stack-2x text-info"></i>
+                        <strong class="fa-stack-1x text-black-50">1</strong>
+                    </span>
+                    <p class="h6 text-black-50 mt-2">ทั่วไป</p>
+                </div>
+
+                <div class="col-sm-1">
+                    <hr class="bg-danger border-4 border-top border-dark">
+                </div>
+
+                <div class="col-sm-1 text-center">
+                    <span class="fa-stack fa-1x">
+                        <i class="fa fa-circle fa-stack-2x text-info"></i>
+                        <strong class="fa-stack-1x text-black-50">2</strong>
+                    </span>
+                    <p class="h6 text-black-50 mt-2">ประวัติการศึกษา</p>
+                </div>
+
+                <div class="col-sm-1">
+                    <hr class="bg-danger border-4 border-top border-dark">
+                </div>
+
+                <div class="col-sm-1 text-center">
+                    <span class="fa-stack fa-1x">
+                        <i class="fa fa-circle fa-stack-2x text-info"></i>
+                        <strong class="fa-stack-1x text-black-50">3</strong>
+                    </span>
+                    <p class="h6 text-black-50 mt-2">การสอน</p>
+                </div>
+
+                <div class="col-sm-1">
+                    <hr class="bg-danger border-4 border-top border-dark">
+                </div>
+
+                <div class="col-sm-1 text-center">
+                    <span class="fa-stack fa-1x">
+                        <i class="fa fa-circle fa-stack-2x text-info"></i>
+                        <strong class="fa-stack-1x text-black-50">4</strong>
+                    </span>
+                    <p class="h6 text-black-50 mt-2">ตารางเวลา</p>
+                </div>
+
+                <div class="col-sm-1">
+                    <hr class="bg-danger border-4 border-top border-dark">
+                </div>
+
+                <div class="col-sm-1 text-center">
+                    <span class="fa-stack fa-1x">
+                        <i class="fa fa-circle fa-stack-2x text-secondary"></i>
+                        <strong class="fa-stack-1x text-light">5</strong>
+                    </span>
+                    <p class="h6 text-white-50 mt-2">เกี่ยวกับฉัน</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Form4 -->
+
+    <div class="container">
+        <div class="Secform1 row bg-white mt-2">
+            <div class="form4 col-xl-12">
+
+                <h6 class="text-black-50">กำหนดตารางเวลาของคุณ</h6>
+
+                <!-- Monday -->
+
+                <div class="DayCheck row g-2">
+                    <div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="TextDay form-check-label" for="flexCheckDefault">
+                                วันจันทร์
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dayTIMEMonday row g-2">
+                    <div class="col-2">
+                        <input type="text" class="form-control" placeholder="10:00">
+                    </div>
+
+                    <div class="minusTIMEMonday col-1 text-center">
+                        <i class="bi bi-dash-lg"></i>
+                    </div>
+
+                    <div class="col-2">
+                        <input type="text" class="form-control" placeholder="12:00">
+                    </div>
+
+                    <button id="AddMonday" class="btn btn-light col-1 text-center mt-4 fs-2 text-black-50">
+                        <!-- <i class="add_form_time_Monday bi bi-plus-lg" id="AddMonday"></i> -->
+                        +
+                    </button>
+                </div>
+
+                <div id="EmptydayTIMEMonday"></div>
+
+                <!-- Tuesday -->
+
+                <div class="DayCheck row g-2">
+                    <div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="TextDay form-check-label" for="flexCheckDefault">
+                                วันอังคาร
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dayTIMETuesday row g-2">
+                    <div class="col-2">
+                        <input type="text" class="form-control" placeholder="10:00">
+                    </div>
+
+                    <div class="minusTIMETuesday col-1 text-center">
+                        <i class="bi bi-dash-lg"></i>
+                    </div>
+
+                    <div class="col-2">
+                        <input type="text" class="form-control" placeholder="12:00">
+                    </div>
+
+                    <button id="AddTuesday" class="btn btn-light col-1 text-center mt-4 fs-2 text-black-50">
+                        <!-- <i class="add_form_time_Monday bi bi-plus-lg" id="AddMonday"></i> -->
+                        +
+                    </button>
+                </div>
+
+                <div id="EmptydayTIMETuesday"></div>
+
+                <!-- Wednesday -->
+
+                <div class="DayCheck row g-2">
+                    <div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="TextDay form-check-label" for="flexCheckDefault">
+                                วันพุธ
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dayTIMEWednesday row g-2">
+                    <div class="col-2">
+                        <input type="text" class="form-control" placeholder="10:00">
+                    </div>
+
+                    <div class="minusTIMEWednesday col-1 text-center">
+                        <i class="bi bi-dash-lg"></i>
+                    </div>
+
+                    <div class="col-2">
+                        <input type="text" class="form-control" placeholder="12:00">
+                    </div>
+
+                    <button id="AddWednesday" class="btn btn-light col-1 text-center mt-4 fs-2 text-black-50">
+                        <!-- <i class="add_form_time_Monday bi bi-plus-lg" id="AddMonday"></i> -->
+                        +
+                    </button>
+                </div>
+
+                <div id="EmptydayTIMEWednesday"></div>
+
+                <!-- Thursday -->
+
+                <div class="DayCheck row g-2">
+                    <div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="TextDay form-check-label" for="flexCheckDefault">
+                                วันพฤหัสบดี
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dayTIMEThursday row g-2">
+                    <div class="col-2">
+                        <input type="text" class="form-control" placeholder="10:00">
+                    </div>
+
+                    <div class="minusTIMEThursday col-1 text-center">
+                        <i class="bi bi-dash-lg"></i>
+                    </div>
+
+                    <div class="col-2">
+                        <input type="text" class="form-control" placeholder="12:00">
+                    </div>
+
+                    <button id="AddThursday" class="btn btn-light col-1 text-center mt-4 fs-2 text-black-50">
+                        <!-- <i class="add_form_time_Monday bi bi-plus-lg" id="AddMonday"></i> -->
+                        +
+                    </button>
+                </div>
+
+                <div id="EmptydayTIMEThursday"></div>
+
+                <!-- Friday -->
+
+                <div class="DayCheck row g-2">
+                    <div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="TextDay form-check-label" for="flexCheckDefault">
+                                วันศุกร์
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dayTIMEFriday row g-2">
+                    <div class="col-2">
+                        <input type="text" class="form-control" placeholder="10:00">
+                    </div>
+
+                    <div class="minusTIMEFriday col-1 text-center">
+                        <i class="bi bi-dash-lg"></i>
+                    </div>
+
+                    <div class="col-2">
+                        <input type="text" class="form-control" placeholder="12:00">
+                    </div>
+
+                    <button id="AddFriday" class="btn btn-light col-1 text-center mt-4 fs-2 text-black-50">
+                        <!-- <i class="add_form_time_Monday bi bi-plus-lg" id="AddMonday"></i> -->
+                        +
+                    </button>
+                </div>
+
+                <div id="EmptydayTIMEFriday"></div>
+
+                <!-- Saturday -->
+
+                <div class="DayCheck row g-2">
+                    <div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="TextDay form-check-label" for="flexCheckDefault">
+                                วันเสาร์
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dayTIMESaturday row g-2">
+                    <div class="col-2">
+                        <input type="text" class="form-control" placeholder="10:00">
+                    </div>
+
+                    <div class="minusTIMESaturday col-1 text-center">
+                        <i class="bi bi-dash-lg"></i>
+                    </div>
+
+                    <div class="col-2">
+                        <input type="text" class="form-control" placeholder="12:00">
+                    </div>
+
+                    <button id="AddSaturday" class="btn btn-light col-1 text-center mt-4 fs-2 text-black-50">
+                        <!-- <i class="add_form_time_Monday bi bi-plus-lg" id="AddMonday"></i> -->
+                        +
+                    </button>
+                </div>
+
+                <div id="EmptydayTIMESaturday"></div>
+
+                <!-- Sunday -->
+
+                <div class="DayCheck row g-2">
+                    <div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="TextDay form-check-label" for="flexCheckDefault">
+                                วันอาทิตย์
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dayTIMESunday row g-2">
+                    <div class="col-2">
+                        <input type="text" class="form-control" placeholder="10:00">
+                    </div>
+
+                    <div class="minusTIMESunday col-1 text-center">
+                        <i class="bi bi-dash-lg"></i>
+                    </div>
+
+                    <div class="col-2">
+                        <input type="text" class="form-control" placeholder="12:00">
+                    </div>
+
+                    <button id="AddSunday" class="btn btn-light col-1 text-center mt-4 fs-2 text-black-50">
+                        <!-- <i class="add_form_time_Monday bi bi-plus-lg" id="AddMonday"></i> -->
+                        +
+                    </button>
+                </div>
+
+                <div id="EmptydayTIMESunday"></div>
+                
+            </div>
+
+            <!-- ButtonGoNextGGoBack -->
+
+            <div class="gobackForm4 col-xl-6">
+                <a href="/tutor-form3"><button type="button"
+                        class="btn btn-block btn-lg btn-secondary text-white">ก่อนหน้า</button></a>
+            </div>
+
+            <div class="gonextForm4 col-xl-6">
+                <a href="/tutor-form5"><button type="button"
+                        class="btn btn-block btn-lg btn-secondary text-white">ถัดไป</button></a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Add Input form -->
+
+    <script>
+
+        //  Monday
+
+        $(document).ready(function () {
+            let wrapper1 = $(".form4");
+            let add_button1 = $("#AddMonday");
+            let x1 = 1;
+            $(add_button1).click(function (e) {
+                e.preventDefault();
+                if (x1 < 3) {
+                    x1++;
+                    let node = document.getElementById("EmptydayTIMEMonday");
+                    let divnode = document.createElement("div")
+                    divnode.innerHTML = '<div class="dayTIMEMonday row g-2"><div class="col-2"><input type="text" class="form-control" placeholder="10:00"></div><div class="minusTIMEMonday col-1 text-center"><i class="bi bi-dash-lg"></i></div><div class="col-2"><input type="text" class="form-control" placeholder="12:00"></div></div><a href="#" class="delete">Delete</a>'
+                    node.appendChild(divnode)
+                    console.log(node.textContent);
+                } else {
+                    alert('You Reached the limits')
+                    document.getElementById('AddMonday').disabled = true;
+                    console.log(x1);
+                }
+            });
+
+            $(wrapper1).on("click", ".delete", function (e) {
+                e.preventDefault();
+                $(this).parent('div').remove();
+                x1--;
+                document.getElementById('AddMonday').disabled = false;
+            })
+        });
+
+        // Tuesday
+
+        $(document).ready(function () {
+            let wrapper2 = $(".form4");
+            let add_button2 = $("#AddTuesday");
+            let x2 = 1;
+            $(add_button2).click(function (e) {
+                e.preventDefault();
+                if (x2 < 3) {
+                    x2++;
+                    let node = document.getElementById("EmptydayTIMETuesday");
+                    let divnode = document.createElement("div")
+                    divnode.innerHTML = '<div class="dayTIMETuesday row g-2"><div class="col-2"><input type="text" class="form-control" placeholder="10:00"></div><div class="minusTIMETuesday col-1 text-center"><i class="bi bi-dash-lg"></i></div><div class="col-2"><input type="text" class="form-control" placeholder="12:00"></div></div><a href="#" class="delete">Delete</a>'
+                    node.appendChild(divnode)
+                    console.log(node.textContent);
+                } else {
+                    alert('You Reached the limits')
+                    document.getElementById('AddTuesday').disabled = true;
+                }
+            });
+
+            $(wrapper2).on("click", ".delete", function (e) {
+                e.preventDefault();
+                $(this).parent('div').remove();
+                x2--;
+                document.getElementById('AddTuesday').disabled = false;
+            })
+        });
+
+        // Wednesday
+
+        $(document).ready(function () {
+            let max_fields_Wednesday = 3;
+            let wrapper3 = $(".form4");
+            let add_button3 = $("#AddWednesday");
+
+            let x3 = 1;
+            $(add_button3).click(function (e) {
+                e.preventDefault();
+                if (x3 < max_fields_Wednesday) {
+                    x3++;
+                    let node = document.getElementById("EmptydayTIMEWednesday");
+                    let divnode = document.createElement("div")
+                    divnode.innerHTML = '<div class="dayTIMEWednesday row g-2"><div class="col-2"><input type="text" class="form-control" placeholder="10:00"></div><div class="minusTIMEWednesday col-1 text-center"><i class="bi bi-dash-lg"></i></div><div class="col-2"><input type="text" class="form-control" placeholder="12:00"></div></div><a href="#" class="delete">Delete</a>'
+                    node.appendChild(divnode)
+                    console.log(node.textContent);
+                } else {
+                    let x = 1;
+                    alert('You Reached the limits')
+                    add_button
+                }
+            });
+
+            $(wrapper3).on("click", ".delete", function (e) {
+                e.preventDefault();
+                $(this).parent('div').remove();
+                x3--;
+            })
+        });
+
+        //  Thursday
+
+        $(document).ready(function () {
+            let max_fields_Thursday = 3;
+            let wrapper = $(".form4");
+            let add_button = $("#AddThursday");
+
+            let x4 = 1;
+            $(add_button).click(function (e) {
+                e.preventDefault();
+                if (x4 < max_fields_Thursday) {
+                    x4++;
+                    let node = document.getElementById("EmptydayTIMEThursday");
+                    let divnode = document.createElement("div")
+                    divnode.innerHTML = '<div class="dayTIMEThursday row g-2"><div class="col-2"><input type="text" class="form-control" placeholder="10:00"></div><div class="minusTIMEThursday col-1 text-center"><i class="bi bi-dash-lg"></i></div><div class="col-2"><input type="text" class="form-control" placeholder="12:00"></div></div><a href="#" class="delete">Delete</a>'
+                    node.appendChild(divnode)
+                    console.log(node.textContent);
+                } else {
+                    let x4 = 1;
+                    alert('You Reached the limits')
+                }
+            });
+
+            $(wrapper).on("click", ".delete", function (e) {
+                e.preventDefault();
+                $(this).parent('div').remove();
+                x4--;
+            })
+        });
+
+        //  Friday
+
+        $(document).ready(function () {
+            let max_fields_Friday = 3;
+            let wrapper = $(".form4");
+            let add_button = $("#AddFriday");
+
+            let x5 = 1;
+            $(add_button).click(function (e) {
+                e.preventDefault();
+                if (x5 < max_fields_Friday) {
+                    x5++;
+                    let node = document.getElementById("EmptydayTIMEFriday");
+                    let divnode = document.createElement("div")
+                    divnode.innerHTML = '<div class="dayTIMEFriday row g-2"><div class="col-2"><input type="text" class="form-control" placeholder="10:00"></div><div class="minusTIMETuesday col-1 text-center"><i class="bi bi-dash-lg"></i></div><div class="col-2"><input type="text" class="form-control" placeholder="12:00"></div></div><a href="#" class="delete">Delete</a>'
+                    node.appendChild(divnode)
+                    console.log(node.textContent);
+                } else {
+                    let x5 = 1;
+                    alert('You Reached the limits')
+                }
+            });
+
+            $(wrapper).on("click", ".delete", function (e) {
+                e.preventDefault();
+                $(this).parent('div').remove();
+                x5--;
+            })
+        });
+
+        //  Saturday
+
+        $(document).ready(function () {
+            let max_fields_Saturday = 3;
+            let wrapper = $(".form4");
+            let add_button = $("#AddSaturday");
+
+            let x6 = 1;
+            $(add_button).click(function (e) {
+                e.preventDefault();
+                if (x6 < max_fields_Saturday) {
+                    x6++;
+                    let node = document.getElementById("EmptydayTIMESaturday");
+                    let divnode = document.createElement("div")
+                    divnode.innerHTML = '<div class="dayTIMESaturday row g-2"><div class="col-2"><input type="text" class="form-control" placeholder="10:00"></div><div class="minusTIMETuesday col-1 text-center"><i class="bi bi-dash-lg"></i></div><div class="col-2"><input type="text" class="form-control" placeholder="12:00"></div></div><a href="#" class="delete">Delete</a>'
+                    node.appendChild(divnode)
+                    console.log(node.textContent);
+                } else {
+                    let x6 = 1;
+                    alert('You Reached the limits')
+                }
+            });
+
+            $(wrapper).on("click", ".delete", function (e) {
+                e.preventDefault();
+                $(this).parent('div').remove();
+                x6--;
+            })
+        });
+
+        //  Sunday
+
+        $(document).ready(function () {
+            let max_fields_Sunday = 3;
+            let wrapper = $(".form4");
+            let add_button = $("#AddSunday");
+
+            let x7 = 1;
+            $(add_button).click(function (e) {
+                e.preventDefault();
+                if (x7 < max_fields_Sunday) {
+                    x7++;
+                    let node = document.getElementById("EmptydayTIMESunday");
+                    let divnode = document.createElement("div")
+                    divnode.innerHTML = '<div class="dayTIMESunday row g-2"><div class="col-2"><input type="text" class="form-control" placeholder="10:00"></div><div class="minusTIMETuesday col-1 text-center"><i class="bi bi-dash-lg"></i></div><div class="col-2"><input type="text" class="form-control" placeholder="12:00"></div></div><a href="#" class="delete">Delete</a>'
+                    node.appendChild(divnode)
+                    console.log(node.textContent);
+                } else {
+                    let x7 = 1;
+                    alert('You Reached the limits')
+                }
+            });
+
+            $(wrapper).on("click", ".delete", function (e) {
+                e.preventDefault();
+                $(this).parent('div').remove();
+                x7--;
+            })
+        });
+    </script>
+</body>
+
+{% endblock content%}

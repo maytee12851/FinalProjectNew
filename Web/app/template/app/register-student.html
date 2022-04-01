@@ -1,0 +1,41 @@
+{% extends 'app/base.html' %}
+{% block content %}
+{% load static %}
+
+<body>
+
+    <!-- Register -->
+
+    <div class="container">
+        <div class="SecregisterSTU row bg-white">
+            <div class="register col-xl-6 col-md-12">
+                <div class="picregisterSTU text-center">
+                    <img src="{% static '/pic/register-student.svg' %}" alt="">
+                </div>
+            </div>
+
+            <div class="vertical-line col-xl-1 col-lg-0"></div>
+
+            <div class="register-student col-xl-6 col-md-12">
+                <h2 class="textregisterSTU text-center">
+                    สมัครสมาชิกเป็น<span>นักเรียน</span>
+                </h2>
+
+                <p>กรุณาลงทะเบียนด้านล่าง</p>
+
+                {% for message in messages %}
+                <h4 class="text-center alert alert-danger">{{ message }}</h4>
+                {% endfor %}
+
+                <form class="form-registerSTU" method="POST">
+                    {% csrf_token %}
+                    <input type="text" class="username form-control" placeholder="ชื่อผู้ใช้" name="username">
+                    <input type="email" class="e-mail form-control" placeholder="อีเมล" name="email">
+                    <input type="password" class="password form-control" placeholder="รหัสผ่าน" name="password">
+                    <button type="submit" class="submit form-control btn-secondary">สมัครสมาชิก</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock content%}

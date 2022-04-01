@@ -1,0 +1,131 @@
+{% extends 'app/base.html' %}
+{% block content %}
+{% load static %}
+
+<body>
+
+    <!-- Number Form -->
+
+    <div class="col-xl-10 ms-auto">
+        <div class="container">
+            <div class="row xl-10 ms-auto mt-3">
+                <div class="col-sm-1 text-center">
+                    <span class="fa-stack fa-1x">
+                        <i class="fa fa-circle fa-stack-2x text-info"></i>
+                        <strong class="fa-stack-1x text-black-50">1</strong>
+                    </span>
+                    <p class="h6 text-black-50 mt-2">ทั่วไป</p>
+                </div>
+
+                <div class="col-sm-1">
+                    <hr class="bg-danger border-4 border-top border-dark">
+                </div>
+
+                <div class="col-sm-1 text-center">
+                    <span class="fa-stack fa-1x">
+                        <i class="fa fa-circle fa-stack-2x text-info"></i>
+                        <strong class="fa-stack-1x text-black-50">2</strong>
+                    </span>
+                    <p class="h6 text-black-50 mt-2">ประวัติการศึกษา</p>
+                </div>
+
+                <div class="col-sm-1">
+                    <hr class="bg-danger border-4 border-top border-dark">
+                </div>
+
+                <div class="col-sm-1 text-center">
+                    <span class="fa-stack fa-1x">
+                        <i class="fa fa-circle fa-stack-2x text-info"></i>
+                        <strong class="fa-stack-1x text-black-50">3</strong>
+                    </span>
+                    <p class="h6 text-black-50 mt-2">การสอน</p>
+                </div>
+
+                <div class="col-sm-1">
+                    <hr class="bg-danger border-4 border-top border-dark">
+                </div>
+
+                <div class="col-sm-1 text-center">
+                    <span class="fa-stack fa-1x">
+                        <i class="fa fa-circle fa-stack-2x text-secondary"></i>
+                        <strong class="fa-stack-1x text-light">4</strong>
+                    </span>
+                    <p class="h6 text-white-50 mt-2">ตารางเวลา</p>
+                </div>
+
+                <div class="col-sm-1">
+                    <hr class="bg-danger border-4 border-top border-dark">
+                </div>
+
+                <div class="col-sm-1 text-center">
+                    <span class="fa-stack fa-1x">
+                        <i class="fa fa-circle fa-stack-2x text-secondary"></i>
+                        <strong class="fa-stack-1x text-light">5</strong>
+                    </span>
+                    <p class="h6 text-white-50 mt-2">เกี่ยวกับฉัน</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Form3 -->
+
+    <div class="container">
+        <div class="Secform1 row bg-white mt-2">
+            <div class="form1 col-xl-12">
+                <input type="text" class="form-control" placeholder="ภาษาที่สอน">
+                <input type="text" class="form-control" placeholder="ชื่อคอร์ส">
+                <input type="text" class="form-control" placeholder="คำอธิบายเกี่่ยวกับคอร์ส">
+                <input type="text" class="form-control" placeholder="เวลาที่เรียน (ชั่่วโมง)">
+                <input type="text" class="form-control" placeholder="อัตราค่าสอน (ต่อคอร์ส)">
+
+                <div class="AddOnCourse">
+                    <button class="add_form_field btn btn-block btn-lg btn-info text-white">เพิ่มคอร์สเรียน &nbsp;
+                    <span style="font-size:24px; font-weight:bold;">+</span>
+                </div>
+            </div>
+
+            <!-- ButtonGoNextGGoBack -->
+
+            <div class="gobackForm3 col-xl-6">
+                <a href="/tutor-form2"><button type="button"
+                        class="btn btn-block btn-lg btn-secondary text-white">ก่อนหน้า</button></a>
+            </div>
+
+            <div class="gonextForm3 col-xl-6">
+                <a href="/tutor-form4"><button type="button"
+                        class="btn btn-block btn-lg btn-secondary text-white">ถัดไป</button></a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Add Input form -->
+
+    <script>
+        $(document).ready(function () {
+            var max_fields = 3;
+            var wrapper = $(".form1");
+            var add_button = $(".add_form_field");
+
+            var x = 1;
+            $(add_button).click(function (e) {
+                e.preventDefault();
+                if (x < max_fields) {
+                    x++;
+                    $(wrapper).append('<div><input type="text" class="form-control" placeholder="ภาษาที่สอน"><input type="text" class="form-control" placeholder="ชื่อคอร์ส"><input type="text" class="form-control" placeholder="คำอธิบายเกี่่ยวกับคอร์ส"><input type="text" class="form-control" placeholder="เวลาที่เรียน (ชั่่วโมง)"><input type="text" class="form-control" placeholder="อัตราค่าสอน (ต่อคอร์ส)"><a href="#" class="delete">Delete</a></div>'); //add input box
+                } else {
+                    alert('You Reached the limits')
+                }
+            });
+
+            $(wrapper).on("click", ".delete", function (e) {
+                e.preventDefault();
+                $(this).parent('div').remove();
+                x--;
+            })
+        });
+    </script>
+</body>
+
+{% endblock content%}

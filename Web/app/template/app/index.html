@@ -1,0 +1,382 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@200;300;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/Style.css' %}">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="bg-img">
+            <div class="navbar navbar-expand-lg navbar-dark pt-3">
+                <div class="container">
+                    <a href="/" class="navbar-brand">
+                        <h4>T-LANGUAGE</h4>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarDropdown" aria-controls="navbarDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarDropdown">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item me-3">
+                                <a class="nav-link text-white" aria-current="page"
+                                    href="/finding-tutor">ค้นหาติวเตอร์</a>
+                            </li>
+
+                            {% if user.is_authenticated %}
+                            <li class="nav-item me-3">
+                                <a class="nav-link text-white" href="/chat">การเรียนของฉัน</a>
+                            </li>
+
+                            {% if user.profile.photo %}
+                            <li class="nav-item me-3">
+                                <img src="{{ user.profile.photo.url }}" width="35" height="35" class="rounded-circle">
+                            </li>
+                            {% endif %}
+
+                            <li class="nav-item me-3">
+                                <p class="nav-link text-info">{{user.username}} : {{user.profile.userType}}</p>
+                            </li>
+                            <a href="{% url 'logout' %}"><button class="btn btn-outline-secondary"
+                                    type="submit">Logout</button></a>
+
+                            {% else %}
+
+                            <li class="nav-item me-3">
+                                <a class="nav-link text-secondary" href="#" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">สมัครสมาชิก</a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a href="/login"><button class="btn btn-outline-secondary"
+                                        type="submit">เข้าสู่ระบบ</button></a>
+                            </li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row" id="welcometext">
+                    <div class="col-xl-9">
+                        <h4 class="textheaderwelcome mt-5">
+                            ยินดีต้องรับสู่ T-LANGUAGE
+                        </h4>
+                    </div>
+
+                    <div class="col-xl-6">
+                        <h1 class="textheader mt-3">
+                            เรามีติวเตอร์ด้านภาษาที่พร้อมจะทำให้คุณได้เรียนรู้มากขึ้น
+                        </h1>
+                    </div>
+
+                    <div class="searchtutor col-xl-12 mt-3">
+                        <a href="#"><button type="submit"
+                                class="textsearch btn btn-block btn-lg btn-info">ค้นหาติวเตอร์</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog mt-5">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">ประเภทสมาชิกที่ต้องการสมัคร</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <a href="/register-student"><button type="button"
+                            class="btn btn-success">สมัครเป็นนักเรียน</button></a>
+                    <a href="/register-tutor"><button type="button"
+                            class="btn btn-success">สมัครเป็นติวเตอร์</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="circle col-12 text-center">
+        <i class="bi bi-question-circle-fill"></i>
+    </div>
+
+    <!-- whyuse -->
+
+    <section>
+        <div class="container">
+            <div class="Secwhyuse row bg-white">
+                <div class="whyuse col-xl-12">
+                    <h2 class="textwhyuse text-center">
+                        ทำไมถึงต้องใช้ T-LANGUAGE
+                    </h2>
+                </div>
+
+                <div class="picwhyuse col-xl-4">
+                    <img src="{% static 'pic/icon-left.svg' %}" alt="" srcset="">
+                    <h5 class="text-center text-secondary">ระบบการจองที่เข้าใจง่าย</h5>
+                </div>
+
+                <div class="picwhyuse col-xl-4">
+                    <img src="{% static '/pic/icon-mid.svg' %}" alt="" srcset="">
+                    <h5 class="text-center text-secondary">มีความปลอดภัย</h5>
+                </div>
+
+                <div class="picwhyuse col-xl-4">
+                    <img src="{% static 'pic/icon-right.svg' %}" alt="" srcset="">
+                    <h5 class="text-center text-secondary">มีทีมงานช่วยเหลือเมื่อเกิดปัญหา</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="circle1 col-12 text-center">
+            <i class="bi bi-info-circle-fill"></i>
+        </div>
+
+        <!-- stepsearch -->
+
+        <div class="container">
+            <div class="Secstepsearch row bg-white">
+                <div class="stepsearch col-xl-12">
+                    <h2 class="textstepsearch text-center">
+                        ขั้นตอนการหาติวเตอร์
+                    </h2>
+                </div>
+
+                <div class="allstepsearch">
+                    <div class="stepsearch col-xl-12">
+                        <h3 class="Sectextstep">
+                            1. ลงทะเบียน
+                        </h3>
+                        <p class="textstep">
+                            สมัครแอคเคาท์ของคุณผ่านการกรอกข้อมูลในระบบ
+                        </p>
+                    </div>
+
+                    <div class="stepsearch col-xl-12">
+                        <h3 class="Sectextstep">
+                            2. เลือกภาษาที่สนใจ
+                        </h3>
+                        <p class="textstep">
+                            เลิอกภาษาที่ต้องการจะเรียน พร้อมทั้งสามารถเลิอกภาษา เพศ ชื่อของติวเตอร์ได้
+                        </p>
+                    </div>
+
+                    <div class="stepsearch col-xl-12">
+                        <h3 class="Sectextstep">
+                            3. เลือกติวเตอร์ที่ตรงใจท่าน
+                        </h3>
+                        <p class="textstep">
+                            มีระบบตัวกรองการค้นหาติวเตอร์เพื่อสามารถค้นหาได้ง่ายขึ้น
+                        </p>
+                    </div>
+
+                    <div class="stepsearch col-xl-12">
+                        <h3 class="Sectextstep">
+                            4. เลือกเวลาที่ท่านสะดวก
+                        </h3>
+                        <p class="textstep">
+                            หาเวลาที่เหมาะสมสำหรับคุณ
+                        </p>
+                    </div>
+
+                    <div class="stepsearch col-xl-12">
+                        <h3 class="Sectextstep">
+                            5. จ้างติวเตอร์
+                        </h3>
+                        <p class="textstep">
+                            ตรวจสอบวันเวลาของคุณแล้วกดยืนยัน
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="circle2 col-12 text-center">
+        <i class="bi bi-chat-left-dots-fill"></i>
+    </div>
+
+    <!-- feedback -->
+
+    <section class="testimonials text-center">
+        <div class="container">
+            <div class="Secfeedback row bg-white">
+                <div class="feedback col-xl-12">
+                    <h2 class="textfeedback">
+                        ผลตอบรับจากนักเรียนที่ใช้ T-LANGUAGE
+                    </h2>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="testimonials-item mx-auto mb-5 mb-lg-0">
+                            <img src="{% static '/pic/BGHeader.jpg' %}" class="img-fluid rounded-circle mb-3" alt="">
+                            <h5>Name Surname</h5>
+                            <p class="font-weight-light mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Eum, deleniti.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <div class="testimonials-item mx-auto mb-5 mb-lg-0">
+                            <img src="{% static '/pic/BGHeader.jpg' %}" class="img-fluid rounded-circle mb-3" alt="">
+                            <h5>Name Surname</h5>
+                            <p class="font-weight-light mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Eum, deleniti.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <div class="testimonials-item mx-auto mb-5 mb-lg-0">
+                            <img src="{% static '/pic/BGHeader.jpg' %}" class="img-fluid rounded-circle mb-3" alt="">
+                            <h5>Name Surname</h5>
+                            <p class="font-weight-light mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Eum, deleniti.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <div class="testimonials-item mx-auto mb-5 mb-lg-0">
+                            <img src="{% static '/pic/BGHeader.jpg' %}" class="img-fluid rounded-circle mb-3" alt="">
+                            <h5>Name Surname</h5>
+                            <p class="font-weight-light mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Eum, deleniti.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- banner-footer -->
+
+    <section class="banner-footer">
+        <div class="container">
+            <div class="img-banner row">
+                <div class="textbanner col-xl-12 text-center">
+                    <h1>
+                        ร่วมเป็นส่วนหนึ่งในการแบ่งปันความรู้<br>กับ T-LANGUAGE
+                    </h1>
+                </div>
+
+                <div class="col-12 text-center">
+                    <a href="/index-tutor"><button type="submit"
+                            class="textregister-banner btn btn-block btn-lg btn-light">สมัครเป็นติวเตอร์</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+
+    <footer class="text-center text-lg-start">
+        <!-- Grid container -->
+        <div class="container p-4">
+            <!--Grid row-->
+            <div class="row">
+                <div class="col-lg-4">
+                    <h1>
+                        LOGO
+                    </h1>
+                </div>
+
+                <!--Grid column-->
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h5 class="headlist-footer">หมวดหมู่ติวเตอร์</h5>
+
+                    <ul class="list-footer list-unstyled">
+                        <li>
+                            <a href="#" class="text-light">ภาษาอังกฤษ</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-light">ภาษาจีน</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-light">ภาษาญี่ปุ่น</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-light">ภาษาเกาหลี</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h5 class="headlist-footer">วิธีการใช้งาน</h5>
+
+                    <ul class="list-footer list-unstyled">
+                        <li>
+                            <a href="#!" class="text-light">สมัครเป็นติวเตอร์</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-light">คำถามที่พบบ่อย</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h5 class="headlist-footer">เกี่ยวกับเรา</h5>
+
+                    <ul class="list-footer list-unstyled">
+                        <li>
+                            <a href="#!" class="text-light">Feedback</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-light">เงื่อนไขการให้บริการ</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h5 class="headlist-footer">ติดต่อเรา</h5>
+
+                    <ul class="list-footer list-unstyled">
+                        <li>
+                            <a href="#!" class="text-light">Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-light">Link 2</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-light">Link 3</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-light">Link 4</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+            </div>
+            <!--Grid row-->
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+{% extends 'app/base.html' %}
+{% block content %}
+{% load static %}
+
+<body>
+    <div class="container">
+        <div class="tutor col-xl-12">
+            <h2 class="texttutor text-black-50 mt-5 text-center">
+                ติวเตอร์ภาษาอังกฤษ
+            </h2>
+            <h5 class="text-black-50 mt-3 text-center">
+                กำลังมองหาครูสอนพิเศษออนไลน์อยู่ใช่ไหม ทดลองใช้ T-LANGUAGE ดูสิ
+            </h5>
+        </div>
+    </div>
+
+    <!-- filter -->
+
+    <form method="GET" action=".">
+        <div class="container">
+            <div class="filter row bg-white d-flex justify-content-center pt-3 pb-2 mt-3">
+                <div class="col-lg-2">
+                    <div class="form-group">
+                        <h6 class="text-black-50">
+                            ฉันต้องการเรียน
+                        </h6>
+                        <select class="form-select form-control" name="language" id="language">       
+                            {% for l in course %}
+                            <option selected value="{{ l.language }}"></option>
+                            <option value="ภาษาอังกฤษ">ภาษาอังกฤษ</option>
+                            <option value="ภาษาจีน">ภาษาจีน</option>
+                            <option value="ภาษาเกาหลี">ภาษาเกาหลี</option>
+                            <option value="ภาษาญี่ปุ่น">ภาษาญี่ปุ่น</option>
+                            <option value="ภาษาเยอรมัน">ภาษาเยอรมัน</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+    
+                <div class="col-lg-2">
+                    <div class="form-group">
+                        <h6 class="text-black-50">
+                            ราคา
+                        </h6>
+                        <select class="form-select form-control">
+                            <option selected disabled>ราคา...</option>
+                            <option>200 - 299 THB</option>
+                            <option>300 - 399 THB</option>
+                            <option>400 - 499 THB</option>
+                            <option>500 THB ขึ้นไป</option>
+                        </select>
+                    </div>
+                </div>
+    
+                <div class="col-lg-2">
+                    <div class="form-group">
+                        <h6 class="text-black-50">
+                            เพศ
+                        </h6>
+                        <select class="form-select form-control">
+                            <option selected disabled>เพศ...</option>
+                            <option>ชาย</option>
+                            <option>หญิง</option>
+                            <option>เพศทางเลือก</option>
+                        </select>
+                    </div>
+                </div>
+    
+                <div class="col-lg-2">
+                    <div class="form-group">
+                        <h6 class="text-black-50">
+                            คะแนนรีวิว
+                        </h6>
+                        <select class="form-select form-control">
+                            <option selected disabled>คะแนนรีวิว...</option>
+                            <option>0 - 1 ดาว</option>
+                            <option>2 - 3 ดาว</option>
+                            <option>4 - 5 ดาว</option>
+                        </select>
+                    </div>
+                </div>
+    
+                <div class="col-lg-1 align-self-center">
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-secondary btn-lg">Search</button>
+                    </div>             
+                </div>
+            </div>
+        </div>
+    </form>  
+        {% for c in course %}
+        {% if c.user.approve %}
+        <div class="container">
+            <div class="tutor row bg-white mt-5 pt-5 pb-5">
+                <div class="col-lg-3 d-flex justify-content-center">
+                    <div class="img-tutor">
+                        <img src="{{ c.user.photo.url }}" class="rounded-circle" width="200" height="200">
+                    </div>
+                </div>
+    
+                <div class="col-lg-6 justify-content-start align-self-center">
+                    <div class="d-flex">
+                        <h3>
+                            {{c.user.name}} {{c.user.surname}}
+                        </h3>
+                        <i class="bi bi-star-fill ms-5 bd-highlight text-black-50">4.7(15)</i>
+                    </div>
+    
+                    <div class="d-flex mt-2">
+                        <h5 class="d-flex">
+                            ภาษา :&nbsp<h5 class="text-black-50">{{ c.language }}</h5>
+                        </h5>
+                        <h5 class="ms-5">
+                            เพศ :&nbsp<h5 class="text-black-50">{{ c.user.sex }}</h5>
+                        </h5>
+                    </div>
+    
+                    <div class="d-flex mt-2">
+                        <h5>
+                            คำอธิบายเกี่ยวกับคอร์ส
+                        </h5>
+                    </div>
+                    
+                    <div class="d-flex">             
+                        <h5 class="text-black-50">
+                            {{ c.courseDesc }}
+                        </h5>        
+                    </div>
+                       
+                </div>
+    
+                <div class="col-lg-3 d-flex justify-content-center align-self-center">
+                    <div>
+                        <a href="{% url 'tutor-data' c.id %}"><button class="btn btn-outline-dark btn-lg" type="submit">ดูข้อมูลเพิ่มเติม</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+     
+</body>
+{% endblock content%}

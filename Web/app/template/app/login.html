@@ -1,0 +1,36 @@
+{% extends 'app/base.html' %}
+{% block content %}
+{% load static %}
+
+<body class="body-LOGIN">
+    
+    <!-- LOGIN -->
+
+    <div class="container">
+        <div class="SecLOGIN row bg-white">
+            <div class="LOGIN col-xl-6">
+                <div class="picLOGIN">
+                    <img src="{% static '/pic/register-student.svg' %}" alt="">
+                </div>
+            </div>
+
+            <div class="vertical-line col-xl-1"></div>
+
+            <div class="allform-LOGIN col-xl-6">
+                <h2 class="textLOGIN text-center">
+                    ลงชื่อ<span>เข้าสู่ระบบ</span>
+                </h2>
+
+                <p>เข้าสู่ระบบด้านล่าง</p>
+
+                <form class="form-LOGIN" method = "POST">
+                    {% csrf_token %}
+                    <input type="text" class="username form-control" placeholder="ชื่อผู้ใช้" name="username">
+                    <input type="password" class="password form-control" placeholder="รหัสผ่าน" name="password">
+                    <button type="submit" class="submit form-control btn-secondary">เข้าสู่ระบบ</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock content%}

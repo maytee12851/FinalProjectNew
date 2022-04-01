@@ -1,0 +1,124 @@
+{% extends 'app/base.html' %}
+{% block content %}
+{% load static %}
+
+<body>
+
+    <!-- Number Form -->
+
+    <div class="col-xl-10 ms-auto">
+        <div class="container">
+            <div class="row xl-10 ms-auto mt-3">
+                <div class="col-sm-1 text-center">
+                    <span class="fa-stack fa-1x">
+                        <i class="fa fa-circle fa-stack-2x text-info"></i>
+                        <strong class="fa-stack-1x text-black-50">1</strong>
+                    </span>
+                    <p class="h6 text-black-50 mt-2">ทั่วไป</p>
+                </div>
+
+                <div class="col-sm-1">
+                    <hr class="bg-danger border-4 border-top border-dark">
+                </div>
+                
+                <div class="col-sm-1 text-center">
+                    <span class="fa-stack fa-1x">
+                        <i class="fa fa-circle fa-stack-2x text-info"></i>
+                        <strong class="fa-stack-1x text-black-50">2</strong>
+                    </span>
+                    <p class="h6 text-black-50 mt-2">ประวัติการศึกษา</p>
+                </div>
+
+                <div class="col-sm-1">
+                    <hr class="bg-danger border-4 border-top border-dark">
+                </div>
+                
+                <div class="col-sm-1 text-center">
+                    <span class="fa-stack fa-1x">
+                        <i class="fa fa-circle fa-stack-2x text-secondary"></i>
+                        <strong class="fa-stack-1x text-light">3</strong>
+                    </span>
+                    <p class="h6 text-white-50 mt-2">การสอน</p>
+                </div>
+
+                <div class="col-sm-1">
+                    <hr class="bg-danger border-4 border-top border-dark">
+                </div>
+                
+                <div class="col-sm-1 text-center">
+                    <span class="fa-stack fa-1x">
+                        <i class="fa fa-circle fa-stack-2x text-secondary"></i>
+                        <strong class="fa-stack-1x text-light">4</strong>
+                    </span>
+                    <p class="h6 text-white-50 mt-2">ตารางเวลา</p>
+                </div>
+
+                <div class="col-sm-1">
+                    <hr class="bg-danger border-4 border-top border-dark">
+                </div>
+                
+                <div class="col-sm-1 text-center">
+                    <span class="fa-stack fa-1x">
+                        <i class="fa fa-circle fa-stack-2x text-secondary"></i>
+                        <strong class="fa-stack-1x text-light">5</strong>
+                    </span>
+                    <p class="h6 text-white-50 mt-2">เกี่ยวกับฉัน</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Form2 -->
+
+    <div class="container">
+        <div class="Secform1 row bg-white mt-2">
+            <div class="form1 col-xl-12">            
+                <input type="text" class="form-control" placeholder="ชื่อโรงเรียน (มัธยมปลาย)">
+                <input type="text" class="form-control" placeholder="สายที่่เรียน">
+
+                <div class="yearstudy row g-2">
+                    <div class="col-2">
+                        <input type="text" class="form-control" placeholder="ปีที่เรียน (พ.ศ.)">
+                    </div>
+
+                    <div class="minusYEARSTUDY col-1 text-center">
+                        <i class="bi bi-dash-lg"></i>
+                    </div>
+
+                    <div class="col-2">
+                        <input type="text" class="form-control" placeholder="ปีที่เรียน (พ.ศ.)">
+                    </div>
+                </div>               
+                <input type="text" class="form-control" placeholder="ชื่อสถาบัน (อุดมศึกษา)">
+                <input type="text" class="form-control" placeholder="ระดับการศึกษา">
+                <input type="text" class="form-control" placeholder="คณะ">
+                <input type="text" class="form-control" placeholder="สาขาวิชา">
+
+                <div class="yearstudy row g-2">
+                    <div class="col-2">
+                        <input type="text" class="form-control" placeholder="ปีที่เรียน (พ.ศ.)"">
+                    </div>
+
+                    <div class="minusYEARSTUDY col-1 text-center">
+                        <i class="bi bi-dash-lg"></i>
+                    </div>
+
+                    <div class="col-2">
+                        <input type="text" class="form-control" placeholder="ปีที่เรียน (พ.ศ.)">
+                    </div>
+                </div>      
+            </div>
+
+            <!-- ButtonGoNextGGoBack -->
+            
+            <div class="gobackForm2 col-xl-6">
+                <a href="/tutor-form1"><button type="button" class="btn btn-block btn-lg btn-secondary text-white">ก่อนหน้า</button></a>
+            </div>
+
+            <div class="gonextForm2 col-xl-6">
+                <a href="/tutor-form3"><button type="button" class="btn btn-block btn-lg btn-secondary text-white">ถัดไป</button></a>
+            </div>
+        </div>
+    </div>   
+</body>
+{% endblock content%}

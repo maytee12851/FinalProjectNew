@@ -1,0 +1,194 @@
+{% extends 'app/base.html' %}
+{% block content %}
+{% load static %}
+
+<body>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container">
+            <ul class="navbar-nav">
+                <li class="nav-item p-2">
+                    <a class="nav-link" href="/chat">แชท</a>
+                </li>
+                {% if user.profile.userType == 'student' %}
+                <li class="nav-item p-2">
+                    <a class="nav-link" href="/study">บทเรียน</a>
+                </li>
+                {% elif user.profile.userType == 'teacher' %}
+                <li class="nav-item p-2">
+                    <a class="nav-link" href="/teaching">การสอน</a>
+                </li>
+                {% endif %}
+
+                {% if user.profile.userType == 'student' %}
+                <li class="nav-item p-2">
+                    <a class="nav-link active" href="/profile">ตั้งค่าโปรไฟล์</a>
+                </li>
+                {% elif user.profile.userType == 'teacher' %}
+                <li class="nav-item p-2">
+                    <a class="nav-link active" href="/profile-tutor">ตั้งค่าโปรไฟล์</a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="col-xl-12 d-flex">
+            <div class="col-md-2">
+                <div class="profile-bg row bg-white justify-content-center">
+                    <ul class="navbar-nav">
+                        <li class="nav-item text-center mt-4 fs-5">
+                            <a class="nav-link text-black-50" href="/profile-tutor">ตั้งค่าโปรไฟล์</a>
+                        </li>
+                        <li class="nav-item nav-item text-center mt-4 fs-5">
+                            <a class="nav-link text-dark" href="/profile-education-tutor">ประวัติการศึกษา</a>
+                        </li>
+                        <li class="nav-item nav-item text-center mt-4 fs-5">
+                            <a class="nav-link text-black-50" href="/yourself-tutor">แนะนำตัว</a>
+                        </li>
+                        <li class="nav-item nav-item text-center mt-4 fs-5">
+                            <a class="nav-link text-black-50" href="/course-tutor">ลงคอร์สที่จะสอน</a>
+                        </li>
+                        <li class="nav-item nav-item text-center mt-4 fs-5 mb-4">
+                            <a class="nav-link text-black-50" href="/calendar">ตารางเวลา</a>
+                        </li>
+                    </ul>
+                </div>
+
+                {% if user.profile.approve %}
+                <div class="approve-bg row bg-success text-white text-center">
+                    <h5 class="p-3">ได้รับการอนุมัติ</h5>
+                </div>
+                {% else %}
+                <div class="approve-bg row bg-danger text-white text-center">
+                    <h5 class="p-3">ยังไม่ได้รับการอนุมัติ</h5>
+                </div>
+                {% endif %}
+            </div>
+
+            <div class="col-md-1">
+            </div>
+
+            <div class="col-md-9">
+                <div class="profile-bg row bg-white justify-content-center">
+                    <div class="col-xl-12">
+                        <form method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            {{ form.media }}
+                            {% for n in Education %}
+                            <div class="col-xl-12">
+                                <h4 class="text-start ms-5 mt-5">
+                                    ประวัติการศึกษา
+                                </h4>
+                            </div>
+    
+                            <div class="col-xl-12 d-flex mt-5">
+                                <div class="col-5">
+                                    <h5 class="text-start text-black-50 ms-5">
+                                        ชื่อโรงเรียน (มัธยมปลาย)
+                                    </h5>
+                                </div>
+                                
+                                <div class="col-4 text-center">
+                                    <input type="text" class="form-control" name="school" id="school" value="{{ n.school }}">
+                                </div>
+                            </div>
+    
+                            <div class="col-xl-12 d-flex mt-5">
+                                <div class="col-5">
+                                    <h5 class="text-start text-black-50 ms-5">
+                                        สายที่เรียน
+                                    </h5>
+                                </div>
+    
+                                <div class="col-4 text-center">
+                                    <input type="text" class="form-control" name="schoolProgram" id="schoolProgram" value="{{ n.schoolProgram }}">
+                                </div>
+                            </div>
+    
+                            <div class="col-xl-12 d-flex mt-5">
+                                <div class="col-5">
+                                    <h5 class="text-start text-black-50 ms-5">
+                                        ปีที่เรียน (พ.ศ.)
+                                    </h5>
+                                </div>
+    
+                                <div class="col-4 text-center">
+                                    <input type="text" class="form-control" maxlength="4" name="schoolYear" id="schoolYear" value="{{ n.schoolYear }}">
+                                </div>
+                            </div>
+    
+                            <div class="col-xl-12 d-flex mt-5">
+                                <div class="col-5">
+                                    <h5 class="text-start text-black-50 ms-5">
+                                        ชื่อสถาบัน (อุดมศึกษา)
+                                    </h5>
+                                </div>
+    
+                                <div class="col-4 text-center">                   
+                                    <input type="text" class="form-control" name="university" id="university" value="{{ n.university }}">              
+                                </div>
+                            </div>
+    
+                            <div class="col-xl-12 d-flex mt-5">
+                                <div class="col-5">
+                                    <h5 class="text-start text-black-50 ms-5">
+                                        ระดับการศึกษา
+                                    </h5>
+                                </div>
+    
+                                <div class="col-4 text-center">
+                                    <input type="text" class="form-control" name="degree" id="degree" value="{{ n.degree }}">                                   
+                                </div>
+                            </div>
+    
+                            <div class="col-xl-12 d-flex mt-5">
+                                <div class="col-5">
+                                    <h5 class="text-start text-black-50 ms-5">
+                                        คณะ
+                                    </h5>
+                                </div>
+    
+                                <div class="col-4 text-center">                               
+                                    <input type="text" class="form-control" name="faculty" id="faculty" value="{{ n.faculty }}">                                   
+                                </div>
+                            </div>
+    
+                            <div class="col-xl-12 d-flex mt-5">
+                                <div class="col-5">
+                                    <h5 class="text-start text-black-50 ms-5">
+                                        สาขาวิชา
+                                    </h5>
+                                </div>
+    
+                                <div class="col-4 text-center">
+                                    <input type="text" class="form-control" name="major" id="major" value="{{ n.major }}">                                    
+                                </div>
+                            </div>
+    
+                            <div class="col-xl-12 d-flex mt-5">
+                                <div class="col-5">
+                                    <h5 class="text-start text-black-50 ms-5">
+                                        ปีที่เรียน (พ.ศ.)
+                                    </h5>
+                                </div>
+    
+                                <div class="col-4 text-center">                                    
+                                    <input type="text" class="form-control" maxlength="4" name="universityYear" id="universityYear" value="{{ n.universityYear }}">                                  
+                                </div>
+                            </div>
+    
+                            <div class="col-xl-12 text-end mt-5 pe-5 pb-5">
+                                <button type="submit" class="btn btn-secondary btn-lg text-white">บันทึกข้อมูล</button>
+                            </div>
+                            {% endfor %}
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+{% endblock content%}

@@ -1,0 +1,176 @@
+{% extends 'app/base.html' %}
+{% block content %}
+{% load static %}
+
+{% for c in course %}
+<body>
+    <div class="container">
+        <div class="row pt-5">
+            <div class="col-lg-3 d-flex justify-content-center">
+                <div class="img-tutor-data">
+                    <img src="{{ c.user.photo.url }}" class="rounded-circle" width="200" height="200">
+                </div>
+            </div>
+            
+            <div class="col-lg-9 justify-content-start align-self-center">
+                <div class="d-flex">
+                    <h3>
+                        {{ c.user.name }} {{ c.user.surname }} ({{ c.user.nickname }})
+                    </h3>
+                </div>
+
+                <div class="d-flex mt-2">
+                    <h5 class="text-black-50">
+                        ภาษา : {{ c.language }}
+                    </h5>
+                    <h5 class="ms-5 text-black-50">
+                        เพศ : {{ c.user.sex }}
+                    </h5>
+                </div>
+
+                <div class="d-flex mt-2">
+                    <div>
+                        <a href="#"><button class="btn btn-outline-dark btn-lg"
+                                type="submit">ติดต่อติวเตอร์</button></a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- About -->
+
+    <div class="bg-color-tutordata">
+        <div class="container">
+            <div class="tutor-data row bg-white mt-5 pt-4 pb-4 ps-5 pe-5">
+                <div class="col-lg-12 justify-content-start">
+                    <h5>
+                        เกี่ยวกับติวเตอร์
+                    </h5>
+                </div>
+
+                <div class="col-lg-12 justify-content-start mt-3">
+                    <h5 class="text-black-50">
+                        {{ c.introduceTutor.introduce }}
+                    </h5>
+                </div>
+            </div>
+
+            <!-- Education -->
+
+            <div class="tutor-data row bg-white mt-5 pt-4 pb-4 ps-5 pe-5">
+                <div class="col-12 justify-content-start">
+                    <h5>
+                        การศึกษา
+                    </h5>
+                </div>
+
+                <div class="col-2 justify-content-start mt-3">
+                    <h5 class="text-black-50">
+                        {{ c.education.universityYear }}
+                    </h5>
+                </div>
+                <div class="col-10 justify-content-start mt-3">
+                    <h5 class="text-black-50 ms-5">
+                        {{ c.education.university }} <br> {{ c.education.faculty }}
+                    </h5>
+                </div>
+
+                <div class="col-2 justify-content-start mt-3">
+                    <h5 class="text-black-50">
+                        {{ c.education.schoolYear }}
+                    </h5>
+                </div>
+                <div class="col-10 justify-content-start mt-3">
+                    <h5 class="text-black-50 ms-5">
+                        {{ c.education.school }} <br> {{ c.education.schoolProgram }}
+                    </h5>
+                </div>
+            </div>
+
+            <!-- Course -->
+
+            <div class="tutor-data row bg-white mt-5 pt-4 pb-4 ps-5 pe-5">
+                <div class="col-4">
+                    <h5>
+                        คอร์ส
+                    </h5>
+                </div>
+
+                <div class="col-3 text-center align-self-center">
+                    <h5>
+                        เวลาเรียน
+                    </h5>
+                </div>
+
+                <div class="col-3 text-center align-self-center">
+                    <h5>
+                        ค่าสอนรวม
+                    </h5>
+                </div>
+
+                <!-- Course 1 -->
+
+                <div class="col-4 mt-4">
+                    <div>
+                        <h5>
+                            {{ c.courseTitle }}
+                        </h5>
+                        <h5 class="text-black-50">
+                            {{ c.courseDesc }}
+                        </h5>
+                    </div>
+                </div>
+
+                <div class="col-3 text-center align-self-center">
+                    <h5>
+                        {{ c.courseHours }} ชั่วโมง
+                    </h5>
+                </div>
+
+                <div class="col-3 text-center align-self-center">
+                    <h5>
+                        {{ c.coursePrice }} บาท
+                    </h5>
+                </div>
+
+                <div class="col-2 text-center align-self-center">
+                    <div>
+                        <a href="#"><button class="btn btn-outline-secondary btn-lg" type="submit">จองคอร์ส</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video -->
+
+            <div class="tutor-data row bg-white mt-5 pt-4 pb-4 ps-5 pe-5">
+                <div class="col-lg-12 justify-content-start">
+                    <h5>
+                        วิดีโอตัวอย่างการสอน
+                    </h5>
+                </div>
+
+                <div class="col-12 text-center mt-3">
+                    <video class="box" width="70%" controls>
+                        <source src="{{ c.introduceTutor.video.url }}" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+
+            <!-- Review -->
+
+            <div class="tutor-data row bg-white mt-5 pt-4 pb-4 ps-5 pe-5">
+                <div class="col-lg-12 justify-content-start">
+                    <h5>
+                        รีวิว
+                    </h5>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+{% endfor %}
+{% endblock content%}
