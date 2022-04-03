@@ -1,4 +1,4 @@
-from calendar import calendar
+from calendar import Calendar, calendar
 from turtle import title
 from unicodedata import name
 from django.db import models
@@ -55,6 +55,8 @@ class Course(models.Model):
     courseTitle = models.CharField(max_length=100)
     courseDesc = models.TextField()
     courseHours = models.CharField(max_length=2, blank=True, null=True)
+    courseDay = models.CharField(max_length=100, blank=True, null=True)
+    courseTime = models.TimeField(max_length=30, blank=True, null=True)
     coursePrice = models.CharField(max_length=100, blank=True, null=True)
 
     def __str__(self):
@@ -63,8 +65,8 @@ class Course(models.Model):
 # calendar
 class Event(models.Model):
     user = models.ForeignKey(Profile, on_delete=CASCADE, blank=True, null=True)
-    title = models.CharField(max_length=200)
-    description = models.TextField()
+    title = models.CharField(max_length=50)
+    description = models.TextField(max_length=100)
     start_time = models.DateTimeField()
     end_time = models.DateTimeField()
 

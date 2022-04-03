@@ -4,7 +4,7 @@ from .views import *
 from . import views
 from django.conf.urls import url
 
-# app_name = 'cal'
+# app_name = 'app'
 urlpatterns = [
     path('', index, name='index'),
     path('index-tutor/', indexTutor, name='index-tutor'),
@@ -36,4 +36,5 @@ urlpatterns = [
     url(r'^calendar/$', views.CalendarView.as_view(), name='calendar'),
     url(r'^event/new/$', views.event, name='event_new'),
 	url(r'^event/edit/(?P<event_id>\d+)/$', views.event, name='event_edit'),
+    path('deleteEvent/<int:event_id>', deleteEvent, name='deleteEvent'),
 ]

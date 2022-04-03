@@ -1,3 +1,4 @@
+from multiprocessing import context
 from .models import *
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.models import User
@@ -376,8 +377,8 @@ def courseTutor(request):
    
     username = request.user.username
     user = Profile.objects.get(username=username)
-    # introduceTutor = YourselfTutor.objects.get(user=user)
-    # education = ProfileEducationTutor.objects.get(user=user)
+    introduceTutor = YourselfTutor.objects.get(user=user)
+    education = ProfileEducationTutor.objects.get(user=user)
 
     if request.method == 'POST':
         data = request.POST.copy()
@@ -385,16 +386,20 @@ def courseTutor(request):
         courseTitle = data.get('courseTitle')
         courseDesc = data.get('courseDesc')
         courseHours = data.get('courseHours')
+        courseDay = data.get('courseDay')
+        courseTime = data.get('courseTime')
         coursePrice = data.get('coursePrice')
 
         addCourse = Course()
         addCourse.user = user
-        # addCourse.introduceTutor = introduceTutor
-        # addCourse.education = education
+        addCourse.introduceTutor = introduceTutor
+        addCourse.education = education
         addCourse.language = language
         addCourse.courseTitle = courseTitle
         addCourse.courseDesc = courseDesc
         addCourse.courseHours = courseHours
+        addCourse.courseDay = courseDay
+        addCourse.courseTime = courseTime
         addCourse.coursePrice = coursePrice
         addCourse.save()
 
@@ -425,7 +430,7 @@ class CalendarView(generic.ListView):
         context = super().get_context_data(**kwargs)
         d = get_date(self.request.GET.get('month', None))
         cal = Calendar(d.year, d.month)
-        html_cal = cal.formatmonth(withyear=True)
+        html_cal = cal.formatmonth(withyear=True, user=self.request.user.profile)
         context['calendar'] = mark_safe(html_cal)
         context['prev_month'] = prev_month(d)
         context['next_month'] = next_month(d)
@@ -465,4 +470,10 @@ def event(request, event_id=None):
         form.user = Profile.objects.get(username=username)
         form.save()
         return HttpResponseRedirect(reverse('calendar'))
-    return render(request, 'app/event.html', {'form': form})
+    return render(request, 'app/event.html', {'form': form,'event_id' : event_id})
+
+def deleteEvent(request, event_id):
+   
+    event = Event.objects.get(id=event_id)
+    event.delete()
+    return redirect ('/calendar/')
