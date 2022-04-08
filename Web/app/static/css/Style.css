@@ -747,10 +747,10 @@ footer{
 /******************************* study *****************************/
 
 .study-bg{
-    border-radius: 20px;
+    border-radius: 10px;
     margin-top: 50px;
-    padding-top: 149px;
-    padding-bottom: 148px;
+    padding-top: 10px;
+    padding-bottom: 3px;
 }
 
 /******************************* profile-student *****************************/

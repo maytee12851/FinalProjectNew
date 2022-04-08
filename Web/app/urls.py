@@ -32,6 +32,9 @@ urlpatterns = [
     path('edit-yourself-tutor/', editYourselfTutor, name='edit-yourself-tutor'),
     path('course-tutor/', courseTutor, name='course-tutor'),
     path('deleteCourse/<int:id>', deleteCourse, name='deleteCourse'),
+    path('addCourseStudent/<int:id>', addCourseStudent, name='addCourseStudent'),
+    path('deleteaddCourseStudent/<int:id>', deleteaddCourseStudent, name='deleteaddCourseStudent'),
+    path('deleteTeaching/<int:id>', deleteTeaching, name='deleteTeaching'),
 
     url(r'^calendar/$', views.CalendarView.as_view(), name='calendar'),
     url(r'^event/new/$', views.event, name='event_new'),

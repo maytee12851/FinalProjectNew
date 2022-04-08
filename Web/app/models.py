@@ -43,6 +43,8 @@ class YourselfTutor(models.Model):
     user = models.ForeignKey(Profile, on_delete=CASCADE, blank=True, null=True)
     video = models.FileField(upload_to='Video/', null=True, blank=True, default='#.mp4')
     introduce = models.TextField()
+    line = models.CharField(max_length=10, blank=True, null=True)
+    facebook = models.CharField(max_length=20, blank=True, null=True)
 
     def __str__(self):
         return '%s' % (self.user)
@@ -55,13 +57,29 @@ class Course(models.Model):
     courseTitle = models.CharField(max_length=100)
     courseDesc = models.TextField()
     courseHours = models.CharField(max_length=2, blank=True, null=True)
-    courseDay = models.CharField(max_length=100, blank=True, null=True)
+    courseDay = models.CharField(max_length=20, blank=True, null=True)
     courseTime = models.TimeField(max_length=30, blank=True, null=True)
-    coursePrice = models.CharField(max_length=100, blank=True, null=True)
+    coursePrice = models.IntegerField(default=0, blank=True, null=True)
 
     def __str__(self):
         return '%s' % (self.user)
-        
+
+class MyCourseStudent (models.Model):
+    user = models.ForeignKey(Profile, on_delete=CASCADE, blank=True, null=True)
+    course = models.ForeignKey(Course, on_delete=CASCADE)
+    courseId = models.IntegerField(null=True)
+
+    def __str__(self):
+        return '%s' % (self.user)
+
+# class Rating (models.Model):
+#     user = models.ForeignKey(Profile, on_delete=CASCADE, blank=True, null=True)
+#     tutor = models.ForeignKey(MyCourseStudent, on_delete=CASCADE, blank=True, null=True)
+#     course = models.ForeignKey(Course, on_delete=CASCADE, blank=True, null=True)
+
+#     def __str__(self):
+#         return '%s' % (self.user)
+
 # calendar
 class Event(models.Model):
     user = models.ForeignKey(Profile, on_delete=CASCADE, blank=True, null=True)

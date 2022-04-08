@@ -30,12 +30,27 @@
 
                 <div class="d-flex mt-2">
                     <div>
-                        <a href="#"><button class="btn btn-outline-dark btn-lg"
-                                type="submit">ติดต่อติวเตอร์</button></a>
+                        <button type="button" class="btn btn-outline-dark btn-lg" data-bs-toggle="modal" data-bs-target="#contact">ติดต่อติวเตอร์</button></a>
                     </div>
                 </div>
-            </div>
-            
+
+                <!-- Modal -->
+
+                <div class="modal fade" id="contact" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="ModalLabel">ช่องทางการติดต่อ</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p><i class="bi bi-line"></i>&nbsp Line ID : {{ c.introduceTutor.line }}</p>
+                                <p><i class="bi bi-facebook"></i>&nbsp Facebook : {{ c.introduceTutor.facebook }}</p>
+                            </div>
+                        </div>               
+                    </div>     
+                </div>
+            </div>       
         </div>
     </div>
 
@@ -147,11 +162,13 @@
                     </h5>
                 </div>
 
+                {% if user.profile.userType == 'student' %}
                 <div class="col-2 text-center align-self-center">
                     <div>
-                        <a href="#"><button class="btn btn-outline-secondary btn-lg" type="submit">จองคอร์ส</button></a>
+                        <a href="{% url 'addCourseStudent' c.id %}"><button class="btn btn-outline-secondary btn-lg" type="submit">จองคอร์ส</button></a>
                     </div>
                 </div>
+                {% endif %}
             </div>
 
             <!-- Video -->

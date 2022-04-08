@@ -25,14 +25,12 @@
                             ฉันต้องการเรียน
                         </h6>
                         <select class="form-select form-control" name="language" id="language">       
-                            {% for l in course %}
-                            <option selected value="{{ l.language }}"></option>
+                            <option selected disabled>ภาษา...</option>
                             <option value="ภาษาอังกฤษ">ภาษาอังกฤษ</option>
                             <option value="ภาษาจีน">ภาษาจีน</option>
                             <option value="ภาษาเกาหลี">ภาษาเกาหลี</option>
                             <option value="ภาษาญี่ปุ่น">ภาษาญี่ปุ่น</option>
                             <option value="ภาษาเยอรมัน">ภาษาเยอรมัน</option>
-                            {% endfor %}
                         </select>
                     </div>
                 </div>
@@ -40,15 +38,9 @@
                 <div class="col-lg-2">
                     <div class="form-group">
                         <h6 class="text-black-50">
-                            ราคา
+                            ราคาไม่เกิน
                         </h6>
-                        <select class="form-select form-control">
-                            <option selected disabled>ราคา...</option>
-                            <option>200 - 299 THB</option>
-                            <option>300 - 399 THB</option>
-                            <option>400 - 499 THB</option>
-                            <option>500 THB ขึ้นไป</option>
-                        </select>
+                        <input type="number" class="form-control" min=0 id="price" name="price">
                     </div>
                 </div>
     
@@ -57,11 +49,11 @@
                         <h6 class="text-black-50">
                             เพศ
                         </h6>
-                        <select class="form-select form-control">
+                        <select class="form-select form-control" name="sex" id="sex">
                             <option selected disabled>เพศ...</option>
-                            <option>ชาย</option>
-                            <option>หญิง</option>
-                            <option>เพศทางเลือก</option>
+                            <option value="ชาย">ชาย</option>
+                            <option value="หญิง">หญิง</option>
+                            <option value="เพศทางเลือก">เพศทางเลือก</option>
                         </select>
                     </div>
                 </div>
@@ -91,7 +83,7 @@
         {% for c in course %}
         {% if c.user.approve %}
         <div class="container">
-            <div class="tutor row bg-white mt-5 pt-5 pb-5">
+            <div class="tutor row bg-white mt-5 mb-5 pt-5 pb-5">
                 <div class="col-lg-3 d-flex justify-content-center">
                     <div class="img-tutor">
                         <img src="{{ c.user.photo.url }}" class="rounded-circle" width="200" height="200">
@@ -123,7 +115,7 @@
                     
                     <div class="d-flex">             
                         <h5 class="text-black-50">
-                            {{ c.courseDesc }}
+                            {{ c.courseDesc }} / {{ c.coursePrice }}
                         </h5>        
                     </div>
                        

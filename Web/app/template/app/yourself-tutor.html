@@ -7,9 +7,9 @@
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <div class="container">
             <ul class="navbar-nav">
-                <li class="nav-item p-2">
+                <!-- <li class="nav-item p-2">
                     <a class="nav-link" href="/chat">แชท</a>
-                </li>
+                </li> -->
                 {% if user.profile.userType == 'student' %}
                 <li class="nav-item p-2">
                     <a class="nav-link" href="/study">บทเรียน</a>
@@ -34,7 +34,7 @@
     </nav>
 
     <div class="container">
-        <div class="col-xl-12 d-flex">
+        <div class="col-xl-12 d-flex mb-5">
             <div class="col-md-2">
                 <div class="profile-bg row bg-white justify-content-center">
                     <ul class="navbar-nav">
@@ -87,7 +87,7 @@
                                 </h5>
                             </div>
 
-                            <div class="col-4">
+                            <div class="col-5">
                                 <video class="box" width="100%" controls>
                                     <source src="{{ y.video.url }}" type="video/mp4">
                                 </video>
@@ -101,9 +101,43 @@
                                 </h5>
                             </div>
 
-                            <div class="col-4 text-center">
+                            <div class="col-5 text-center">
                                 <h5 class="text-start text-black-50">
                                     {{ y.introduce }}
+                                </h5>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-12">
+                            <h4 class="text-start ms-5 mt-5">
+                                ช่องทางการติดต่อ
+                            </h4>
+                        </div>
+
+                        <div class="col-xl-12 d-flex mt-5">
+                            <div class="col-5">
+                                <h5 class="text-start text-black-50 ms-5">
+                                    Line ID
+                                </h5>
+                            </div>
+
+                            <div class="col-5 text-center">
+                                <h5 class="text-start text-black-50">
+                                    {{ y.line }}
+                                </h5>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-12 d-flex mt-5">
+                            <div class="col-5">
+                                <h5 class="text-start text-black-50 ms-5">
+                                    Facebook
+                                </h5>
+                            </div>
+
+                            <div class="col-5 text-center">
+                                <h5 class="text-start text-black-50">
+                                    {{ y.facebook }}
                                 </h5>
                             </div>
                         </div>
@@ -112,6 +146,7 @@
                             <a href="/edit-yourself-tutor"><button type="button"
                                     class="btn btn-secondary btn-lg text-white">แก้ไขข้อมูล</button></a>
                         </div>
+                        
                         {% endfor %}
                     </div>
                 </div>

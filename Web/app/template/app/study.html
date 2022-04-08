@@ -7,12 +7,12 @@
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <div class="container">
             <ul class="navbar-nav">
-                <li class="nav-item p-2">
+                <!-- <li class="nav-item p-2">
                     <a class="nav-link" href="/chat">แชท</a>
-                </li>
+                </li> -->
                 {% if user.profile.userType == 'student' %}
                 <li class="nav-item p-2">
-                    <a class="nav-link active" href="/study">บทเรียน</a>
+                    <a class="nav-link active" href="/study">การเรียน</a>
                 </li>
                 {% elif user.profile.userType == 'teacher' %}
                 <li class="nav-item p-2">
@@ -33,25 +33,39 @@
         </div>
     </nav>
 
+    <!-- Table -->
+
     <div class="container">
         <div class="study-bg row bg-white justify-content-center ">
-            <div class="col-xl-12">
-                <div class="">
-                    <h4 class="text-center">
-                        ยังไม่มีเรียน
-                    </h4>
-
-                    <h5 class="text-center text-black-50 mt-3">
-                        ทันทีที่คุณพบติวเตอร์ที่เหมาะสมและจองบทเรียนแรกของคุณ คุณจะเห็นได้ที่นี่
-                    </h5>
-
-                    <div class="text-center mt-3">
-                        <a href="#"><button class="btn btn-info btn-lg text-black" type="submit">ดูข้อมูลเพิ่มเติม</button></a>
-                    </div>
-                </div>
+            <div class="col-xl-12">     
+                <table class="table">
+                    <thead>
+                      <tr class="align-middle">
+                        <th scope="col" class="pt-3 pb-3">ติวเตอร์</th>
+                        <th scope="col">วันที่เรียน</th>
+                        <th scope="col">เวลา</th>
+                        <th scope="col">ภาษา</th>
+                        <th scope="col">คอร์ส</th>
+                        <th scope="col">จัดการคอร์ส</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    {% for m in MyCourse %}
+                      <tr class="align-middle">
+                        <td class="pt-3 pb-3"><img src="{{m.course.user.photo.url}}" width="35" height="35" class="rounded-circle"> {{m.course.user.name}} {{m.course.user.surname}}</td>
+                        <td class="pt-3 pb-3">{{m.course.courseDay}}</td>
+                        <td class="pt-3 pb-3">{{m.course.courseTime}}</td>
+                        <td class="pt-3 pb-3">{{m.course.language}}</td>
+                        <td class="pt-3 pb-3">{{m.course.courseTitle}}</td>
+                        <td class="pt-3 pb-3"><a class="btn btn-danger btn" href="/deleteaddCourseStudent/{{m.id}}"> ลบคอร์ส </a></td>
+                      </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
+    
 
 </body>
 {% endblock content%}

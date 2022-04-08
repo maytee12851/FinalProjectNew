@@ -113,11 +113,20 @@ def is_valid_queryparam(param):
 @login_required
 def findingTutor(request):
 
-    course = Course.objects.all()
+    course = Course.objects.all().order_by('user__approve')
+
     language = request.GET.get('language')
+    sex = request.GET.get('sex')
+    price = request.GET.get('price')
 
     if is_valid_queryparam(language):
         course = course.filter(language=language)
+
+    if is_valid_queryparam(sex):
+        course = course.filter(user__sex=sex)
+
+    if is_valid_queryparam(price):
+        course = course.filter(coursePrice__lte=price)
     
     context = {'course' : course}
     
@@ -137,8 +146,7 @@ def findingTutor(request):
 
         if request.user.profile.nickname == '':
             messages.warning(request, 'กรุณากรอกข้อมูลให้ครบถ้วน')
-            
-        
+              
         if request.user.profile.tel == '':
             messages.warning(request, 'กรุณากรอกข้อมูลให้ครบถ้วน')
             return redirect('/edit-profile/')
@@ -178,19 +186,59 @@ def findingTutor(request):
 def tutorData(request, id):
 
     course = Course.objects.filter(id=id)
-   
+  
     context = {'course' : course}
 
     return render(request, 'app/tutor-data.html', context)
 
-def chat(request):
-    return render(request, 'app/chat.html')
+def addCourseStudent(request, id):
+
+    username = request.user.profile.username
+    user = Profile.objects.get(username=username)
+    course = Course.objects.get(id=id)
+
+    newCourseStudent = MyCourseStudent()
+    newCourseStudent.user = user
+    newCourseStudent.course = course
+    newCourseStudent.courseId = id
+    newCourseStudent.save()
+
+    return redirect('/study/')
+
+def deleteaddCourseStudent(request, id):
+   
+    CourseStudent = MyCourseStudent.objects.get(id=id)
+    CourseStudent.delete()
+    return redirect ('/study/')
 
 def study(request):
-    return render(request, 'app/study.html')
+    
+    username = request.user.profile.username
+    user = Profile.objects.get(username=username)
+    MyCourse = MyCourseStudent.objects.filter(user=user)
+    
+    context = {'MyCourse' : MyCourse}
+    
+    return render(request, 'app/study.html',context)
 
 def teaching(request):
-    return render(request, 'app/teaching.html')
+
+    username = request.user.profile.username
+    user = Profile.objects.get(username=username)
+    TutorCourse = MyCourseStudent.objects.filter(course__user=user)
+
+    context = {'TutorCourse' : TutorCourse}
+
+    return render(request, 'app/teaching.html', context)
+
+def deleteTeaching(request, id):
+   
+    CourseStudent = MyCourseStudent.objects.get(id=id)
+    CourseStudent.delete()
+    return redirect ('/teaching/')
+
+def chat(request):
+    return render(request, 'app/chat.html')
 
 def profileStudent(request):
     return render(request, 'app/profile-student.html')
@@ -353,11 +401,15 @@ def editYourselfTutor(request):
     if request.method == 'POST':
         data = request.POST.copy()
         introduce = data.get('introduce')
+        line = data.get('line')
+        facebook = data.get('facebook')
 
         yourself = YourselfTutor()
         newYourself = YourselfTutor.objects.get(user=user)
         newYourself.user = user
         newYourself.introduce = introduce
+        newYourself.line = line
+        newYourself.facebook = facebook
         newYourself.save()
 
         if request.FILES['video'] if 'video' in request.FILES else None:

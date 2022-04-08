@@ -29,3 +29,8 @@ class EventAdmin(admin.ModelAdmin):
     list_display = ['user','title']
 
 admin.site.register(Event,EventAdmin)
+
+class MyCourseStudentAdmin(admin.ModelAdmin):
+    list_display = ['user','course','id']
+
+admin.site.register(MyCourseStudent,MyCourseStudentAdmin)

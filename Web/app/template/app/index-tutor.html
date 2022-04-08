@@ -40,14 +40,21 @@
                             </li>
 
                             {% if user.is_authenticated %}
-                            <li class="nav-item me-3">
-                                <a class="nav-link text-white" aria-current="page" href="/chat">การเรียนของฉัน</a>
-                            </li>
+                                {% if user.profile.userType == 'student' %}
+                                <li class="nav-item me-3">
+                                    <a class="nav-link text-secondary" href="/study">การเรียนของฉัน</a>
+                                </li>
 
-                            {% if user.profile.photo %}
-                            <li class="nav-item me-3">
-                                <img src="{{ user.profile.photo.url }}" width="35" height="35" class="rounded-circle">
-                            </li>
+                                {% elif user.profile.userType == 'teacher' %}
+                                <li class="nav-item me-3">
+                                    <a class="nav-link text-secondary" href="/teaching">การสอนของฉัน</a>
+                                </li>
+
+                                {% if user.profile.photo %}
+                                <li class="nav-item me-3">
+                                    <img src="{{ user.profile.photo.url }}" width="35" height="35" class="rounded-circle">
+                                </li>
+                                {% endif %}
                             {% endif %}
 
                             <li class="nav-item me-3">
