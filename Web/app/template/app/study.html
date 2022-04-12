@@ -19,7 +19,7 @@
                     <a class="nav-link active" href="/teaching">การสอน</a>
                 </li>
                 {% endif %}
-                
+
                 {% if user.profile.userType == 'student' %}
                 <li class="nav-item p-2">
                     <a class="nav-link" href="/profile">ตั้งค่าโปรไฟล์</a>
@@ -36,36 +36,141 @@
     <!-- Table -->
 
     <div class="container">
-        <div class="study-bg row bg-white justify-content-center ">
-            <div class="col-xl-12">     
+        <div class="mt-5">
+            <h4 class="text-black-50">
+                การเรียนที่ดำเนินอยู่
+            </h4>
+        </div>
+        <div class="study-bg row bg-white justify-content-center">
+            <div class="col-xl-12">
                 <table class="table">
                     <thead>
-                      <tr class="align-middle">
-                        <th scope="col" class="pt-3 pb-3">ติวเตอร์</th>
-                        <th scope="col">วันที่เรียน</th>
-                        <th scope="col">เวลา</th>
-                        <th scope="col">ภาษา</th>
-                        <th scope="col">คอร์ส</th>
-                        <th scope="col">จัดการคอร์ส</th>
-                      </tr>
+                        <tr class="align-middle">
+                            <th scope="col" class="pt-3 pb-3">ติวเตอร์</th>
+                            <th scope="col">วันที่เรียน</th>
+                            <th scope="col">เวลา</th>
+                            <th scope="col">ภาษา</th>
+                            <th scope="col">คอร์ส</th>
+                            <th scope="col">จัดการคอร์ส</th>
+                        </tr>
                     </thead>
                     <tbody>
-                    {% for m in MyCourse %}
-                      <tr class="align-middle">
-                        <td class="pt-3 pb-3"><img src="{{m.course.user.photo.url}}" width="35" height="35" class="rounded-circle"> {{m.course.user.name}} {{m.course.user.surname}}</td>
-                        <td class="pt-3 pb-3">{{m.course.courseDay}}</td>
-                        <td class="pt-3 pb-3">{{m.course.courseTime}}</td>
-                        <td class="pt-3 pb-3">{{m.course.language}}</td>
-                        <td class="pt-3 pb-3">{{m.course.courseTitle}}</td>
-                        <td class="pt-3 pb-3"><a class="btn btn-danger btn" href="/deleteaddCourseStudent/{{m.id}}"> ลบคอร์ส </a></td>
-                      </tr>
-                    {% endfor %}
+                        {% for m in MyCourse %}
+                        {% if m.finish == False %}
+                        <tr class="align-middle">
+                            <td class="pt-3 pb-3"><img src="{{m.course.user.photo.url}}" width="35" height="35"
+                                    class="rounded-circle"> {{m.course.user.name}} {{m.course.user.surname}}</td>
+                            <td class="pt-3 pb-3">{{m.course.courseDay}}</td>
+                            <td class="pt-3 pb-3">{{m.course.courseTime}}</td>
+                            <td class="pt-3 pb-3">{{m.course.language}}</td>
+                            <td class="pt-3 pb-3">{{m.course.courseTitle}}</td>
+                            <td class="pt-3 pb-3"><a class="btn btn-danger btn" href="/deleteaddCourseStudent/{{m.id}}">
+                                    ลบคอร์ส </a></td>
+                        </tr>
+                        {% endif %}
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="mt-5">
+            <h4 class="text-black-50">
+                ให้คะแนนติวเตอร์
+            </h4>
+        </div>
+        <div class="study-bg row bg-white justify-content-center mb-5">
+            <div class="col-xl-12">
+                <table class="table">
+                    <thead>
+                        <tr class="align-middle">
+                            <th scope="col" class="pt-3 pb-3">ติวเตอร์</th>
+                            <th scope="col">วันที่เรียน</th>
+                            <th scope="col">เวลา</th>
+                            <th scope="col">ภาษา</th>
+                            <th scope="col">คอร์ส</th>
+                            <th scope="col" class="text-center">ให้คะแนน</th>
+                            <th scope="col">จัดการคอร์ส</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for m in MyCourse %}
+                        {% if m.finish == True and m.star == False %}
+                        <form method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <tr class="align-middle">
+                                <td class="pt-3 pb-3"><img src="{{m.course.user.photo.url}}" width="35" height="35"
+                                        class="rounded-circle"> {{m.course.user.name}} {{m.course.user.surname}}</td>
+                                <td class="pt-3 pb-3">{{m.course.courseDay}}</td>
+                                <td class="pt-3 pb-3">{{m.course.courseTime}}</td>
+                                <td class="pt-3 pb-3">{{m.course.language}}</td>
+                                <td class="pt-3 pb-3">{{m.course.courseTitle}}</td>
+                                <td class="pt-3 pb-3 text-center w-25">
+                                    <span class="star-rating">
+                                        <input type="radio" name="rating" value="1"><i></i>
+                                        <input type="radio" name="rating" value="2"><i></i>
+                                        <input type="radio" name="rating" value="3"><i></i>
+                                        <input type="radio" name="rating" value="4"><i></i>
+                                        <input type="radio" name="rating" value="5"><i></i>
+                                    </span>
+                                </td>
+                                <input type="hidden" value="{{m.id}}" name="MycourseId">
+                                <input type="hidden" value="{{m.course.id}}" name="tutor">
+                                <td class="pt-3 pb-3 te"><button class="btn btn-success" type="submit"
+                                        href="{% url 'starFinish' m.id 'star' %}">ยืนยัน</button>
+                                </td>
+                            </tr>
+                        </form>
+                        {% endif %}
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="mt-5">
+            <h4 class="text-black-50">
+                การเรียนที่สำเร็จแล้ว
+            </h4>
+        </div>
+        <div class="study-bg row bg-white justify-content-center mb-5">
+            <div class="col-xl-12">
+                <table class="table">
+                    <thead>
+                        <tr class="align-middle">
+                            <th scope="col" class="pt-3 pb-3">ติวเตอร์</th>
+                            <th scope="col">วันที่เรียน</th>
+                            <th scope="col">เวลา</th>
+                            <th scope="col">ภาษา</th>
+                            <th scope="col">คอร์ส</th>
+                            <th scope="col" class="text-center">คะแนน</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for n in newRating %}
+                        {% if n.star == True %}
+                        {% csrf_token %}
+                        <tr class="align-middle">
+                            <td class="pt-3 pb-3"><img src="{{n.tutor.user.photo.url}}" width="35" height="35"
+                                    class="rounded-circle"> {{n.tutor.user.name}} {{n.tutor.user.surname}}</td>
+                            <td class="pt-3 pb-3">{{n.tutor.courseDay}}</td>
+                            <td class="pt-3 pb-3">{{n.tutor.courseTime}}</td>
+                            <td class="pt-3 pb-3">{{n.tutor.language}}</td>
+                            <td class="pt-3 pb-3">{{n.tutor.courseTitle}}</td>
+                            <td class="pt-3 pb-3 text-center w-25">
+                                <div style="width: calc(20% * {{ n.rating }})"></div>
+                                <img class="starpic" src="{% static 'pic/star.png' %}" alt="{{ n.rating }}"
+                                    title="{{ n.rating }}">
+                            </td>
+                        </tr>
+                        {% endif %}
+                        {% endfor %}
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
-    
+
 
 </body>
 {% endblock content%}

@@ -68,17 +68,21 @@ class MyCourseStudent (models.Model):
     user = models.ForeignKey(Profile, on_delete=CASCADE, blank=True, null=True)
     course = models.ForeignKey(Course, on_delete=CASCADE)
     courseId = models.IntegerField(null=True)
+    finish = models.BooleanField(default=False)
+    star = models.BooleanField(default=False)
 
     def __str__(self):
         return '%s' % (self.user)
 
-# class Rating (models.Model):
-#     user = models.ForeignKey(Profile, on_delete=CASCADE, blank=True, null=True)
-#     tutor = models.ForeignKey(MyCourseStudent, on_delete=CASCADE, blank=True, null=True)
-#     course = models.ForeignKey(Course, on_delete=CASCADE, blank=True, null=True)
+class Rating (models.Model):
+    user = models.ForeignKey(Profile, on_delete=CASCADE, blank=True, null=True)
+    tutor = models.ForeignKey(Course, on_delete=CASCADE, blank=True, null=True)
+    rating = models.IntegerField(null=True, blank=True, choices=[(1, '1'), (2, '2'), (3, '3'), (4, '4'), (5, '5')])
+    MycourseId = models.ForeignKey(MyCourseStudent, on_delete=CASCADE, blank=True, null=True)
+    star = models.BooleanField(default=False)
 
-#     def __str__(self):
-#         return '%s' % (self.user)
+    def __str__(self):
+        return '%s' % (self.user)
 
 # calendar
 class Event(models.Model):

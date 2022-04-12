@@ -1,4 +1,4 @@
-body{
+body {
     font-family: 'Prompt', sans-serif;
     background: rgb(230, 230, 241);
 }
@@ -19,12 +19,12 @@ body{
     height: 800px;
 }
 
-.navbar-brand{
+.navbar-brand {
     color: white;
     letter-spacing: 5px;
 }
 
-.nav-link{
+.nav-link {
     color: white;
 }
 
@@ -32,114 +32,114 @@ body{
     margin-top: 100px;
 } */
 
-.textheaderwelcome{
+.textheaderwelcome {
     color: white;
     letter-spacing: 3px;
 }
 
-.textheader{
+.textheader {
     color: white;
     letter-spacing: 5px;
     padding-top: 10px;
 }
 
-.searchtutor{
+.searchtutor {
     padding-top: 10px;
 }
 
-.textsearch{
+.textsearch {
     color: rgb(248, 241, 241);
 }
 
 /******************************* Section whyuse *****************************/
 
-.circle{
+.circle {
     color: #35a1aa;
     font-size: 70px;
     position: absolute;
     bottom: 120px;
 }
 
-.textwhyuse{
+.textwhyuse {
     color: rgb(92, 83, 83);
     letter-spacing: 2px;
     padding-top: 100px;
 }
 
-.Secwhyuse{
+.Secwhyuse {
     border-radius: 20px;
     padding-bottom: 50px;
 }
 
 /******************************* Section Stepsearch *****************************/
 
-.circle1{
+.circle1 {
     color: #35a1aa;
     font-size: 70px;
     position: absolute;
     margin-top: 30px;
 }
 
-.Secstepsearch{
+.Secstepsearch {
     margin-top: 80px;
     border-radius: 20px;
     padding-bottom: 50px;
 }
 
-.textstepsearch{
+.textstepsearch {
     padding-top: 30px;
     color: rgb(92, 83, 83);
 }
 
-.allstepsearch{
+.allstepsearch {
     margin-left: 100px;
     color: rgb(92, 83, 83);
 }
 
-.textstep{
+.textstep {
     color: rgb(180, 161, 161);
 }
 
-.stepsearch{
+.stepsearch {
     margin-top: 50px;
 }
 
 /******************************* Section Feedback *****************************/
 
-.circle2{
+.circle2 {
     color: #35a1aa;
     font-size: 70px;
     position: absolute;
     margin-top: 30px;
 }
 
-.Secfeedback{
+.Secfeedback {
     margin-top: 80px;
     border-radius: 20px;
     padding-bottom: 80px;
 }
 
-.textfeedback{
+.textfeedback {
     padding-top: 30px;
     color: rgb(92, 83, 83);
     margin-bottom: 50px;
 }
 
-.feedback{
+.feedback {
     margin-top: 50px;
 }
 
-.testimonials .testimonials-item img{
+.testimonials .testimonials-item img {
     max-width: 15rem;
 }
 
 /******************************* banner footer *****************************/
 
-.banner-footer{
+.banner-footer {
     margin-top: 40px;
 }
 
-.img-banner{
+.img-banner {
     background: url('/static/pic/BGfooter.jpeg') no-repeat center center;
     background-size: cover;
     padding-top: 7rem;
@@ -147,22 +147,23 @@ body{
     border-radius: 20px;
 }
 
-.textbanner{
+.textbanner {
     height: 100px;
 }
 
-.textbanner h1{
+.textbanner h1 {
     padding-top: 100px;
     color: white;
     font-size: 40px;
 }
-.textregister-banner{
+
+.textregister-banner {
     color: #35a1aa;
 }
 
 /******************************* footer *****************************/
 
-footer{
+footer {
     background-color: #35a1aa;
     color: white;
     height: auto;
@@ -170,28 +171,28 @@ footer{
     margin-top: 62px;
 }
 
-.list-footer{
+.list-footer {
     line-height: 40px;
 }
 
-.list-footer li a{
+.list-footer li a {
     text-decoration: none;
 }
 
 /******************************* Register Student *****************************/
 
-.SecregisterSTU{
+.SecregisterSTU {
     margin-top: 52px;
     border-radius: 20px;
     margin-bottom: 54px;
 }
 
-.picregisterSTU img{
+.picregisterSTU img {
     height: 500px;
     padding: 70px;
 }
 
-.vertical-line{
+.vertical-line {
     border-right: 2px solid #35a1aa;
     height: 350px;
     position: absolute;
@@ -199,26 +200,26 @@ footer{
     margin-left: 500px;
 }
 
-.textregisterSTU{
+.textregisterSTU {
     margin-top: 50px;
     color: rgb(92, 83, 83);
 }
 
-.textregisterSTU span{
+.textregisterSTU span {
     color: #35a1aa;
 }
 
-.register-student p{
+.register-student p {
     margin-top: 15px;
     color: #35a1aa;
     text-align: center;
 }
 
-.form-registerSTU{
+.form-registerSTU {
     margin-top: 30px;
 }
 
-.form-registerSTU input{
+.form-registerSTU input {
     width: 70%;
     margin: 0 auto;
     border-radius: 10px;
@@ -226,7 +227,7 @@ footer{
     margin-top: 20px;
 }
 
-.form-registerSTU button{
+.form-registerSTU button {
     width: 70%;
     margin: 0 auto;
     border-radius: 10px;
@@ -236,22 +237,22 @@ footer{
 
 /******************************* Register Tutor *****************************/
 
-.body-TUTOR{
+.body-TUTOR {
     background-color: #767e8a;
 }
 
-.SecregisterTUTOR{
+.SecregisterTUTOR {
     margin-top: 52px;
     border-radius: 20px;
     margin-bottom: 54px;
 }
 
-.picregisterTUTOR img{
+.picregisterTUTOR img {
     height: 500px;
     padding: 70px;
 }
 
-.vertical-line{
+.vertical-line {
     border-right: 2px solid #35a1aa;
     height: 350px;
     position: absolute;
@@ -259,26 +260,26 @@ footer{
     margin-left: 500px;
 }
 
-.textregisterTUTOR{
+.textregisterTUTOR {
     margin-top: 50px;
     color: rgb(92, 83, 83);
 }
 
-.textregisterTUTOR span{
+.textregisterTUTOR span {
     color: #35a1aa;
 }
 
-.register-TUTOR p{
+.register-TUTOR p {
     margin-top: 15px;
     color: #35a1aa;
     text-align: center;
 }
 
-.form-registerTUTOR{
+.form-registerTUTOR {
     margin-top: 30px;
 }
 
-.form-registerTUTOR input{
+.form-registerTUTOR input {
     width: 70%;
     margin: 0 auto;
     border-radius: 10px;
@@ -286,7 +287,7 @@ footer{
     margin-top: 20px;
 }
 
-.form-registerTUTOR button{
+.form-registerTUTOR button {
     width: 70%;
     margin: 0 auto;
     border-radius: 10px;
@@ -296,22 +297,22 @@ footer{
 
 /******************************* LOGIN *****************************/
 
-.body-LOGIN{
+.body-LOGIN {
     background-color: #4a515c;
 }
 
-.SecLOGIN{
+.SecLOGIN {
     margin-top: 52px;
     border-radius: 20px;
     margin-bottom: 54px;
 }
 
-.picLOGIN img{
+.picLOGIN img {
     height: 500px;
     padding: 70px;
 }
 
-.vertical-line{
+.vertical-line {
     border-right: 2px solid #35a1aa;
     height: 350px;
     position: absolute;
@@ -319,26 +320,26 @@ footer{
     margin-left: 500px;
 }
 
-.textLOGIN{
+.textLOGIN {
     margin-top: 85px;
     color: rgb(92, 83, 83);
 }
 
-.textLOGIN span{
+.textLOGIN span {
     color: #35a1aa;
 }
 
-.allform-LOGIN p{
+.allform-LOGIN p {
     margin-top: 15px;
     color: #35a1aa;
     text-align: center;
 }
 
-.form-LOGIN{
+.form-LOGIN {
     margin-top: 30px;
 }
 
-.form-LOGIN input{
+.form-LOGIN input {
     width: 70%;
     margin: 0 auto;
     border-radius: 10px;
@@ -346,7 +347,7 @@ footer{
     margin-top: 20px;
 }
 
-.form-LOGIN button{
+.form-LOGIN button {
     width: 70%;
     margin: 0 auto;
     border-radius: 10px;
@@ -356,16 +357,16 @@ footer{
 
 /******************************* Tutor-Form1 *****************************/
 
-.Secform1{
+.Secform1 {
     border-radius: 10px;
     padding-bottom: 20px;
 }
 
-.form1{
+.form1 {
     margin-top: 20px;
 }
 
-.form1 input{
+.form1 input {
     width: 95%;
     margin: 0 auto;
     border-radius: 10px;
@@ -373,12 +374,12 @@ footer{
     margin-top: 20px;
 }
 
-.textIDCard{
+.textIDCard {
     padding-left: 45px;
     margin-top: 20px;
 }
 
-.fileIDCard{
+.fileIDCard {
     width: 95%;
     margin: 0 auto;
     border-radius: 10px;
@@ -387,89 +388,89 @@ footer{
     padding-right: 13px;
 }
 
-.gonextForm1{
+.gonextForm1 {
     margin-top: 20px;
     text-align: end;
     padding-right: 46px;
 }
 
-.gonextForm1 button{
-   padding: 15px 40px 15px 40px;
-   font-size: 18px;
+.gonextForm1 button {
+    padding: 15px 40px 15px 40px;
+    font-size: 18px;
 }
 
 /******************************* Tutor-Form2 *****************************/
 
-.gonextForm2{
+.gonextForm2 {
     margin-top: 20px;
     text-align: end;
     padding-right: 46px;
 }
 
-.gonextForm2 button{
-   padding: 15px 40px 15px 40px;
-   font-size: 18px;
+.gonextForm2 button {
+    padding: 15px 40px 15px 40px;
+    font-size: 18px;
 }
 
 
-.gobackForm2{
+.gobackForm2 {
     margin-top: 20px;
     text-align: start;
     padding-left: 44px;
 }
 
-.gobackForm2 button{
-   padding: 15px 40px 15px 40px;
-   font-size: 18px;
+.gobackForm2 button {
+    padding: 15px 40px 15px 40px;
+    font-size: 18px;
 }
 
-.yearstudy{
+.yearstudy {
     margin-left: 27px;
 }
 
-.yearstudy input{
+.yearstudy input {
     width: 100%;
 }
 
-.minusYEARSTUDY{
+.minusYEARSTUDY {
     margin-top: 40px;
 }
 
 /******************************* Tutor-Form3 *****************************/
 
-.gonextForm3{
+.gonextForm3 {
     margin-top: 20px;
     text-align: end;
     padding-right: 46px;
 }
 
-.gonextForm3 button{
+.gonextForm3 button {
     padding: 15px 40px 15px 40px;
     font-size: 18px;
 }
 
-.gobackForm3{
+.gobackForm3 {
     margin-top: 20px;
     text-align: start;
     padding-left: 44px;
 }
 
-.gobackForm3 button{
-   padding: 15px 40px 15px 40px;
-   font-size: 18px;
+.gobackForm3 button {
+    padding: 15px 40px 15px 40px;
+    font-size: 18px;
 }
 
-.add_form_field{
+.add_form_field {
     width: 15%;
     font-size: 18px;
 }
 
-.AddOnCourse{
+.AddOnCourse {
     padding-left: 32px;
     margin-top: 20px;
 }
 
-.delete{
+.delete {
     margin-left: 35px;
     text-decoration: none;
     color: rgb(238, 180, 180);
@@ -477,248 +478,248 @@ footer{
 
 /******************************* Tutor-Form4 *****************************/
 
-.form4{
+.form4 {
     margin-top: 20px;
 }
 
-.form4 input{  
+.form4 input {
     margin: 0 auto;
     border-radius: 10px;
     padding: 13px;
     margin-top: 20px;
 }
 
-.gonextForm4{
+.gonextForm4 {
     margin-top: 20px;
     text-align: end;
     padding-right: 46px;
 }
 
-.gonextForm4 button{
+.gonextForm4 button {
     padding: 15px 40px 15px 40px;
     font-size: 18px;
 }
 
-.gobackForm4{
+.gobackForm4 {
     margin-top: 20px;
     text-align: start;
     padding-left: 44px;
 }
 
-.gobackForm4 button{
-   padding: 15px 40px 15px 40px;
-   font-size: 18px;
+.gobackForm4 button {
+    padding: 15px 40px 15px 40px;
+    font-size: 18px;
 }
 
-.form4 h6{
+.form4 h6 {
     margin-left: 30px;
 }
 
-.DayCheck{
+.DayCheck {
     margin-left: 27px;
 }
 
-.TextDay{
+.TextDay {
     margin-top: 21px;
     margin-left: 10px;
 }
 
 /* Monday */
 
-.dayTIMEMonday{
+.dayTIMEMonday {
     margin-left: 27px;
     margin-bottom: 10px;
 }
 
-.dayTIMEMonday input{
+.dayTIMEMonday input {
     width: 100%;
 }
 
-.minusTIMEMonday{
+.minusTIMEMonday {
     margin-top: 40px;
 }
 
-.AddOnTimeMonday{
+.AddOnTimeMonday {
     margin-top: 40px;
 }
 
-.EmptydayTIMEMonday{
+.EmptydayTIMEMonday {
     visibility: hidden;
 }
 
 /* Tuesday */
 
-.dayTIMETuesday{
+.dayTIMETuesday {
     margin-left: 27px;
     margin-bottom: 10px;
 }
 
-.dayTIMETuesday input{
+.dayTIMETuesday input {
     width: 100%;
 }
 
-.minusTIMETuesday{
+.minusTIMETuesday {
     margin-top: 40px;
 }
 
-.AddOnTimeTuesday{
+.AddOnTimeTuesday {
     margin-top: 40px;
 }
 
 /* Wednesday */
 
-.dayTIMEWednesday{
+.dayTIMEWednesday {
     margin-left: 27px;
     margin-bottom: 10px;
 }
 
-.dayTIMEWednesday input{
+.dayTIMEWednesday input {
     width: 100%;
 }
 
-.minusTIMEWednesday{
+.minusTIMEWednesday {
     margin-top: 40px;
 }
 
-.AddOnTimeWednesday{
+.AddOnTimeWednesday {
     margin-top: 40px;
 }
 
 /* Thursday */
 
-.dayTIMEThursday{
+.dayTIMEThursday {
     margin-left: 27px;
     margin-bottom: 10px;
 }
 
-.dayTIMEThursday input{
+.dayTIMEThursday input {
     width: 100%;
 }
 
-.minusTIMEThursday{
+.minusTIMEThursday {
     margin-top: 40px;
 }
 
-.AddOnTimeThursday{
+.AddOnTimeThursday {
     margin-top: 40px;
 }
 
 /* Friday */
 
-.dayTIMEFriday{
+.dayTIMEFriday {
     margin-left: 27px;
     margin-bottom: 10px;
 }
 
-.dayTIMEFriday input{
+.dayTIMEFriday input {
     width: 100%;
 }
 
-.minusTIMEFriday{
+.minusTIMEFriday {
     margin-top: 40px;
 }
 
-.AddOnTimeFriday{
+.AddOnTimeFriday {
     margin-top: 40px;
 }
 
 /* Saturday */
 
-.dayTIMESaturday{
+.dayTIMESaturday {
     margin-left: 27px;
     margin-bottom: 10px;
 }
 
-.dayTIMESaturday input{
+.dayTIMESaturday input {
     width: 100%;
 }
 
-.minusTIMESaturday{
+.minusTIMESaturday {
     margin-top: 40px;
 }
 
-.AddOnTimeSaturday{
+.AddOnTimeSaturday {
     margin-top: 40px;
 }
 
 /* Sunday */
 
-.dayTIMESunday{
+.dayTIMESunday {
     margin-left: 27px;
     margin-bottom: 10px;
 }
 
-.dayTIMESunday input{
+.dayTIMESunday input {
     width: 100%;
 }
 
-.minusTIMESunday{
+.minusTIMESunday {
     margin-top: 40px;
 }
 
-.AddOnTimeSunday{
+.AddOnTimeSunday {
     margin-top: 40px;
 }
 
 /******************************* Tutor-Form5 *****************************/
 
-.gonextForm5{
+.gonextForm5 {
     margin-top: 40px;
     text-align: end;
     padding-right: 46px;
 }
 
-.gonextForm5 button{
+.gonextForm5 button {
     padding: 15px 40px 15px 40px;
     font-size: 18px;
 }
 
-.gobackForm5{
+.gobackForm5 {
     margin-top: 40px;
     text-align: start;
     padding-left: 44px;
 }
 
-.gobackForm5 button{
-   padding: 15px 40px 15px 40px;
-   font-size: 18px;
+.gobackForm5 button {
+    padding: 15px 40px 15px 40px;
+    font-size: 18px;
 }
 
-.form5-left{
+.form5-left {
     margin-top: 40px;
     display: flex;
-    align-items: center;  
+    align-items: center;
     justify-content: center;
 }
 
-.avatar-pic{
+.avatar-pic {
     width: 150px;
 }
 
-.input-file-pic{
+.input-file-pic {
     margin: 0 auto;
 }
 
-.form5-right{
+.form5-right {
     margin-top: 40px;
 }
 
-.about-me textarea{
+.about-me textarea {
     border-radius: 10px;
     width: 85%;
     margin: 0 auto;
 }
 
-.input-video-test{
+.input-video-test {
     margin-top: 30px;
 }
 
-.input-video-test h6{
+.input-video-test h6 {
     width: 85%;
     margin: 0 auto;
 }
 
-.input-video-test input{
+.input-video-test input {
     width: 85%;
     margin: 0 auto;
     margin-top: 10px;
@@ -726,36 +727,46 @@ footer{
 
 /******************************* finding-tutor *****************************/
 
-.form-select.form-control{
+.form-select.form-control {
     border: none;
 }
 
-.filter{
+.filter {
     border-radius: 20px;
 }
 
-.tutor{
+.tutor {
     border-radius: 20px;
 }
 
 /******************************* tutor-data *****************************/
 
-.tutor-data{
+.tutor-data {
     border-radius: 20px;
 }
 
 /******************************* study *****************************/
 
-.study-bg{
+.study-bg {
     border-radius: 10px;
-    margin-top: 50px;
+    margin-top: 15px;
     padding-top: 10px;
     padding-bottom: 3px;
 }
 
+/******************************* teaching *****************************/
+
+.teaching-bg {
+    border-radius: 10px;
+    margin-top: 15px;
+    padding-top: 10px;
+    padding-bottom: 3px;
+}
+
+
 /******************************* profile-student *****************************/
 
-.sex{
+.sex {
     width: 95%;
     margin: 0 auto;
     border-radius: 10px;
@@ -766,12 +777,12 @@ footer{
 
 /******************************* profile *****************************/
 
-.profile-bg{
+.profile-bg {
     border-radius: 20px;
     margin-top: 50px;
 }
 
-.approve-bg{
+.approve-bg {
     border-radius: 5px;
     margin-top: 30px;
 }
@@ -782,6 +793,98 @@ footer{
     list-style-type: none;
 } */
 
+/******************************* star rating ********************************/
+
+.star-rating {
+    font-size: 0;
+    white-space: nowrap;
+    display: inline-block;
+    width: 250px;
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+    background: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjBweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwIDIwIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cG9seWdvbiBmaWxsPSIjREREREREIiBwb2ludHM9IjEwLDAgMTMuMDksNi41ODMgMjAsNy42MzkgMTUsMTIuNzY0IDE2LjE4LDIwIDEwLDE2LjU4MyAzLjgyLDIwIDUsMTIuNzY0IDAsNy42MzkgNi45MSw2LjU4MyAiLz48L3N2Zz4=');
+    background-size: contain;
+}
+
+.star-rating i {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 20%;
+    z-index: 1;
+    background: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjBweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwIDIwIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cG9seWdvbiBmaWxsPSIjRkZERjg4IiBwb2ludHM9IjEwLDAgMTMuMDksNi41ODMgMjAsNy42MzkgMTUsMTIuNzY0IDE2LjE4LDIwIDEwLDE2LjU4MyAzLjgyLDIwIDUsMTIuNzY0IDAsNy42MzkgNi45MSw2LjU4MyAiLz48L3N2Zz4=');
+    background-size: contain;
+}
+
+.star-rating input {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    opacity: 0;
+    display: inline-block;
+    width: 20%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+    position: relative;
+}
+
+.star-rating input:hover + i,
+.star-rating input:checked + i {
+  opacity: 1;
+}
+
+.star-rating i ~ i {
+    width: 40%;
+}
+
+.star-rating i ~ i ~ i {
+    width: 60%;
+}
+
+.star-rating i ~ i ~ i ~ i {
+    width: 80%;
+}
+
+.star-rating i ~ i ~ i ~ i ~ i {
+    width: 100%;
+}
+
+::after,
+::before {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-align: center;
+  vertical-align: middle;
+}
+
+table.table td{
+    /* width: 100px; */
+    position: relative;
+}
+
+table.table td div{
+    background-color: gold;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 63px;
+    z-index: 100;
+}
+
+table.table td img.starpic{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 110;
+}
+
 /******************************* calendar ********************************/
 
 .calendar {
@@ -790,31 +893,32 @@ footer{
     font-size: 16px;
     margin-bottom: 30px;
 }
-  
-.calendar tr, .calendar td {
+
+.calendar tr,
+.calendar td {
     border: 1px solid black;
 }
-  
+
 .calendar th {
     padding: 10px;
     text-align: center;
     font-size: 18px;
 }
-  
+
 .calendar td {
     width: 200px;
     height: 150px;
     padding: 20px 0px 0px 5px;
 }
-  
+
 .month {
     font-size: 25px;
 }
-  
+
 .date {
     font-size: 16px;
 }
-  
+
 a {
     color: #17a2b8;
 }
@@ -822,7 +926,7 @@ a {
 .left {
     float: left;
 }
-  
+
 .right {
     float: right;
 }
@@ -831,11 +935,13 @@ a {
     margin: 15px;
 }
 
-.form-calendar .form{
+.form-calendar .form {
     margin: auto;
 }
 
-.form-calendar.form input,.form-calendar.form select,.form-calendar.form textarea {
+.form-calendar.form input,
+.form-calendar.form select,
+.form-calendar.form textarea {
     border-radius: 5px;
     border: 1px solid #17a2b8;
     outline: none;

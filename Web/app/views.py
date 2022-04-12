@@ -6,6 +6,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.contrib.auth import authenticate, login
+from django.db.models import Avg
 
 # calendar
 import calendar
@@ -217,9 +218,48 @@ def study(request):
     user = Profile.objects.get(username=username)
     MyCourse = MyCourseStudent.objects.filter(user=user)
     
-    context = {'MyCourse' : MyCourse}
+    username = request.user.profile.username
+    user = Profile.objects.get(username=username)
     
+    if request.method == 'POST':
+        data = request.POST.copy()
+        tutor = data.get('tutor')
+        MycourseId = data.get('MycourseId')
+        rating = data.get('rating')
+
+        newRating = Rating()
+        newRating.user = user
+        newRating.tutor = Course.objects.get(id=tutor)
+        newRating.MycourseId = MyCourseStudent.objects.get(id=MycourseId)
+        newRating.rating = rating
+        newRating.star = True
+        newRating.save()
+
+        MyCourse = MyCourseStudent.objects.filter(id=MycourseId)
+        for m in MyCourse:
+            m.star = True
+            m.save()
+
+        return redirect('/study/')
+
+    newRating = Rating.objects.filter(user=user)
+
+    context = {'MyCourse' : MyCourse,
+    'newRating' : newRating}
+
     return render(request, 'app/study.html',context)
+
+def starFinish(request, id, status):
+    
+    CourseStudent = MyCourseStudent.objects.get(id=id)
+
+    if status == 'star':
+        CourseStudent.star = True
+        CourseStudent.save()
+
+    CourseStudent.save()
+    
+    return redirect ('/study/')
 
 def teaching(request):
 
@@ -235,6 +275,18 @@ def deleteTeaching(request, id):
    
     CourseStudent = MyCourseStudent.objects.get(id=id)
     CourseStudent.delete()
+    return redirect ('/teaching/')
+
+def finishTeaching(request, id, status):
+    
+    CourseStudent = MyCourseStudent.objects.get(id=id)
+
+    if status == 'finish':
+        CourseStudent.finish = True
+        CourseStudent.save()
+
+    CourseStudent.save()
+    
     return redirect ('/teaching/')
 
 def chat(request):

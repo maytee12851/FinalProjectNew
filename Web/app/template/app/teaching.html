@@ -19,7 +19,7 @@
                     <a class="nav-link active" href="/teaching">การสอน</a>
                 </li>
                 {% endif %}
-                
+
                 {% if user.profile.userType == 'student' %}
                 <li class="nav-item p-2">
                     <a class="nav-link" href="/profile">ตั้งค่าโปรไฟล์</a>
@@ -36,31 +36,81 @@
     <!-- Table -->
 
     <div class="container">
-        <div class="study-bg row bg-white justify-content-center ">
+        <div class="mt-5">
+            <h4 class="text-black-50">
+                การสอนที่ดำเนินอยู่
+            </h4>
+        </div>
+        <div class="teaching-bg row bg-white justify-content-center ">
             <div class="col-xl-12">
                 <table class="table">
                     <thead>
-                      <tr class="align-middle">
-                        <th scope="col" class="pt-3 pb-3">นักเรียน</th>
-                        <th scope="col">วันที่เรียน</th>
-                        <th scope="col">เวลา</th>
-                        <th scope="col">ภาษา</th>
-                        <th scope="col">คอร์ส</th>
-                        <th scope="col" class="text-center">จัดการคอร์ส</th>
-                      </tr>
+                        <tr class="align-middle">
+                            <th scope="col" class="pt-3 pb-3">นักเรียน</th>
+                            <th scope="col">วันที่เรียน</th>
+                            <th scope="col">เวลา</th>
+                            <th scope="col">ภาษา</th>
+                            <th scope="col">คอร์ส</th>
+                            <th scope="col" class="text-center">จัดการคอร์ส</th>
+                        </tr>
                     </thead>
                     <tbody>
-                    {% for t in TutorCourse %}
-                      <tr class="align-middle">
-                        <td class="pt-3 pb-3"><img src="{{t.user.photo.url}}" width="35" height="35" class="rounded-circle"> {{t.user.name}} {{t.user.surname}}</td>
-                        <td class="pt-3 pb-3">{{t.course.courseDay}}</td>
-                        <td class="pt-3 pb-3">{{t.course.courseTime}}</td>
-                        <td class="pt-3 pb-3">{{t.course.language}}</td>
-                        <td class="pt-3 pb-3">{{t.course.courseTitle}}</td>
-                        <td class="pt-3 pb-3 text-center w-25"><a class="btn btn-success btn" href="/deleteTeaching/{{t.id}}"> สอนสำเร็จ </a> 
-                            <a class="btn btn-danger btn" href="/deleteTeaching/{{t.id}}"> ลบคอร์ส </a></td>
-                      </tr>
-                    {% endfor %}
+                        {% for t in TutorCourse %}
+                        {% if t.finish == False %}
+                        <tr class="align-middle">
+                            <td class="pt-3 pb-3"><img src="{{t.user.photo.url}}" width="35" height="35"
+                                    class="rounded-circle"> {{t.user.name}} {{t.user.surname}}</td>
+                            <td class="pt-3 pb-3">{{t.course.courseDay}}</td>
+                            <td class="pt-3 pb-3">{{t.course.courseTime}}</td>
+                            <td class="pt-3 pb-3">{{t.course.language}}</td>
+                            <td class="pt-3 pb-3">{{t.course.courseTitle}}</td>
+                            <td class="pt-3 pb-3 text-center w-25"><a class="btn btn-success btn"
+                                    href="{% url 'finishTeaching' t.id 'finish' %}"> สอนสำเร็จ </a>
+                                <a class="btn btn-danger btn" href="/deleteTeaching/{{t.id}}"> ลบคอร์ส </a>
+                            </td>
+                        </tr>
+                        {% endif %}
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="mt-5">
+            <h4 class="text-black-50">
+                การสอนที่สำเร็จแล้ว
+            </h4>
+        </div>
+        <div class="teaching-bg row bg-white justify-content-center mb-5">
+            <div class="col-xl-12">
+                <table class="table">
+                    <thead>
+                        <tr class="align-middle">
+                            <th scope="col" class="pt-3 pb-3">นักเรียน</th>
+                            <th scope="col">วันที่เรียน</th>
+                            <th scope="col">เวลา</th>
+                            <th scope="col">ภาษา</th>
+                            <th scope="col">คอร์ส</th>
+                            <th scope="col" class="text-center">จัดการคอร์ส</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for t in TutorCourse %}
+                        {% if t.finish == True %}
+                        <tr class="align-middle">
+                            <td class="pt-3 pb-3"><img src="{{t.user.photo.url}}" width="35" height="35"
+                                    class="rounded-circle"> {{t.user.name}} {{t.user.surname}}</td>
+                            <td class="pt-3 pb-3">{{t.course.courseDay}}</td>
+                            <td class="pt-3 pb-3">{{t.course.courseTime}}</td>
+                            <td class="pt-3 pb-3">{{t.course.language}}</td>
+                            <td class="pt-3 pb-3">{{t.course.courseTitle}}</td>
+                            <td class="pt-3 pb-3 text-center w-25"><button class="btn btn-success btn"
+                                    href="{% url 'finishTeaching' t.id 'finish' %}"> สอนสำเร็จ </button>
+                                <a class="btn btn-danger btn" href="/deleteTeaching/{{t.id}}"> ลบคอร์ส </a>
+                            </td>
+                        </tr>
+                        {% endif %}
+                        {% endfor %}
                     </tbody>
                 </table>
             </div>

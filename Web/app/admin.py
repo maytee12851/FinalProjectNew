@@ -31,6 +31,11 @@ class EventAdmin(admin.ModelAdmin):
 admin.site.register(Event,EventAdmin)
 
 class MyCourseStudentAdmin(admin.ModelAdmin):
-    list_display = ['user','course','id']
+    list_display = ['user','course','finish','star','id']
 
 admin.site.register(MyCourseStudent,MyCourseStudentAdmin)
+
+class RatingAdmin(admin.ModelAdmin):
+    list_display = ['user','rating','id']
+
+admin.site.register(Rating,RatingAdmin)
