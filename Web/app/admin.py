@@ -4,7 +4,7 @@ from .models import *
 # Register your models here.
 
 class ProfileAdmin(admin.ModelAdmin):
-    list_display = ['username','name','surname','nickname','tel','sex','userType','approve','id']
+    list_display = ['username','name','surname','nickname','sex','userType','approve','id']
     list_filter = ['userType','approve']
 
 admin.site.register(Profile,ProfileAdmin)
@@ -20,7 +20,7 @@ class introduceYourselfTutor(admin.ModelAdmin):
 admin.site.register(YourselfTutor,introduceYourselfTutor)
 
 class CourseAdmin(admin.ModelAdmin):
-    list_display = ['user','language','id']
+    list_display = ['user','language','courseTitle','courseRating','id']
     list_filter = ['user','language']
 
 admin.site.register(Course,CourseAdmin)
@@ -36,6 +36,6 @@ class MyCourseStudentAdmin(admin.ModelAdmin):
 admin.site.register(MyCourseStudent,MyCourseStudentAdmin)
 
 class RatingAdmin(admin.ModelAdmin):
-    list_display = ['user','rating','id']
+    list_display = ['user','tutor','rating','star','id']
 
 admin.site.register(Rating,RatingAdmin)

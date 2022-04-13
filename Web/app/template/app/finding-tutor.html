@@ -38,15 +38,6 @@
                 <div class="col-lg-2">
                     <div class="form-group">
                         <h6 class="text-black-50">
-                            ราคาไม่เกิน
-                        </h6>
-                        <input type="number" class="form-control" min=0 id="price" name="price">
-                    </div>
-                </div>
-    
-                <div class="col-lg-2">
-                    <div class="form-group">
-                        <h6 class="text-black-50">
                             เพศ
                         </h6>
                         <select class="form-select form-control" name="sex" id="sex">
@@ -57,18 +48,22 @@
                         </select>
                     </div>
                 </div>
+
+                <div class="col-lg-2">
+                    <div class="form-group">
+                        <h6 class="text-black-50">
+                            ราคาไม่เกิน
+                        </h6>
+                        <input type="number" class="form-control" min=0 id="price" name="price">
+                    </div>
+                </div>
     
                 <div class="col-lg-2">
                     <div class="form-group">
                         <h6 class="text-black-50">
-                            คะแนนรีวิว
+                            คะแนนไม่ต่ำกว่า
                         </h6>
-                        <select class="form-select form-control">
-                            <option selected disabled>คะแนนรีวิว...</option>
-                            <option>0 - 1 ดาว</option>
-                            <option>2 - 3 ดาว</option>
-                            <option>4 - 5 ดาว</option>
-                        </select>
+                        <input type="number" class="form-control" min=0 max="5" id="rating" name="rating">
                     </div>
                 </div>
     
@@ -95,7 +90,7 @@
                         <h3>
                             {{c.user.name}} {{c.user.surname}}
                         </h3>
-                        <i class="bi bi-star-fill ms-5 bd-highlight text-black-50">4.7(15)</i>
+                        <i class="bi bi-star-fill ms-5 bd-highlight text-black-50"> {{ c.courseRating }}</i>
                     </div>
     
                     <div class="d-flex mt-2">

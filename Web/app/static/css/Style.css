@@ -57,18 +57,19 @@ body {
     color: #35a1aa;
     font-size: 70px;
     position: absolute;
-    bottom: 120px;
+    margin-bottom: 30px;
 }
 
 .textwhyuse {
     color: rgb(92, 83, 83);
     letter-spacing: 2px;
-    padding-top: 100px;
+    margin-top: 70px;
 }
 
 .Secwhyuse {
     border-radius: 20px;
     padding-bottom: 50px;
+    margin-top: 50px;
 }
 
 /******************************* Section Stepsearch *****************************/
@@ -92,7 +93,6 @@ body {
 }
 
 .allstepsearch {
-    margin-left: 100px;
     color: rgb(92, 83, 83);
 }
 
@@ -101,7 +101,7 @@ body {
 }
 
 .stepsearch {
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 /******************************* Section Feedback *****************************/

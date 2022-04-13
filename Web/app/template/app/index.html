@@ -19,7 +19,6 @@
 <body>
 
     <header>
-
         <div class="bg-img">
             <div class="navbar navbar-expand-lg navbar-dark pt-3">
                 <div class="container">
@@ -95,7 +94,7 @@
                     </div>
 
                     <div class="searchtutor col-xl-12 mt-3">
-                        <a href="#"><button type="submit"
+                        <a href="/finding-tutor"><button type="submit"
                                 class="textsearch btn btn-block btn-lg btn-info">ค้นหาติวเตอร์</button></a>
                     </div>
                 </div>
@@ -128,25 +127,26 @@
     <!-- whyuse -->
 
     <section>
+
         <div class="container">
             <div class="Secwhyuse row bg-white">
-                <div class="whyuse col-xl-12">
+                <div class="whyuse col-12">
                     <h2 class="textwhyuse text-center">
                         ทำไมถึงต้องใช้ T-LANGUAGE
                     </h2>
                 </div>
 
-                <div class="picwhyuse col-xl-4">
+                <div class="picwhyuse col-md-4">
                     <img src="{% static 'pic/icon-left.svg' %}" alt="" srcset="">
                     <h5 class="text-center text-secondary">ระบบการจองที่เข้าใจง่าย</h5>
                 </div>
 
-                <div class="picwhyuse col-xl-4">
+                <div class="picwhyuse col-md-4">
                     <img src="{% static '/pic/icon-mid.svg' %}" alt="" srcset="">
                     <h5 class="text-center text-secondary">มีความปลอดภัย</h5>
                 </div>
 
-                <div class="picwhyuse col-xl-4">
+                <div class="picwhyuse col-md-4">
                     <img src="{% static 'pic/icon-right.svg' %}" alt="" srcset="">
                     <h5 class="text-center text-secondary">มีทีมงานช่วยเหลือเมื่อเกิดปัญหา</h5>
                 </div>
@@ -167,8 +167,8 @@
                     </h2>
                 </div>
 
-                <div class="allstepsearch">
-                    <div class="stepsearch col-12">
+                <div class="allstepsearch ms-5">
+                    <div class="stepsearch col-10 ms-5">
                         <h3 class="Sectextstep">
                             1. ลงทะเบียน
                         </h3>
@@ -177,7 +177,7 @@
                         </p>
                     </div>
 
-                    <div class="stepsearch col-12">
+                    <div class="stepsearch col-10 ms-5">
                         <h3 class="Sectextstep">
                             2. เลือกภาษาที่สนใจ
                         </h3>
@@ -186,7 +186,7 @@
                         </p>
                     </div>
 
-                    <div class="stepsearch col-12">
+                    <div class="stepsearch col-10 ms-5">
                         <h3 class="Sectextstep">
                             3. เลือกติวเตอร์ที่ตรงใจท่าน
                         </h3>
@@ -195,7 +195,7 @@
                         </p>
                     </div>
 
-                    <div class="stepsearch col-12">
+                    <div class="stepsearch col-10 ms-5">
                         <h3 class="Sectextstep">
                             4. เลือกเวลาที่ท่านสะดวก
                         </h3>
@@ -204,7 +204,7 @@
                         </p>
                     </div>
 
-                    <div class="stepsearch col-12">
+                    <div class="stepsearch col-10 ms-5">
                         <h3 class="Sectextstep">
                             5. จ้างติวเตอร์
                         </h3>
@@ -275,7 +275,7 @@
 
     <!-- banner-footer -->
 
-    <section class="banner-footer">
+    <section class="banner-footer mb-5">
         <div class="container">
             <div class="img-banner row">
                 <div class="textbanner col-xl-12 text-center">
@@ -294,9 +294,9 @@
 
     <!-- footer -->
 
-    <footer class="text-center text-lg-start">
+    <footer class="text-center text-lg-start mt-auto">
         <!-- Grid container -->
-        <div class="container p-4">
+        <div class="footer container p-4">
             <!--Grid row-->
             <div class="row">
                 <div class="col-lg-4">
@@ -311,16 +311,19 @@
 
                     <ul class="list-footer list-unstyled">
                         <li>
-                            <a href="#" class="text-light">ภาษาอังกฤษ</a>
+                            <a href="/finding-tutor/?language=ภาษาอังกฤษ&price=&rating=" class="text-light">ภาษาอังกฤษ</a>
                         </li>
                         <li>
-                            <a href="#" class="text-light">ภาษาจีน</a>
+                            <a href="/finding-tutor/?language=ภาษาจีน&price=&rating=" class="text-light">ภาษาจีน</a>
                         </li>
                         <li>
-                            <a href="#" class="text-light">ภาษาญี่ปุ่น</a>
+                            <a href="/finding-tutor/?language=ภาษาญี่ปุ่น&price=&rating=" class="text-light">ภาษาญี่ปุ่น</a>
                         </li>
                         <li>
-                            <a href="#" class="text-light">ภาษาเกาหลี</a>
+                            <a href="/finding-tutor/?language=ภาษาเกาหลี&price=&rating=" class="text-light">ภาษาเกาหลี</a>
+                        </li>
+                        <li>
+                            <a href="/finding-tutor/?language=ภาษาเยอรมัน&price=&rating=" class="text-light">ภาษาเยอรมัน</a>
                         </li>
                     </ul>
                 </div>
@@ -332,10 +335,10 @@
 
                     <ul class="list-footer list-unstyled">
                         <li>
-                            <a href="#!" class="text-light">สมัครเป็นติวเตอร์</a>
+                            <a href="/" class="text-light">สมัครเป็นนักเรียน</a>
                         </li>
                         <li>
-                            <a href="#!" class="text-light">คำถามที่พบบ่อย</a>
+                            <a href="/index-tutor" class="text-light">สมัครเป็นติวเตอร์</a>
                         </li>
                     </ul>
                 </div>
@@ -348,9 +351,6 @@
                     <ul class="list-footer list-unstyled">
                         <li>
                             <a href="#!" class="text-light">Feedback</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-light">เงื่อนไขการให้บริการ</a>
                         </li>
                     </ul>
                 </div>
@@ -385,5 +385,4 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 </body>
-
 </html>

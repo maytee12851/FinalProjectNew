@@ -119,6 +119,7 @@ def findingTutor(request):
     language = request.GET.get('language')
     sex = request.GET.get('sex')
     price = request.GET.get('price')
+    rating = request.GET.get('rating')
 
     if is_valid_queryparam(language):
         course = course.filter(language=language)
@@ -128,6 +129,9 @@ def findingTutor(request):
 
     if is_valid_queryparam(price):
         course = course.filter(coursePrice__lte=price)
+
+    if is_valid_queryparam(rating):
+        course = course.filter(courseRating__gte=rating)
     
     context = {'course' : course}
     
@@ -239,6 +243,16 @@ def study(request):
         for m in MyCourse:
             m.star = True
             m.save()
+
+        # userId = request.user.profile.id
+        avgRating = Rating.objects.filter(tutor = tutor).aggregate(Avg('rating'))
+        ratingTutor = Course.objects.filter(id = tutor)
+        for r in ratingTutor:
+            avg = avgRating.get('rating__avg')
+            r.courseRating = avg
+            r.save()
+
+        print(ratingTutor,avgRating,tutor)
 
         return redirect('/study/')
 

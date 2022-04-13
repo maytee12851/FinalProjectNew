@@ -60,6 +60,7 @@ class Course(models.Model):
     courseDay = models.CharField(max_length=20, blank=True, null=True)
     courseTime = models.TimeField(max_length=30, blank=True, null=True)
     coursePrice = models.IntegerField(default=0, blank=True, null=True)
+    courseRating = models.DecimalField(default=0, max_digits=5, decimal_places=1,null=True, blank=True)
 
     def __str__(self):
         return '%s' % (self.user)
@@ -77,7 +78,7 @@ class MyCourseStudent (models.Model):
 class Rating (models.Model):
     user = models.ForeignKey(Profile, on_delete=CASCADE, blank=True, null=True)
     tutor = models.ForeignKey(Course, on_delete=CASCADE, blank=True, null=True)
-    rating = models.IntegerField(null=True, blank=True, choices=[(1, '1'), (2, '2'), (3, '3'), (4, '4'), (5, '5')])
+    rating = models.IntegerField(blank=True, null=True, default='1', choices=[(1, '1'), (2, '2'), (3, '3'), (4, '4'), (5, '5')])
     MycourseId = models.ForeignKey(MyCourseStudent, on_delete=CASCADE, blank=True, null=True)
     star = models.BooleanField(default=False)
 
