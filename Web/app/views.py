@@ -244,12 +244,13 @@ def study(request):
             m.star = True
             m.save()
 
-        # userId = request.user.profile.id
         avgRating = Rating.objects.filter(tutor = tutor).aggregate(Avg('rating'))
         ratingTutor = Course.objects.filter(id = tutor)
         for r in ratingTutor:
             avg = avgRating.get('rating__avg')
             r.courseRating = avg
+            count = r.courseCount + 1
+            r.courseCount = count
             r.save()
 
         print(ratingTutor,avgRating,tutor)

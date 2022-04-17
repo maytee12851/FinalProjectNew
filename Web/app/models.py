@@ -61,6 +61,7 @@ class Course(models.Model):
     courseTime = models.TimeField(max_length=30, blank=True, null=True)
     coursePrice = models.IntegerField(default=0, blank=True, null=True)
     courseRating = models.DecimalField(default=0, max_digits=5, decimal_places=1,null=True, blank=True)
+    courseCount = models.IntegerField(default=0, null=True, blank=True)
 
     def __str__(self):
         return '%s' % (self.user)
