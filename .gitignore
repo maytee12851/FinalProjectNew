@@ -1,2 +1,7 @@
 # created by virtualenv automatically
 *.mp4
+venv
+*.pyc
+staticfiles
+.env
+.DS_Store
