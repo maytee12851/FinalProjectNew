@@ -47,8 +47,8 @@ def registerStudent(request):
             profile.email = email
             profile.userType = 'student'
             profile.save()
-            return redirect('login') 
-                              
+            return redirect('login')
+            
         user = authenticate(username=username, password=password)
         login(request, user)
 

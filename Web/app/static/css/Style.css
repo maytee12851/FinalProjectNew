@@ -142,17 +142,13 @@ body {
 .img-banner {
     background: url('/static/pic/BGfooter.jpeg') no-repeat center center;
     background-size: cover;
-    padding-top: 7rem;
+    /* padding-top: 7rem; */
+    align-items: center;
     height: 500px;
     border-radius: 20px;
 }
 
-.textbanner {
-    height: 100px;
-}
-
 .textbanner h1 {
-    padding-top: 100px;
     color: white;
     font-size: 40px;
 }
@@ -308,7 +304,7 @@ footer {
 }
 
 .picLOGIN img {
-    height: 500px;
+    max-height: 500px;
     padding: 70px;
 }
 
@@ -883,6 +879,52 @@ table.table td img.starpic{
     left: 0;
     width: 100%;
     z-index: 110;
+}
+
+/**************** star-height *****************/
+
+@media only screen and (max-width : 1400px){
+    table.table td div{
+        background-color: gold;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 54px;
+        z-index: 100;
+    }
+}
+
+@media only screen and (max-width : 1200px){
+    table.table td div{
+        background-color: gold;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 44px;
+        z-index: 100;
+    }
+}
+
+@media only screen and (max-width : 992px){
+    table.table td div{
+        background-color: gold;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 32px;
+        z-index: 100;
+    }
+}
+
+@media only screen and (max-width : 768px){
+    table.table td div{
+        background-color: gold;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 24px;
+        z-index: 100;
+    }
 }
 
 /******************************* calendar ********************************/

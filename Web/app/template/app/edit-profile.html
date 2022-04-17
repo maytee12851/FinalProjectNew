@@ -22,30 +22,30 @@
 
     <div class="container">
         <div class="profile-bg row bg-white justify-content-center mb-5">
-            <div class="col-xl-12" >
+            <div class="col-12" >
 
                 <form method="POST" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ form.media }}
-                    <div class="col-xl-12">
+                    <div class="col-12">
                         <h4 class="text-start ms-5 mt-5">
                             ตั้งค่าโปรไฟล์
                         </h4>
                     </div>
     
-                    <div class="col-xl-12 d-flex mt-5 me-5">
+                    <div class="col-12 d-flex mt-5 me-5">
                         <div class="col-4">
                             <h5 class="text-start text-black-50 ms-5">
                                 รูปโปรไฟล์
                             </h5>
                         </div>
     
-                        <div class="col-4 ">
-                            <img src="{{ user.profile.photo.url }}" class="rounded" width="200" height="200">
+                        <div class="col-4">
+                            <img src="{{ user.profile.photo.url }}" id="photo-preview" class="rounded" width="200" height="200">
                         </div>
     
-                        <div class="col-4 text-center align-self-center pe-5">
-                            <input class="form-control form-control-lg text-black-50" id="photo" name="photo" type="file">
+                        <div class="col-md-4 pe-md-5 ps-sm-5 ps-lg-0 text-center align-self-center">
+                            <input class="form-control form-control-lg text-black-50" id="photo" name="photo" type="file" accept="image/*" onchange="imgPreview(event);">
                         </div>
                     </div>
 
@@ -54,7 +54,7 @@
                     <h5 class="text-center alert alert-danger">{{ message }}</h5>
                     {% endfor %}
     
-                    <div class="col-xl-12 d-flex mt-5">
+                    <div class="col-12 d-flex mt-5">
                         <div class="col-4 align-self-center">
                             <h5 class="text-start text-black-50 ms-5">
                                 ชื่อจริง
@@ -66,7 +66,7 @@
                         </div>
                     </div>
     
-                    <div class="col-xl-12 d-flex mt-5">
+                    <div class="col-12 d-flex mt-5">
                         <div class="col-4 align-self-center">
                             <h5 class="text-start text-black-50 ms-5">
                                 นามสกุล
@@ -78,7 +78,7 @@
                         </div>
                     </div>
     
-                    <div class="col-xl-12 d-flex mt-5">
+                    <div class="col-12 d-flex mt-5">
                         <div class="col-4 align-self-center">
                             <h5 class="text-start text-black-50 ms-5">
                                 ชื่อเล่น
@@ -90,7 +90,7 @@
                         </div>
                     </div>
     
-                    <div class="col-xl-12 d-flex mt-5">
+                    <div class="col-12 d-flex mt-5">
                         <div class="col-4 align-self-center">
                             <h5 class="text-start text-black-50 ms-5">
                                 เบอร์โทรศัพท์
@@ -102,7 +102,7 @@
                         </div>
                     </div>
     
-                    <div class="col-xl-12 d-flex mt-5">
+                    <div class="col-12 d-flex mt-5">
                         <div class="col-4 align-self-center">
                             <h5 class="text-start text-black-50 ms-5">
                                 อีเมล
@@ -114,7 +114,7 @@
                         </div>  
                     </div>
     
-                    <div class="col-xl-12 d-flex mt-5">
+                    <div class="col-12 d-flex mt-5">
                         <div class="col-4 align-self-center">
                             <h5 class="text-start text-black-50 ms-5">
                                 เพศ
@@ -132,13 +132,15 @@
                         </div>
                     </div>
     
-                    <div class="col-xl-12 text-end mt-5 pe-5 pb-4">
+                    <div class="col-12 text-end mt-5 pe-5 pb-4">
                         <button type="submit" class="btn btn-secondary btn-lg text-white">บันทึกข้อมูล</button>
                     </div>
                 </form>              
             </div>
         </div>
     </div>
-
 </body>
+
+<script src="{% static "js/imgPreview.js" %}"></script>
+
 {% endblock content%}

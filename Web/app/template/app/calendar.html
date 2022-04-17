@@ -34,10 +34,10 @@
     </nav>
 
     <div class="container">
-        <div class="col-xl-12 d-flex mb-5">
+        <div class="col-12 d-flex mb-5">
             <div class="col-md-2">
                 <div class="profile-bg row bg-white justify-content-center">
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav p-0">
                         <li class="nav-item text-center mt-4 fs-5">
                             <a class="nav-link text-black-50" href="/profile-tutor">ตั้งค่าโปรไฟล์</a>
                         </li>
@@ -67,12 +67,12 @@
                 {% endif %}
             </div>
 
-            <div class="col-md-1">
+            <div class="col-1">
             </div>
 
             <div class="col-md-9">
                 <div class="profile-bg row bg-white justify-content-center">
-                    <div class="col-xl-12">
+                    <div class="col-12">
                         <div class="clearfix">
                             <a class="btn btn-outline-info left text-dark" href="{% url 'calendar' %}?{{ prev_month }}"> เดือนก่อนหน้า </a>
                             <a class="btn btn-outline-info right text-dark" href="{% url 'calendar' %}?{{ next_month }}"> เดือนถัดไป </a>
