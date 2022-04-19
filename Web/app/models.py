@@ -4,6 +4,8 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.deletion import CASCADE, SET_DEFAULT
 from django.urls import reverse
+from cloudinary_storage.storage import VideoMediaCloudinaryStorage
+from cloudinary_storage.validators import validate_video
 
 # Create your models here.
 
@@ -16,8 +18,8 @@ class Profile(models.Model):
     nickname = models.CharField(max_length=100)
     tel = models.CharField(max_length=10)
     sex = models.CharField(max_length=100, choices=[('ชาย', 'ชาย'), ('หญิง', 'หญิง'), ('เพศทางเลือก', 'เพศทางเลือก')])
-    photo = models.ImageField(upload_to="profilePic/", null=True, blank=True, default='profilePic/avatarPic.jpg')
-    idcard = models.ImageField(upload_to="profilePic/", null=True, blank=True, default='profilePic/idcard.jpg')
+    photo = models.ImageField(upload_to="profilePic/", null=True, blank=True, default='profilePic/avatarPic_pekm5b.jpg')
+    idcard = models.ImageField(upload_to="idCard/", null=True, blank=True, default='idCard/idcard_midixi.jpg')
     userType = models.CharField(max_length=100, choices=[('student', 'Student'), ('teacher', 'Teacher'), ('admin', 'Admin')])
     approve = models.BooleanField('Approve', default=False)
 
@@ -40,10 +42,10 @@ class ProfileEducationTutor(models.Model):
 
 class YourselfTutor(models.Model):
     user = models.ForeignKey(Profile, on_delete=CASCADE, blank=True, null=True)
-    video = models.FileField(upload_to='Video/', null=True, blank=True, default='#.mp4')
+    video = models.FileField(upload_to='Video/', null=True, blank=True, default='#.mp4', storage=VideoMediaCloudinaryStorage(), validators=[validate_video])
     introduce = models.TextField()
-    line = models.CharField(max_length=10, blank=True, null=True)
-    facebook = models.CharField(max_length=20, blank=True, null=True)
+    line = models.CharField(max_length=10, blank=True)
+    facebook = models.CharField(max_length=20, blank=True)
 
     def __str__(self):
         return '%s' % (self.user)

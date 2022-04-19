@@ -65,6 +65,10 @@
                     <h5 class="p-3">ยังไม่ได้รับการอนุมัติ</h5>
                 </div>
                 {% endif %}
+                
+                <div class="approve-bg row bg-warning text-black text-center">
+                    <h5 class="p-3">กรุณากรอกข้อมูลให้ครบถ้วน และระบบจะทำการอนุมัติภายใน 24 ชั่วโมง</h5>
+                </div>
             </div>
 
             <div class="col-1">
@@ -73,6 +77,8 @@
             <div class="col-md-9">
                 <div class="profile-bg row bg-white justify-content-center">
                     <div class="col-12">
+
+                        {% load cloudinary %}
                         <form method="POST" enctype="multipart/form-data">
                             {% csrf_token %}
                             {{ form.media }}
