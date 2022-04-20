@@ -20,7 +20,7 @@ class Profile(models.Model):
     sex = models.CharField(max_length=100, choices=[('ชาย', 'ชาย'), ('หญิง', 'หญิง'), ('เพศทางเลือก', 'เพศทางเลือก')])
     photo = models.ImageField(upload_to="profilePic/", null=True, blank=True, default='profilePic/avatarPic_pekm5b.jpg')
     idcard = models.ImageField(upload_to="idCard/", null=True, blank=True, default='idCard/idcard_midixi.jpg')
-    userType = models.CharField(max_length=100, choices=[('student', 'Student'), ('teacher', 'Teacher'), ('admin', 'Admin')])
+    userType = models.CharField(max_length=100, choices=[('student', 'Student'), ('tutor', 'Tutor'), ('admin', 'Admin')])
     approve = models.BooleanField('Approve', default=False)
 
     def __str__(self):

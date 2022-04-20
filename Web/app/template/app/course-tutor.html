@@ -14,7 +14,7 @@
                 <li class="nav-item p-2">
                     <a class="nav-link" href="/study">บทเรียน</a>
                 </li>
-                {% elif user.profile.userType == 'teacher' %}
+                {% elif user.profile.userType == 'tutor' %}
                 <li class="nav-item p-2">
                     <a class="nav-link" href="/teaching">การสอน</a>
                 </li>
@@ -24,7 +24,7 @@
                 <li class="nav-item p-2">
                     <a class="nav-link active" href="/profile">ตั้งค่าโปรไฟล์</a>
                 </li>
-                {% elif user.profile.userType == 'teacher' %}
+                {% elif user.profile.userType == 'tutor' %}
                 <li class="nav-item p-2">
                     <a class="nav-link active" href="/profile-tutor">ตั้งค่าโปรไฟล์</a>
                 </li>
@@ -145,7 +145,7 @@
 
                                             <div class="mb-3">
                                                 <label class="col-form-label text-black-50">อัตราค่าสอน (ต่อคอร์ส):</label>
-                                                <input type="number" class="form-control form-input" name="coursePrice" required>
+                                                <input type="number" class="form-control form-input" min="200" name="coursePrice" required>
                                             </div>
 
                                             <div class="col-mb-3 text-end">

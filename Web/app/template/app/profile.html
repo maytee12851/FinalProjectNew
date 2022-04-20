@@ -14,7 +14,7 @@
                 <li class="nav-item p-2">
                     <a class="nav-link" href="/study">การเรียน</a>
                 </li>
-                {% elif user.profile.userType == 'teacher' %}
+                {% elif user.profile.userType == 'tutor' %}
                 <li class="nav-item p-2">
                     <a class="nav-link" href="/teaching">การสอน</a>
                 </li>
@@ -24,7 +24,7 @@
                 <li class="nav-item p-2">
                     <a class="nav-link active" href="/profile">ตั้งค่าโปรไฟล์</a>
                 </li>
-                {% elif user.profile.userType == 'teacher' %}
+                {% elif user.profile.userType == 'tutor' %}
                 <li class="nav-item p-2">
                     <a class="nav-link active" href="/profile-tutor">ตั้งค่าโปรไฟล์</a>
                 </li>

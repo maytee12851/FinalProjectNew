@@ -76,7 +76,7 @@ def registerTutor(request):
             profile.user = User.objects.get(username=username)
             profile.username = username
             profile.email = email
-            profile.userType = 'teacher'
+            profile.userType = 'tutor'
             profile.save()
 
             EducationTutor = ProfileEducationTutor()
@@ -160,7 +160,7 @@ def findingTutor(request):
             messages.warning(request, 'กรุณากรอกข้อมูลให้ครบถ้วน')
             return redirect('/edit-profile/')
 
-    if request.user.profile.userType == 'teacher':
+    if request.user.profile.userType == 'tutor':
     
         if request.user.profile.email == '':
             messages.warning(request, 'กรุณากรอกข้อมูลให้ครบถ้วน')
