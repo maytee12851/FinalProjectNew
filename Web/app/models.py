@@ -27,15 +27,15 @@ class Profile(models.Model):
         return '%s %s' % (self.name,self.surname)
 
 class ProfileEducationTutor(models.Model):
-    user = models.ForeignKey(Profile, on_delete=CASCADE, blank=True, null=True)
-    school = models.CharField(max_length=100, blank=True, null=True)
-    schoolProgram = models.CharField(max_length=100, blank=True, null=True)
-    schoolYear = models.CharField(max_length=4, blank=True, null=True)
-    university = models.CharField(max_length=100, blank=True, null=True)
-    degree = models.CharField(max_length=100, blank=True, null=True)
-    faculty = models.CharField(max_length=100, blank=True, null=True)
-    major = models.CharField(max_length=100, blank=True, null=True)
-    universityYear = models.CharField(max_length=4, blank=True, null=True)
+    user = models.ForeignKey(Profile, on_delete=CASCADE, blank=True)
+    school = models.CharField(max_length=100, blank=True)
+    schoolProgram = models.CharField(max_length=100, blank=True)
+    schoolYear = models.CharField(max_length=4, blank=True)
+    university = models.CharField(max_length=100, blank=True)
+    degree = models.CharField(max_length=100, blank=True)
+    faculty = models.CharField(max_length=100, blank=True)
+    major = models.CharField(max_length=100, blank=True)
+    universityYear = models.CharField(max_length=4, blank=True)
 
     def __str__(self):
         return '%s' % (self.user)
