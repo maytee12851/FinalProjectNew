@@ -9,7 +9,7 @@
     <div class="container">
         <div class="SecLOGIN row bg-white">
             <div class="LOGIN col-xl-6 col-md-12">
-                <div class="picLOGIN">
+                <div class="picLOGIN text-center">
                     <img src="{% static '/pic/register-student.svg' %}" class="mw-100" alt="">
                 </div>
             </div>
@@ -27,7 +27,7 @@
                     {% csrf_token %}
                     <input type="text" class="username form-control" placeholder="ชื่อผู้ใช้" name="username">
                     <input type="password" class="password form-control" placeholder="รหัสผ่าน" name="password">
-                    <button type="submit" class="submit form-control btn-secondary mb-sm-5 mb-xl-0">เข้าสู่ระบบ</button>
+                    <button type="submit" class="submitLOGIN form-control btn-secondary mb-sm-5 mb-xl-0">เข้าสู่ระบบ</button>
                 </form>
             </div>
         </div>

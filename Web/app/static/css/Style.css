@@ -96,8 +96,13 @@ body {
     color: rgb(92, 83, 83);
 }
 
+.Sectextstep {
+    margin-left: 5rem;
+}
+
 .textstep {
     color: rgb(180, 161, 161);
+    margin-left: 5rem;
 }
 
 .stepsearch {
@@ -196,6 +201,18 @@ footer {
     margin-left: 500px;
 }
 
+@media only screen and (max-width : 1199px){
+    .vertical-line{
+        display: none;
+    }
+}
+
+@media only screen and (max-width : 575px){
+    .submitREGISSTU{
+        margin-bottom: 3rem!important;
+    }
+}
+
 .textregisterSTU {
     margin-top: 50px;
     color: rgb(92, 83, 83);
@@ -248,13 +265,13 @@ footer {
     padding: 70px;
 }
 
-.vertical-line {
+/* .vertical-line {
     border-right: 2px solid #35a1aa;
     height: 350px;
     position: absolute;
     margin-top: 75px;
     margin-left: 500px;
-}
+} */
 
 .textregisterTUTOR {
     margin-top: 50px;
@@ -291,6 +308,12 @@ footer {
     margin-top: 20px;
 }
 
+@media only screen and (max-width : 575px){
+    .submitREGISTUTOR{
+        margin-bottom: 3rem!important;
+    }
+}
+
 /******************************* LOGIN *****************************/
 
 .body-LOGIN {
@@ -308,13 +331,13 @@ footer {
     padding: 70px;
 }
 
-.vertical-line {
+/* .vertical-line {
     border-right: 2px solid #35a1aa;
     height: 350px;
     position: absolute;
     margin-top: 75px;
     margin-left: 500px;
-}
+} */
 
 .textLOGIN {
     margin-top: 85px;
@@ -351,374 +374,10 @@ footer {
     margin-top: 20px;
 }
 
-/******************************* Tutor-Form1 *****************************/
-
-.Secform1 {
-    border-radius: 10px;
-    padding-bottom: 20px;
-}
-
-.form1 {
-    margin-top: 20px;
-}
-
-.form1 input {
-    width: 95%;
-    margin: 0 auto;
-    border-radius: 10px;
-    padding: 13px;
-    margin-top: 20px;
-}
-
-.textIDCard {
-    padding-left: 45px;
-    margin-top: 20px;
-}
-
-.fileIDCard {
-    width: 95%;
-    margin: 0 auto;
-    border-radius: 10px;
-    margin-top: 20px;
-    padding-left: 13px;
-    padding-right: 13px;
-}
-
-.gonextForm1 {
-    margin-top: 20px;
-    text-align: end;
-    padding-right: 46px;
-}
-
-.gonextForm1 button {
-    padding: 15px 40px 15px 40px;
-    font-size: 18px;
-}
-
-/******************************* Tutor-Form2 *****************************/
-
-.gonextForm2 {
-    margin-top: 20px;
-    text-align: end;
-    padding-right: 46px;
-}
-
-.gonextForm2 button {
-    padding: 15px 40px 15px 40px;
-    font-size: 18px;
-}
-
-
-.gobackForm2 {
-    margin-top: 20px;
-    text-align: start;
-    padding-left: 44px;
-}
-
-.gobackForm2 button {
-    padding: 15px 40px 15px 40px;
-    font-size: 18px;
-}
-
-.yearstudy {
-    margin-left: 27px;
-}
-
-.yearstudy input {
-    width: 100%;
-}
-
-.minusYEARSTUDY {
-    margin-top: 40px;
-}
-
-/******************************* Tutor-Form3 *****************************/
-
-.gonextForm3 {
-    margin-top: 20px;
-    text-align: end;
-    padding-right: 46px;
-}
-
-.gonextForm3 button {
-    padding: 15px 40px 15px 40px;
-    font-size: 18px;
-}
-
-.gobackForm3 {
-    margin-top: 20px;
-    text-align: start;
-    padding-left: 44px;
-}
-
-.gobackForm3 button {
-    padding: 15px 40px 15px 40px;
-    font-size: 18px;
-}
-
-.add_form_field {
-    width: 15%;
-    font-size: 18px;
-}
-
-.AddOnCourse {
-    padding-left: 32px;
-    margin-top: 20px;
-}
-
-.delete {
-    margin-left: 35px;
-    text-decoration: none;
-    color: rgb(238, 180, 180);
-}
-
-/******************************* Tutor-Form4 *****************************/
-
-.form4 {
-    margin-top: 20px;
-}
-
-.form4 input {
-    margin: 0 auto;
-    border-radius: 10px;
-    padding: 13px;
-    margin-top: 20px;
-}
-
-.gonextForm4 {
-    margin-top: 20px;
-    text-align: end;
-    padding-right: 46px;
-}
-
-.gonextForm4 button {
-    padding: 15px 40px 15px 40px;
-    font-size: 18px;
-}
-
-.gobackForm4 {
-    margin-top: 20px;
-    text-align: start;
-    padding-left: 44px;
-}
-
-.gobackForm4 button {
-    padding: 15px 40px 15px 40px;
-    font-size: 18px;
-}
-
-.form4 h6 {
-    margin-left: 30px;
-}
-
-.DayCheck {
-    margin-left: 27px;
-}
-
-.TextDay {
-    margin-top: 21px;
-    margin-left: 10px;
-}
-
-/* Monday */
-
-.dayTIMEMonday {
-    margin-left: 27px;
-    margin-bottom: 10px;
-}
-
-.dayTIMEMonday input {
-    width: 100%;
-}
-
-.minusTIMEMonday {
-    margin-top: 40px;
-}
-
-.AddOnTimeMonday {
-    margin-top: 40px;
-}
-
-.EmptydayTIMEMonday {
-    visibility: hidden;
-}
-
-/* Tuesday */
-
-.dayTIMETuesday {
-    margin-left: 27px;
-    margin-bottom: 10px;
-}
-
-.dayTIMETuesday input {
-    width: 100%;
-}
-
-.minusTIMETuesday {
-    margin-top: 40px;
-}
-
-.AddOnTimeTuesday {
-    margin-top: 40px;
-}
-
-/* Wednesday */
-
-.dayTIMEWednesday {
-    margin-left: 27px;
-    margin-bottom: 10px;
-}
-
-.dayTIMEWednesday input {
-    width: 100%;
-}
-
-.minusTIMEWednesday {
-    margin-top: 40px;
-}
-
-.AddOnTimeWednesday {
-    margin-top: 40px;
-}
-
-/* Thursday */
-
-.dayTIMEThursday {
-    margin-left: 27px;
-    margin-bottom: 10px;
-}
-
-.dayTIMEThursday input {
-    width: 100%;
-}
-
-.minusTIMEThursday {
-    margin-top: 40px;
-}
-
-.AddOnTimeThursday {
-    margin-top: 40px;
-}
-
-/* Friday */
-
-.dayTIMEFriday {
-    margin-left: 27px;
-    margin-bottom: 10px;
-}
-
-.dayTIMEFriday input {
-    width: 100%;
-}
-
-.minusTIMEFriday {
-    margin-top: 40px;
-}
-
-.AddOnTimeFriday {
-    margin-top: 40px;
-}
-
-/* Saturday */
-
-.dayTIMESaturday {
-    margin-left: 27px;
-    margin-bottom: 10px;
-}
-
-.dayTIMESaturday input {
-    width: 100%;
-}
-
-.minusTIMESaturday {
-    margin-top: 40px;
-}
-
-.AddOnTimeSaturday {
-    margin-top: 40px;
-}
-
-/* Sunday */
-
-.dayTIMESunday {
-    margin-left: 27px;
-    margin-bottom: 10px;
-}
-
-.dayTIMESunday input {
-    width: 100%;
-}
-
-.minusTIMESunday {
-    margin-top: 40px;
-}
-
-.AddOnTimeSunday {
-    margin-top: 40px;
-}
-
-/******************************* Tutor-Form5 *****************************/
-
-.gonextForm5 {
-    margin-top: 40px;
-    text-align: end;
-    padding-right: 46px;
-}
-
-.gonextForm5 button {
-    padding: 15px 40px 15px 40px;
-    font-size: 18px;
-}
-
-.gobackForm5 {
-    margin-top: 40px;
-    text-align: start;
-    padding-left: 44px;
-}
-
-.gobackForm5 button {
-    padding: 15px 40px 15px 40px;
-    font-size: 18px;
-}
-
-.form5-left {
-    margin-top: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.avatar-pic {
-    width: 150px;
-}
-
-.input-file-pic {
-    margin: 0 auto;
-}
-
-.form5-right {
-    margin-top: 40px;
-}
-
-.about-me textarea {
-    border-radius: 10px;
-    width: 85%;
-    margin: 0 auto;
-}
-
-.input-video-test {
-    margin-top: 30px;
-}
-
-.input-video-test h6 {
-    width: 85%;
-    margin: 0 auto;
-}
-
-.input-video-test input {
-    width: 85%;
-    margin: 0 auto;
-    margin-top: 10px;
+@media only screen and (max-width : 575px){
+    .submitLOGIN{
+        margin-bottom: 3rem!important;
+    }
 }
 
 /******************************* finding-tutor *****************************/
@@ -733,6 +392,16 @@ footer {
 
 .tutor {
     border-radius: 20px;
+}
+
+@media only screen and (max-width : 575px){
+    .submitFILTER{
+        margin-top: 1rem!important;
+    }
+
+    .Exdata{
+        margin-top: 1.5rem!important;
+    }
 }
 
 /******************************* tutor-data *****************************/
@@ -785,9 +454,21 @@ footer {
 
 /******************************* profile-tutor *****************************/
 
-/* .profile-bg ul{
-    list-style-type: none;
-} */
+@media only screen and (max-width: 768px){
+    .text-profiletutor{
+        font-size: 100%;
+    }
+}
+
+@media only screen and (max-width: 576px){
+    .input-photo{
+        padding-left: 2rem;
+    }
+
+    .input-idcard{
+        padding-left: 2rem;
+    }
+}
 
 /******************************* star rating ********************************/
 
@@ -927,6 +608,39 @@ table.table td img.starpic{
     }
 }
 
+@media only screen and (max-width : 465px){
+    table.table td div{
+        background-color: gold;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 20px;
+        z-index: 100;
+    }
+}
+
+@media only screen and (max-width : 425px){
+    table.table td div{
+        background-color: gold;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 17px;
+        z-index: 100;
+    }
+}
+
+@media only screen and (max-width : 410px){
+    table.table td div{
+        background-color: gold;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 14px;
+        z-index: 100;
+    }
+}
+
 /******************************* calendar ********************************/
 
 .calendar {
@@ -989,4 +703,10 @@ a {
     outline: none;
     padding: 5px;
     width: 100%;
+}
+
+@media only screen and (max-width: 391px){
+    .btnAddEvent{
+        margin-top: 10px;
+    }
 }

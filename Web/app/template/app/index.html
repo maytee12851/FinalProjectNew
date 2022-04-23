@@ -39,21 +39,21 @@
                             </li>
 
                             {% if user.is_authenticated %}
-                                {% if user.profile.userType == 'student' %}
-                                <li class="nav-item me-3">
-                                    <a class="nav-link text-secondary" href="/study">การเรียนของฉัน</a>
-                                </li>
+                            {% if user.profile.userType == 'student' %}
+                            <li class="nav-item me-3">
+                                <a class="nav-link text-white" href="/study">การเรียนของฉัน</a>
+                            </li>
 
-                                {% elif user.profile.userType == 'tutor' %}
-                                <li class="nav-item me-3">
-                                    <a class="nav-link text-secondary" href="/teaching">การสอนของฉัน</a>
-                                </li>
+                            {% elif user.profile.userType == 'tutor' %}
+                            <li class="nav-item me-3">
+                                <a class="nav-link text-white" href="/teaching">การสอนของฉัน</a>
+                            </li>
+                            {% endif %}
 
-                                {% if user.profile.photo %}
-                                <li class="nav-item me-3">
-                                    <img src="{{ user.profile.photo.url }}" width="35" height="35" class="rounded-circle">
-                                </li>
-                                {% endif %}
+                            {% if user.profile.photo %}
+                            <li class="nav-item me-3">
+                                <img src="{{ user.profile.photo.url }}" width="35" height="35" class="rounded-circle">
+                            </li>                      
                             {% endif %}
 
                             <li class="nav-item me-3">
@@ -167,8 +167,8 @@
                     </h2>
                 </div>
 
-                <div class="allstepsearch ms-5">
-                    <div class="stepsearch col-10 ms-lg-5 ms-sm-0">
+                <div class="allstepsearch ">
+                    <div class="stepsearch col-10">
                         <h3 class="Sectextstep">
                             1. ลงทะเบียน
                         </h3>
@@ -177,7 +177,7 @@
                         </p>
                     </div>
 
-                    <div class="stepsearch col-10 ms-lg-5 ms-sm-0">
+                    <div class="stepsearch col-10">
                         <h3 class="Sectextstep">
                             2. เลือกภาษาที่สนใจ
                         </h3>
@@ -186,7 +186,7 @@
                         </p>
                     </div>
 
-                    <div class="stepsearch col-10 ms-lg-5 ms-sm-0">
+                    <div class="stepsearch col-10 ">
                         <h3 class="Sectextstep">
                             3. เลือกติวเตอร์ที่ตรงใจท่าน
                         </h3>
@@ -195,7 +195,7 @@
                         </p>
                     </div>
 
-                    <div class="stepsearch col-10 ms-lg-5 ms-sm-0">
+                    <div class="stepsearch col-10 ">
                         <h3 class="Sectextstep">
                             4. เลือกเวลาที่ท่านสะดวก
                         </h3>
@@ -204,7 +204,7 @@
                         </p>
                     </div>
 
-                    <div class="stepsearch col-10 ms-lg-5 ms-sm-0">
+                    <div class="stepsearch col-10 ">
                         <h3 class="Sectextstep">
                             5. จ้างติวเตอร์
                         </h3>
@@ -290,7 +290,7 @@
                                 class="textregister-banner btn btn-block btn-lg btn-light">สมัครเป็นติวเตอร์</button></a>
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </section>
@@ -314,19 +314,23 @@
 
                     <ul class="list-footer list-unstyled">
                         <li>
-                            <a href="/finding-tutor/?language=ภาษาอังกฤษ&price=&rating=" class="text-light">ภาษาอังกฤษ</a>
+                            <a href="/finding-tutor/?language=ภาษาอังกฤษ&price=&rating="
+                                class="text-light">ภาษาอังกฤษ</a>
                         </li>
                         <li>
                             <a href="/finding-tutor/?language=ภาษาจีน&price=&rating=" class="text-light">ภาษาจีน</a>
                         </li>
                         <li>
-                            <a href="/finding-tutor/?language=ภาษาญี่ปุ่น&price=&rating=" class="text-light">ภาษาญี่ปุ่น</a>
+                            <a href="/finding-tutor/?language=ภาษาญี่ปุ่น&price=&rating="
+                                class="text-light">ภาษาญี่ปุ่น</a>
                         </li>
                         <li>
-                            <a href="/finding-tutor/?language=ภาษาเกาหลี&price=&rating=" class="text-light">ภาษาเกาหลี</a>
+                            <a href="/finding-tutor/?language=ภาษาเกาหลี&price=&rating="
+                                class="text-light">ภาษาเกาหลี</a>
                         </li>
                         <li>
-                            <a href="/finding-tutor/?language=ภาษาเยอรมัน&price=&rating=" class="text-light">ภาษาเยอรมัน</a>
+                            <a href="/finding-tutor/?language=ภาษาเยอรมัน&price=&rating="
+                                class="text-light">ภาษาเยอรมัน</a>
                         </li>
                     </ul>
                 </div>
@@ -353,7 +357,8 @@
 
                     <ul class="list-footer list-unstyled">
                         <li>
-                            <a href="https://docs.google.com/forms/d/1_qEj0JocPeHkYd7j6tFUGdUYK-dWW8OeQ9uO-umONRI/viewform?edit_requested=true" target="_blank" class="text-light">Feedback</a>
+                            <a href="https://docs.google.com/forms/d/1_qEj0JocPeHkYd7j6tFUGdUYK-dWW8OeQ9uO-umONRI/viewform?edit_requested=true"
+                                target="_blank" class="text-light">Feedback</a>
                         </li>
                     </ul>
                 </div>
@@ -379,4 +384,5 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 </body>
+
 </html>

@@ -34,7 +34,7 @@
     </nav>
 
     <div class="container">
-        <div class="col-xl-12 d-flex mb-5">
+        <div class="col-12 d-md-flex mb-5">
             <div class="col-md-2">
                 <div class="profile-bg row bg-white justify-content-center">
                     <ul class="navbar-nav p-0">
@@ -71,7 +71,7 @@
                 </div>
             </div>
 
-            <div class="col-1">
+            <div class="col-md-1">
             </div>
 
             <div class="col-md-9">
@@ -82,104 +82,104 @@
                             {{ form.media }}
                             {% for n in Education %}
                             <div class="col-12">
-                                <h4 class="text-start ms-5 mt-5">
+                                <h4 class="text-profiletutor text-start ms-5 mt-5">
                                     ประวัติการศึกษา
                                 </h4>
                             </div>
     
                             <div class="col-12 d-flex mt-5">
-                                <div class="col-5">
-                                    <h5 class="text-start text-black-50 ms-5">
+                                <div class="col-6 col-md-5">
+                                    <h5 class="text-profiletutor text-start text-black-50 ms-5">
                                         ชื่อโรงเรียน (มัธยมปลาย)
                                     </h5>
                                 </div>
                                 
                                 <div class="col-4 text-center">
-                                    <input type="text" class="form-control" name="school" id="school" value="{{ n.school }}">
+                                    <input type="text-profiletutor text" class="form-control" name="school" id="school" value="{{ n.school }}">
                                 </div>
                             </div>
     
                             <div class="col-12 d-flex mt-5">
-                                <div class="col-5">
-                                    <h5 class="text-start text-black-50 ms-5">
+                                <div class="col-6 col-md-5">
+                                    <h5 class="text-profiletutor text-start text-black-50 ms-5">
                                         สายที่เรียน
                                     </h5>
                                 </div>
     
                                 <div class="col-4 text-center">
-                                    <input type="text" class="form-control" name="schoolProgram" id="schoolProgram" value="{{ n.schoolProgram }}">
+                                    <input type="text-profiletutor text" class="form-control" name="schoolProgram" id="schoolProgram" value="{{ n.schoolProgram }}">
                                 </div>
                             </div>
     
                             <div class="col-12 d-flex mt-5">
-                                <div class="col-5">
-                                    <h5 class="text-start text-black-50 ms-5">
+                                <div class="col-6 col-md-5">
+                                    <h5 class="text-profiletutor text-start text-black-50 ms-5">
                                         ปีที่เรียน (พ.ศ.)
                                     </h5>
                                 </div>
     
                                 <div class="col-4 text-center">
-                                    <input type="number" class="form-control" maxlength="4" name="schoolYear" id="schoolYear" value="{{ n.schoolYear }}">
+                                    <input type="text-profiletutor number" class="form-control" maxlength="4" name="schoolYear" id="schoolYear" value="{{ n.schoolYear }}">
                                 </div>
                             </div>
     
                             <div class="col-12 d-flex mt-5">
-                                <div class="col-5">
-                                    <h5 class="text-start text-black-50 ms-5">
+                                <div class="col-6 col-md-5">
+                                    <h5 class="text-profiletutor text-start text-black-50 ms-5">
                                         ชื่อสถาบัน (อุดมศึกษา)
                                     </h5>
                                 </div>
     
                                 <div class="col-4 text-center">                   
-                                    <input type="text" class="form-control" name="university" id="university" value="{{ n.university }}">              
+                                    <input type="text-profiletutor text" class="form-control" name="university" id="university" value="{{ n.university }}">              
                                 </div>
                             </div>
     
                             <div class="col-12 d-flex mt-5">
-                                <div class="col-5">
-                                    <h5 class="text-start text-black-50 ms-5">
+                                <div class="col-6 col-md-5">
+                                    <h5 class="text-profiletutor text-start text-black-50 ms-5">
                                         ระดับการศึกษา
                                     </h5>
                                 </div>
     
                                 <div class="col-4 text-center">
-                                    <input type="text" class="form-control" name="degree" id="degree" value="{{ n.degree }}">                                   
+                                    <input type="text-profiletutor text" class="form-control" name="degree" id="degree" value="{{ n.degree }}">                                   
                                 </div>
                             </div>
     
                             <div class="col-12 d-flex mt-5">
-                                <div class="col-5">
-                                    <h5 class="text-start text-black-50 ms-5">
+                                <div class="col-6 col-md-5">
+                                    <h5 class="text-profiletutor text-start text-black-50 ms-5">
                                         คณะ
                                     </h5>
                                 </div>
     
                                 <div class="col-4 text-center">                               
-                                    <input type="text" class="form-control" name="faculty" id="faculty" value="{{ n.faculty }}">                                   
+                                    <input type="text-profiletutor text" class="form-control" name="faculty" id="faculty" value="{{ n.faculty }}">                                   
                                 </div>
                             </div>
     
                             <div class="col-12 d-flex mt-5">
-                                <div class="col-5">
-                                    <h5 class="text-start text-black-50 ms-5">
+                                <div class="col-6 col-md-5">
+                                    <h5 class="text-profiletutor text-start text-black-50 ms-5">
                                         สาขาวิชา
                                     </h5>
                                 </div>
     
                                 <div class="col-4 text-center">
-                                    <input type="text" class="form-control" name="major" id="major" value="{{ n.major }}">                                    
+                                    <input type="text-profiletutor text" class="form-control" name="major" id="major" value="{{ n.major }}">                                    
                                 </div>
                             </div>
     
                             <div class="col-12 d-flex mt-5">
-                                <div class="col-5">
-                                    <h5 class="text-start text-black-50 ms-5">
+                                <div class="col-6 col-md-5">
+                                    <h5 class="text-profiletutor text-start text-black-50 ms-5">
                                         ปีที่เรียน (พ.ศ.)
                                     </h5>
                                 </div>
     
                                 <div class="col-4 text-center">                                    
-                                    <input type="number" class="form-control" maxlength="4" name="universityYear" id="universityYear" value="{{ n.universityYear }}">                                  
+                                    <input type="text-profiletutor number" class="form-control" maxlength="4" name="universityYear" id="universityYear" value="{{ n.universityYear }}">                                  
                                 </div>
                             </div>
     

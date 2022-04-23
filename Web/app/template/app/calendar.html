@@ -34,7 +34,7 @@
     </nav>
 
     <div class="container">
-        <div class="col-12 d-flex mb-5">
+        <div class="col-12 d-md-flex mb-5">
             <div class="col-md-2">
                 <div class="profile-bg row bg-white justify-content-center">
                     <ul class="navbar-nav p-0">
@@ -71,7 +71,7 @@
                 </div>
             </div>
 
-            <div class="col-1">
+            <div class="col-md-1">
             </div>
 
             <div class="col-md-9">
@@ -80,9 +80,11 @@
                         <div class="clearfix">
                             <a class="btn btn-outline-info left text-dark" href="{% url 'calendar' %}?{{ prev_month }}"> เดือนก่อนหน้า </a>
                             <a class="btn btn-outline-info right text-dark" href="{% url 'calendar' %}?{{ next_month }}"> เดือนถัดไป </a>
-                            <a class="btn btn-outline-info right text-dark me-2" href="{% url 'event_new' %}"> เพิ่มกิจกรรม </a>
+                            <a class="btnAddEvent btn btn-outline-info right text-dark me-2" href="{% url 'event_new' %}"> เพิ่มกิจกรรม </a>
                         </div>
-                        {{ calendar }}
+                        <div class="table-responsive">
+                            {{ calendar }}
+                        </div>                
                     </div>
                 </div>
             </div>

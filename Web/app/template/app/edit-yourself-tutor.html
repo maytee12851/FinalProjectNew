@@ -34,7 +34,7 @@
     </nav>
 
     <div class="container">
-        <div class="col-xl-12 d-flex mb-5">
+        <div class="col-12 d-md-flex mb-5">
             <div class="col-md-2">
                 <div class="profile-bg row bg-white justify-content-center">
                     <ul class="navbar-nav p-0">
@@ -71,7 +71,7 @@
                 </div>
             </div>
 
-            <div class="col-1">
+            <div class="col-md-1">
             </div>
 
             <div class="col-md-9">
@@ -84,65 +84,65 @@
                             {{ form.media }}
                             {% for y in yourself %}
                             <div class="col-12">
-                                <h4 class="text-start ms-5 mt-5">
+                                <h4 class="text-profiletutor text-start ms-5 mt-5">
                                     แนะนำตัว
                                 </h4>
                             </div>
     
-                            <div class="col-12 d-flex mt-5">
-                                <div class="col-4">
-                                    <h5 class="text-start text-black-50 ms-5">
+                            <div class="col-12 d-md-flex mt-5">
+                                <div class="col-12 col-md-4">
+                                    <h5 class="text-profiletutor text-start text-black-50 ms-5">
                                         วิดีโอตัวอย่างการสอน
                                     </h5>
-                                    <p class="text-start text-black-50 ms-5 fs-6">
+                                    <p class="text-profiletutor text-start text-black-50 ms-5 fs-6">
                                         (ขนาดไฟล์วิดีโอไม่เกิน 100 MB)
                                     </p>
                                 </div>
     
-                                <div class="col-4 ">
+                                <div class="col-12 col-md-4">
                                     <video class="box" width="100%" controls>
                                         <source src="{{ y.video.url }}" type="video/mp4">
                                     </video>
                                 </div>
 
-                                <div class="col-4 align-self-center pe-5 ps-5">
-                                    <input type="file" class="form-control form-control-lg text-black-50" name="video" id="video" accept="video/*">
+                                <div class="col-12 col-md-4 align-self-center pe-3 ps-4 mt-3 mt-md-0">
+                                    <input type="file" class="form-control form-control text-black-50" name="video" id="video" accept="video/*">
                                 </div>
                             </div>
     
                             <div class="col-12 d-flex mt-5">
                                 <div class="col-4">
-                                    <h5 class="text-start text-black-50 ms-5">
+                                    <h5 class="text-profiletutor text-start text-black-50 ms-5">
                                         แนะนำตัวติวเตอร์
                                     </h5>
                                 </div>
     
                                 <div class="col-4 text-center">
-                                    <textarea class="form-control form-input" maxlength="300" rows="10" name="introduce" value="{{ y.introduce }}">{{ y.introduce }}</textarea>
+                                    <textarea class="text-profiletutor form-control form-input" maxlength="300" rows="10" name="introduce" value="{{ y.introduce }}">{{ y.introduce }}</textarea>
                                 </div>
                             </div>
 
                             <div class="col-12 d-flex mt-5">
                                 <div class="col-4">
-                                    <h5 class="text-start text-black-50 ms-5">
+                                    <h5 class="text-profiletutor text-start text-black-50 ms-5">
                                         Line ID
                                     </h5>
                                 </div>
     
                                 <div class="col-4 text-center">
-                                    <input type="text" class="form-control" name="line" value="{{ y.line }}"></input>
+                                    <input type="text-profiletutor text" class="form-control" name="line" value="{{ y.line }}"></input>
                                 </div>
                             </div>
 
                             <div class="col-12 d-flex mt-5">
                                 <div class="col-4">
-                                    <h5 class="text-start text-black-50 ms-5">
+                                    <h5 class="text-profiletutor text-start text-black-50 ms-5">
                                         Facebook
                                     </h5>
                                 </div>
     
                                 <div class="col-4 text-center">
-                                    <input type="text" class="form-control" name="facebook" value="{{ y.facebook }}"></input>
+                                    <input type="text-profiletutor text" class="form-control" name="facebook" value="{{ y.facebook }}"></input>
                                 </div>
                             </div>
     

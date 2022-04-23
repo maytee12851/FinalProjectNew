@@ -40,21 +40,21 @@
                             </li>
 
                             {% if user.is_authenticated %}
-                                {% if user.profile.userType == 'student' %}
-                                <li class="nav-item me-3">
-                                    <a class="nav-link text-secondary" href="/study">การเรียนของฉัน</a>
-                                </li>
+                            {% if user.profile.userType == 'student' %}
+                            <li class="nav-item me-3">
+                                <a class="nav-link text-white" href="/study">การเรียนของฉัน</a>
+                            </li>
 
-                                {% elif user.profile.userType == 'tutor' %}
-                                <li class="nav-item me-3">
-                                    <a class="nav-link text-secondary" href="/teaching">การสอนของฉัน</a>
-                                </li>
+                            {% elif user.profile.userType == 'tutor' %}
+                            <li class="nav-item me-3">
+                                <a class="nav-link text-white" href="/teaching">การสอนของฉัน</a>
+                            </li>
+                            {% endif %}
 
-                                {% if user.profile.photo %}
-                                <li class="nav-item me-3">
-                                    <img src="{{ user.profile.photo.url }}" width="35" height="35" class="rounded-circle">
-                                </li>
-                                {% endif %}
+                            {% if user.profile.photo %}
+                            <li class="nav-item me-3">
+                                <img src="{{ user.profile.photo.url }}" width="35" height="35" class="rounded-circle">
+                            </li>
                             {% endif %}
 
                             <li class="nav-item me-3">
@@ -97,10 +97,10 @@
                     <div class="searchtutor col-xl-12 mt-3">
                         {% if user.is_authenticated %}
                         <a href="#"><button type="submit"
-                            class="textsearch btn btn-block btn-lg btn-info">สมัครเป็นติวเตอร์</button></a>
+                                class="textsearch btn btn-block btn-lg btn-info">สมัครเป็นติวเตอร์</button></a>
 
                         {% else %}
-                        
+
                         <a href="/register-tutor"><button type="submit"
                                 class="textsearch btn btn-block btn-lg btn-info">สมัครเป็นติวเตอร์</button></a>
                         {% endif %}
@@ -175,8 +175,8 @@
                     </h2>
                 </div>
 
-                <div class="allstepsearch ms-5">
-                    <div class="stepsearch col-10 ms-lg-5 ms-sm-0">
+                <div class="allstepsearch">
+                    <div class="stepsearch col-10">
                         <h3 class="Sectextstep">
                             1. ลงทะเบียน
                         </h3>
@@ -185,7 +185,7 @@
                         </p>
                     </div>
 
-                    <div class="stepsearch col-10 ms-lg-5 ms-sm-0">
+                    <div class="stepsearch col-10">
                         <h3 class="Sectextstep">
                             2. สร้างโปรไฟล์ของคุณ
                         </h3>
@@ -194,7 +194,7 @@
                         </p>
                     </div>
 
-                    <div class="stepsearch col-10 ms-lg-5 ms-sm-0">
+                    <div class="stepsearch col-10">
                         <h3 class="Sectextstep">
                             3. รอการอนุมัติจากแอดมิน
                         </h3>
@@ -203,7 +203,7 @@
                         </p>
                     </div>
 
-                    <div class="stepsearch col-10 ms-lg-5 ms-sm-0">
+                    <div class="stepsearch col-10">
                         <h3 class="Sectextstep">
                             4. ยืนยันการสอน
                         </h3>
@@ -212,7 +212,7 @@
                         </p>
                     </div>
 
-                    <div class="stepsearch col-10 ms-lg-5 ms-sm-0">
+                    <div class="stepsearch col-10">
                         <h3 class="Sectextstep">
                             5. เริ่มสอน
                         </h3>
@@ -318,19 +318,23 @@
 
                     <ul class="list-footer list-unstyled">
                         <li>
-                            <a href="/finding-tutor/?language=ภาษาอังกฤษ&price=&rating=" class="text-light">ภาษาอังกฤษ</a>
+                            <a href="/finding-tutor/?language=ภาษาอังกฤษ&price=&rating="
+                                class="text-light">ภาษาอังกฤษ</a>
                         </li>
                         <li>
                             <a href="/finding-tutor/?language=ภาษาจีน&price=&rating=" class="text-light">ภาษาจีน</a>
                         </li>
                         <li>
-                            <a href="/finding-tutor/?language=ภาษาญี่ปุ่น&price=&rating=" class="text-light">ภาษาญี่ปุ่น</a>
+                            <a href="/finding-tutor/?language=ภาษาญี่ปุ่น&price=&rating="
+                                class="text-light">ภาษาญี่ปุ่น</a>
                         </li>
                         <li>
-                            <a href="/finding-tutor/?language=ภาษาเกาหลี&price=&rating=" class="text-light">ภาษาเกาหลี</a>
+                            <a href="/finding-tutor/?language=ภาษาเกาหลี&price=&rating="
+                                class="text-light">ภาษาเกาหลี</a>
                         </li>
                         <li>
-                            <a href="/finding-tutor/?language=ภาษาเยอรมัน&price=&rating=" class="text-light">ภาษาเยอรมัน</a>
+                            <a href="/finding-tutor/?language=ภาษาเยอรมัน&price=&rating="
+                                class="text-light">ภาษาเยอรมัน</a>
                         </li>
                     </ul>
                 </div>
@@ -357,7 +361,8 @@
 
                     <ul class="list-footer list-unstyled">
                         <li>
-                            <a href="https://docs.google.com/forms/d/1_qEj0JocPeHkYd7j6tFUGdUYK-dWW8OeQ9uO-umONRI/viewform?edit_requested=true" target="_blank" class="text-light">Feedback</a>
+                            <a href="https://docs.google.com/forms/d/1_qEj0JocPeHkYd7j6tFUGdUYK-dWW8OeQ9uO-umONRI/viewform?edit_requested=true"
+                                target="_blank" class="text-light">Feedback</a>
                         </li>
                     </ul>
                 </div>

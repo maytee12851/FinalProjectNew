@@ -34,7 +34,7 @@
     </nav>
 
     <div class="container">
-        <div class="col-12 d-flex mb-5">
+        <div class="col-12 d-md-flex mb-5">
             <div class="col-md-2">
                 <div class="profile-bg row bg-white justify-content-center">
                     <ul class="navbar-nav p-0">
@@ -71,40 +71,43 @@
                 </div>
             </div>
 
-            <div class="col-1">
+            <div class="col-md-1">
             </div>
 
             <div class="col-md-9">
                 <div class="profile-bg row bg-white justify-content-center">
-                    <div class="col-12">          
+                    <div class="col-12">
                         <div class="col-12 d-flex">
                             <div class="col-md-9">
-                                <h4 class="text-start ms-5 mt-5">
+                                <h4 class="text-profiletutor text-start ms-5 mt-5">
                                     ลงคอร์สที่จะสอน
                                 </h4>
-                                <h6 class="text-black-50 ms-5">
+                                <h6 class="text-profiletutor text-black-50 ms-5">
                                     (สำหรับช่องทางในการสอน ติวเตอร์สามารถตกลงกับผู้เรียนได้เลยว่าจะเรียนผ่านช่องทางใด)
                                 </h6>
                             </div>
-                            
+
                             <div class="col-md-3 text-end mt-5 pe-5  pb-5">
-                                <button type="button" class="btn btn-secondary btn-lg text-white" data-bs-toggle="modal" data-bs-target="#addcourse">เพิ่มคอร์ส</button>
-                            </div>    
+                                <button type="button" class="btn btn-secondary btn-lg text-white" data-bs-toggle="modal"
+                                    data-bs-target="#addcourse">เพิ่มคอร์ส</button>
+                            </div>
                         </div>
 
                         <!-- Modal -->
 
-                        <div class="modal fade" id="addcourse" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+                        <div class="modal fade" id="addcourse" tabindex="-1" aria-labelledby="ModalLabel"
+                            aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <h5 class="modal-title" id="ModalLabel">เพิ่มคอร์ส</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
                                         <form method="POST" enctype="multipart/form-data">
                                             {% csrf_token %}
-                                            
+
                                             <div class="mb-3">
                                                 <label class="col-form-label text-black-50">ภาษาที่สอน:</label>
                                                 <select class="form-select" name="language" required>
@@ -124,13 +127,15 @@
                                             </div>
 
                                             <div class="mb-3">
-                                                <label class="col-form-label text-black-50">คำอธิบายเกี่ยวกับคอร์ส:</label>
+                                                <label
+                                                    class="col-form-label text-black-50">คำอธิบายเกี่ยวกับคอร์ส:</label>
                                                 <input type="text" class="form-control" name="courseDesc" required>
                                             </div>
 
                                             <div class="mb-3">
                                                 <label class="col-form-label text-black-50">เวลาเรียน (ชั่วโมง):</label>
-                                                <input type="number" class="form-control form-input" min="1" max="10" name="courseHours" required>
+                                                <input type="number" class="form-control form-input" min="1" max="10"
+                                                    name="courseHours" required>
                                             </div>
 
                                             <div class="mb-3">
@@ -140,18 +145,22 @@
 
                                             <div class="mb-3">
                                                 <label class="col-form-label text-black-50">ช่วงเวลา:</label>
-                                                <input type="time" class="form-control form-input"name="courseTime" required>
+                                                <input type="time" class="form-control form-input" name="courseTime"
+                                                    required>
                                             </div>
 
                                             <div class="mb-3">
-                                                <label class="col-form-label text-black-50">อัตราค่าสอน (ต่อคอร์ส):</label>
-                                                <input type="number" class="form-control form-input" min="200" name="coursePrice" required>
+                                                <label class="col-form-label text-black-50">อัตราค่าสอน
+                                                    (ต่อคอร์ส):</label>
+                                                <input type="number" class="form-control form-input" min="200"
+                                                    name="coursePrice" required>
                                             </div>
 
                                             <div class="col-mb-3 text-end">
-                                                <button type="submit" class="btn btn-secondary btn-lg text-white">บันทึกข้อมูล</button>
+                                                <button type="submit"
+                                                    class="btn btn-secondary btn-lg text-white">บันทึกข้อมูล</button>
                                             </div>
-                                            
+
                                         </form>
                                     </div>
                                 </div>
@@ -159,33 +168,34 @@
                         </div>
 
                         <!-- Table -->
-
-                        <table class="table mb-5">
-                            <thead class="table-primary border border-dark">
-                                <tr class="heading-table text-center align-middle">
-                                    <th scope="col" class="w-50 border border-dark">ภาษาที่สอน/ชื่อคอร์ส/คำอธิบายเกี่ยวกับคอร์ส</th>
-                                    <th scope="col" class="border border-dark">เวลาเรียน (ชั่วโมง)</th>
-                                    <th scope="col" class="border border-dark">วันที่ติวเตอร์สะดวก</th>
-                                    <th scope="col" class="border border-dark">ช่วงเวลา</th>
-                                    <th scope="col" class="border border-dark">อัตราค่าสอน (ต่อคอร์ส)</th>
-                                    <th scope="col" class="border border-dark">จัดการคอร์ส</th>
-                                  </tr>
-                            </thead>
-                            <tbody>
-                                {% for m in myCourse %}
-                                <tr class="table-row text-center border border-dark align-middle">
-                                  <td class="border border-dark">{{ m.language }} / {{ m.courseTitle }} / {{ m.courseDesc }}</td>
-                                  <td class="border border-dark">{{ m.courseHours }}</td>
-                                  <td class="border border-dark">{{ m.courseDay }}</td>
-                                  <td class="border border-dark">{{ m.courseTime }}</td>
-                                  <td class="border border-dark">{{ m.coursePrice }}</td>
-                                  <td class="border border-dark"><a href="{% url 'deleteCourse' m.id %}" class="btn btn-outilne-danger btn-sm">Delete</a></td>
-                                </tr>
-                                {% endfor %}
-                            </tbody>
-                        </table>
-                            </div>
-                        </div>    
+                        <div class="table-responsive">
+                            <table class="table mb-5">
+                                <thead class="table-primary border border-dark">
+                                    <tr class="heading-table text-center align-middle">
+                                        <th scope="col" class="w-50 border border-dark">
+                                            ภาษาที่สอน/ชื่อคอร์ส/คำอธิบายเกี่ยวกับคอร์ส</th>
+                                        <th scope="col" class="border border-dark">เวลาเรียน (ชั่วโมง)</th>
+                                        <th scope="col" class="border border-dark">วันที่ติวเตอร์สะดวก</th>
+                                        <th scope="col" class="border border-dark">ช่วงเวลา</th>
+                                        <th scope="col" class="border border-dark">อัตราค่าสอน (ต่อคอร์ส)</th>
+                                        <th scope="col" class="border border-dark">จัดการคอร์ส</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for m in myCourse %}
+                                    <tr class="table-row text-center border border-dark align-middle">
+                                        <td class="border border-dark">{{ m.language }} / {{ m.courseTitle }} / {{ m.courseDesc }}</td>
+                                        <td class="border border-dark">{{ m.courseHours }}</td>
+                                        <td class="border border-dark">{{ m.courseDay }}</td>
+                                        <td class="border border-dark">{{ m.courseTime }}</td>
+                                        <td class="border border-dark">{{ m.coursePrice }}</td>
+                                        <td class="border border-dark"><a href="{% url 'deleteCourse' m.id %}"
+                                                class="btn btn-outilne-danger btn-sm">Delete</a></td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -34,13 +34,14 @@
     </nav>
 
     <div class="container">
-        <div class="col-12 d-flex mb-5">
+        <div class="col-12 d-md-flex mb-5">
             <div class="col-md-2">
+
                 <div class="profile-bg row bg-white justify-content-center">
                     <ul class="navbar-nav p-0">
                         <li class="nav-item text-center mt-4 fs-5">
                             <a class="nav-link text-dark" href="/profile-tutor">ตั้งค่าโปรไฟล์</a>
-                        </li>   
+                        </li>
                         <li class="nav-item nav-item text-center mt-4 fs-5">
                             <a class="nav-link text-black-50" href="/profile-education-tutor">ประวัติการศึกษา</a>
                         </li>
@@ -71,39 +72,39 @@
                 </div>
             </div>
 
-            <div class="col-1">
+            <div class="col-md-1">
             </div>
 
             <div class="col-md-9">
                 <div class="profile-bg row bg-white justify-content-center">
                     <div class="col-12">
                         <div class="col-12">
-                            <h4 class="text-start ms-5 mt-5">
+                            <h4 class="text-profiletutortext-start ms-5 mt-5">
                                 ตั้งค่าโปรไฟล์
                             </h4>
                         </div>
 
                         <div class="col-12 d-flex mt-5">
                             <div class="col-5">
-                                <h5 class="text-start text-black-50 ms-5">
+                                <h5 class="text-profiletutor text-start text-black-50 ms-5">
                                     รูปโปรไฟล์
                                 </h5>
                             </div>
 
                             <div class="col-4 text-start">
-                                <img src="{{ user.profile.photo.url }}" class="rounded" width="200" height="200">
+                                <img src="{{ user.profile.photo.url }}" class="rounded" width="200" height="200" style="max-width: 100%; height: auto;">
                             </div>
                         </div>
 
                         <div class="col-12 d-flex mt-5">
                             <div class="col-5">
-                                <h5 class="text-start text-black-50 ms-5">
+                                <h5 class="text-profiletutor text-start text-black-50 ms-5">
                                     ชื่อจริง
                                 </h5>
                             </div>
 
                             <div class="col-4 text-center">
-                                <h5 class="text-start text-black-50">
+                                <h5 class="text-profiletutor text-start text-black-50">
                                     {{user.profile.name}}
                                 </h5>
                             </div>
@@ -111,13 +112,13 @@
 
                         <div class="col-12 d-flex mt-5">
                             <div class="col-5">
-                                <h5 class="text-start text-black-50 ms-5">
+                                <h5 class="text-profiletutor text-start text-black-50 ms-5">
                                     นามสกุล
                                 </h5>
                             </div>
 
                             <div class="col-4 text-center">
-                                <h5 class="text-start text-black-50">
+                                <h5 class="text-profiletutor text-start text-black-50">
                                     {{user.profile.surname}}
                                 </h5>
                             </div>
@@ -125,13 +126,13 @@
 
                         <div class="col-12 d-flex mt-5">
                             <div class="col-5">
-                                <h5 class="text-start text-black-50 ms-5">
+                                <h5 class="text-profiletutor text-start text-black-50 ms-5">
                                     ชื่อเล่น
                                 </h5>
                             </div>
 
                             <div class="col-4 text-center">
-                                <h5 class="text-start text-black-50">
+                                <h5 class="text-profiletutor text-start text-black-50">
                                     {{user.profile.nickname}}
                                 </h5>
                             </div>
@@ -139,13 +140,13 @@
 
                         <div class="col-12 d-flex mt-5">
                             <div class="col-5">
-                                <h5 class="text-start text-black-50 ms-5">
+                                <h5 class="text-profiletutor text-start text-black-50 ms-5">
                                     เบอร์โทรศัพท์
                                 </h5>
                             </div>
 
                             <div class="col-4 text-center">
-                                <h5 class="text-start text-black-50">
+                                <h5 class="text-profiletutor text-start text-black-50">
                                     {{user.profile.tel}}
                                 </h5>
                             </div>
@@ -153,13 +154,13 @@
 
                         <div class="col-12 d-flex mt-5">
                             <div class="col-5">
-                                <h5 class="text-start text-black-50 ms-5">
+                                <h5 class="text-profiletutor text-start text-black-50 ms-5">
                                     อีเมล
                                 </h5>
                             </div>
 
                             <div class="col-4 text-center">
-                                <h5 class="text-start text-black-50">
+                                <h5 class="text-profiletutor text-start text-black-50">
                                     {{user.email}}
                                 </h5>
                             </div>
@@ -167,13 +168,13 @@
 
                         <div class="col-12 d-flex mt-5">
                             <div class="col-5">
-                                <h5 class="text-start text-black-50 ms-5">
+                                <h5 class="text-profiletutor text-start text-black-50 ms-5">
                                     เพศ
                                 </h5>
                             </div>
 
                             <div class="col-4 text-center">
-                                <h5 class="text-start text-black-50">
+                                <h5 class="text-profiletutor text-start text-black-50">
                                     {{user.profile.sex}}
                                 </h5>
                             </div>
@@ -181,14 +182,16 @@
 
                         <div class="col-12 d-flex mt-5">
                             <div class="col-5">
-                                <h5 class="text-start text-black-50 ms-5">
+                                <h5 class="text-profiletutor text-start text-black-50 ms-5">
                                     รูปบัตรประจำตัวประชาชน
-                                    <p class="text-danger"><br>**ใช้เป็นเอกสารเพื่อยืนยันตัวตนเท่านั้น <br>จะไม่มีการนำไปแสดงบนเว็บไซต์โดยเด็ดขาด**</p>
+                                    <p class="text-danger"><br>**ใช้เป็นเอกสารเพื่อยืนยันตัวตนเท่านั้น
+                                        <br>จะไม่มีการนำไปแสดงบนเว็บไซต์โดยเด็ดขาด**
+                                    </p>
                                 </h5>
                             </div>
 
                             <div class="col-4 text-start">
-                                <img src="{{ user.profile.idcard.url }}" class="rounded" width="230" height="139">
+                                <img src="{{ user.profile.idcard.url }}" class="rounded" width="230" height="139" style="max-width: 100%; height: auto;">
                             </div>
                         </div>
 

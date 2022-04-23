@@ -3,6 +3,7 @@
 {% load static %}
 
 {% for c in course %}
+
 <body>
     <div class="container">
         <div class="row pt-5">
@@ -11,7 +12,7 @@
                     <img src="{{ c.user.photo.url }}" class="rounded-circle" width="200" height="200">
                 </div>
             </div>
-            
+
             <div class="col-lg-9 justify-content-start align-self-center">
                 <div class="d-flex">
                     <h3>
@@ -30,7 +31,8 @@
 
                 <div class="d-flex mt-2">
                     <div>
-                        <button type="button" class="btn btn-outline-dark btn-lg" data-bs-toggle="modal" data-bs-target="#contact">ติดต่อติวเตอร์</button></a>
+                        <button type="button" class="btn btn-outline-dark btn-lg" data-bs-toggle="modal"
+                            data-bs-target="#contact">ติดต่อติวเตอร์</button></a>
                     </div>
                 </div>
 
@@ -47,11 +49,13 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="ModalLabel">ช่องทางการติดต่อ</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
                                 <p><i class="bi bi-line fs-4"></i>&nbsp Line ID : {{ c.introduceTutor.line }}</p>
-                                <p><i class="bi bi-facebook fs-4"></i>&nbsp Facebook : {{ c.introduceTutor.facebook }}</p>
+                                <p><i class="bi bi-facebook fs-4"></i>&nbsp Facebook : {{ c.introduceTutor.facebook }}
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -112,74 +116,35 @@
 
             <!-- Course -->
 
-            <div class="tutor-data row bg-white mt-5 pt-4 pb-4 ps-5 pe-5">
-                <div class="col-4 align-self-center">
-                    <h5>
-                        คอร์ส
-                    </h5>
-                </div>
-
-                <div class="col-2 text-center align-self-center">
-                    <h5>
-                        เวลาเรียน (ต่อคอร์ส)
-                    </h5>
-                </div>
-
-                <div class="col-2 text-center align-self-center">
-                    <h5>
-                        วัน-เวลา
-                    </h5>
-                </div>
-
-                <div class="col-2 text-center align-self-center">
-                    <h5>
-                        ค่าสอนรวม
-                    </h5>
-                </div>
-
-                <!-- Course 1 -->
-
-                <div class="col-4 mt-4">
-                    <div>
-                        <h5>
-                            {{ c.courseTitle }}
-                        </h5>
-                        <h5 class="text-black-50">
-                            {{ c.courseDesc }}
-                        </h5>
-                    </div>
-                </div>
-
-                <div class="col-2 text-center align-self-center">
-                    <h5>
-                        {{ c.courseHours }} ชั่วโมง
-                    </h5>
-                </div>
-
-                <div class="col-2 text-center align-self-center">
-                    <h5>
-                        {{ c.courseDay }} / {{ c.courseTime }}
-                    </h5>
-                </div>
-
-                <div class="col-2 text-center align-self-center">
-                    <h5>
-                        {{ c.coursePrice }} บาท
-                    </h5>
-                </div>
-
-                {% if user.profile.userType == 'student' %}
-                <div class="col-2 text-center align-self-center">
-                    <div>
-                        <a href="{% url 'addCourseStudent' c.id %}"><button class="btn btn-outline-secondary btn-lg" type="submit">จองคอร์ส</button></a>
-                    </div>
-                </div>
-                {% endif %}
+            <div class="tutor-data row bg-white mt-5 pt-4 pb-3 ps-5 pe-5 table-responsive">
+                <table class="table table-borderless">
+                    <thead>
+                        <tr class="fs-5 align-middle">
+                            <th scope="col" class="fw-normal">คอร์ส</th>
+                            <th scope="col" class="fw-normal">เวลาเรียน (ต่อคอร์ส)</th>
+                            <th scope="col" class="fw-normal">วัน-เวลา</th>
+                            <th scope="col" class="fw-normal">ค่าสอนรวม</th>
+                            <th scope="col" class="fw-normal"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="fs-6 align-middle">
+                            <td>{{ c.courseTitle }} <br> <p class="text-black-50">{{ c.courseDesc }}</p></td>
+                            <td>{{ c.courseHours }} ชั่วโมง</td>
+                            <td>{{ c.courseDay }} / {{ c.courseTime }}</td>
+                            <td>{{ c.coursePrice }} บาท</td>
+                            {% if user.profile.userType == 'student' %}
+                            <td><a href="{% url 'addCourseStudent' c.id %}"><button class="btn btn-outline-secondary btn-lg"
+                                type="submit">จองคอร์ส</button></a></td>
+                            {% endif %}
+                        </tr>
+                    </tbody>
+                </table>
             </div>
 
             <!-- Video -->
 
-            <div class="tutor-data row bg-white mt-5 pt-4 pb-4 ps-5 pe-5">
+            <div class="tutor-data row bg-white mt-5 mb-5 pt-4 pb-4 ps-5 pe-5">
                 <div class="col-lg-12 justify-content-start">
                     <h5>
                         วิดีโอตัวอย่างการสอน

@@ -11,10 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-
-# import cloudinary_storage
-# import cloudinary.uploader
-# import cloudinary.api
+import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -78,17 +75,29 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'Web.wsgi.application'
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd1mucbt0egcbla',
+        'USER': 'pooypnwqrkluvh',
+        'PASSWORD': '377bce827539b146276182a5a948ab4f92ec3378b06824638c81666d53a44f46',
+        'HOST': 'ec2-44-199-143-43.compute-1.amazonaws.com',
+        'PORT': '5432'
+    }
+}
+
+# Heroku Database
+DATABASES['default'] = dj_database_url.config(default='postgres://pooypnwqrkluvh:377bce827539b146276182a5a948ab4f92ec3378b06824638c81666d53a44f46@ec2-44-199-143-43.compute-1.amazonaws.com:5432/d1mucbt0egcbla')
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
-
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -148,3 +157,5 @@ CLOUDINARY_STORAGE = {
 }
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

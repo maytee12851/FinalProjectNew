@@ -29,24 +29,24 @@
                     {% csrf_token %}
                     {{ form.media }}
                     <div class="col-12">
-                        <h4 class="text-start ms-5 mt-5">
+                        <h4 class="text-profiletutor text-start ms-5 mt-5">
                             ตั้งค่าโปรไฟล์
                         </h4>
                     </div>
     
                     <div class="col-12 d-flex mt-5 me-5">
                         <div class="col-4">
-                            <h5 class="text-start text-black-50 ms-5">
+                            <h5 class="text-profiletutor text-start text-black-50 ms-5">
                                 รูปโปรไฟล์
                             </h5>
                         </div>
     
                         <div class="col-4">
-                            <img src="{{ user.profile.photo.url }}" id="photo-preview" class="rounded" width="200" height="200">
+                            <img src="{{ user.profile.photo.url }}" id="photo-preview" class="rounded" width="200" height="200" style="max-width: 100%; height: auto;">
                         </div>
     
-                        <div class="col-md-4 pe-md-5 ps-sm-5 ps-lg-0 text-center align-self-center">
-                            <input class="form-control form-control-lg text-black-50" id="photo" name="photo" type="file" accept="image/*" onchange="imgPreview(event);">
+                        <div class="input-photo col-md-4 pe-md-5 ps-sm-5 ps-lg-0 text-center align-self-center">
+                            <input class="form-control form-control text-black-50" id="photo" name="photo" type="file" accept="image/*" onchange="imgPreview(event);">
                         </div>
                     </div>
 
@@ -57,67 +57,67 @@
     
                     <div class="col-12 d-flex mt-5">
                         <div class="col-4 align-self-center">
-                            <h5 class="text-start text-black-50 ms-5">
+                            <h5 class="text-profiletutor text-start text-black-50 ms-5">
                                 ชื่อจริง
                             </h5>
                         </div>
     
                         <div class="col-4 text-center">
-                            <input type="text" class="form-control" name="name" value="{{ user.profile.name }}">
+                            <input type="text" class="form-control text-profiletutor" name="name" value="{{ user.profile.name }}">
                         </div>
                     </div>
     
                     <div class="col-12 d-flex mt-5">
                         <div class="col-4 align-self-center">
-                            <h5 class="text-start text-black-50 ms-5">
+                            <h5 class="text-profiletutor text-start text-black-50 ms-5">
                                 นามสกุล
                             </h5>
                         </div>
     
                         <div class="col-4 text-center">
-                            <input type="text" class="form-control" name="surname" value="{{ user.profile.surname }}">
+                            <input type="text" class="form-control text-profiletutor" name="surname" value="{{ user.profile.surname }}">
                         </div>
                     </div>
     
                     <div class="col-12 d-flex mt-5">
                         <div class="col-4 align-self-center">
-                            <h5 class="text-start text-black-50 ms-5">
+                            <h5 class="text-profiletutor text-start text-black-50 ms-5">
                                 ชื่อเล่น
                             </h5>
                         </div>
     
                         <div class="col-4 text-center">
-                            <input type="text" class="form-control" name="nickname" value="{{ user.profile.nickname }}">
+                            <input type="text" class="form-control text-profiletutor" name="nickname" value="{{ user.profile.nickname }}">
                         </div>
                     </div>
     
                     <div class="col-12 d-flex mt-5">
                         <div class="col-4 align-self-center">
-                            <h5 class="text-start text-black-50 ms-5">
+                            <h5 class="text-profiletutor text-start text-black-50 ms-5">
                                 เบอร์โทรศัพท์
                             </h5>
                         </div>
     
                         <div class="col-4 text-center">
-                            <input type="tel" class="form-control" maxlength="10" name="tel" value="{{ user.profile.tel }}">
+                            <input type="tel" class="form-control text-profiletutor" maxlength="10" name="tel" value="{{ user.profile.tel }}">
                         </div>
                     </div>
     
                     <div class="col-12 d-flex mt-5">
                         <div class="col-4 align-self-center">
-                            <h5 class="text-start text-black-50 ms-5">
+                            <h5 class="text-profiletutor text-start text-black-50 ms-5">
                                 อีเมล
                             </h5>
                         </div>
     
                         <div class="col-4 text-center">
-                            <input type="email" class="form-control" name="email" value="{{ user.email }}">
+                            <input type="email" class="form-control text-profiletutor" name="email" value="{{ user.email }}">
                         </div>  
                     </div>
     
                     <div class="col-12 d-flex mt-5">
                         <div class="col-4 align-self-center">
-                            <h5 class="text-start text-black-50 ms-5">
+                            <h5 class="text-profiletutor text-start text-black-50 ms-5">
                                 เพศ
                             </h5>
                         </div>

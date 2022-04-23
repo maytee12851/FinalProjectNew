@@ -93,21 +93,6 @@ def registerTutor(request):
      
     return render(request, 'app/register-tutor.html')
 
-def tutorForm1(request):
-    return render(request, 'app/tutor-form1.html')
-
-def tutorForm2(request):
-    return render(request, 'app/tutor-form2.html')
-
-def tutorForm3(request):
-    return render(request, 'app/tutor-form3.html')
-
-def tutorForm4(request):
-    return render(request, 'app/tutor-form4.html')
-
-def tutorForm5(request):
-    return render(request, 'app/tutor-form5.html')
-
 def is_valid_queryparam(param):
     return param != '' and param is not None
 
@@ -303,12 +288,6 @@ def finishTeaching(request, id, status):
     CourseStudent.save()
     
     return redirect ('/teaching/')
-
-def chat(request):
-    return render(request, 'app/chat.html')
-
-def profileStudent(request):
-    return render(request, 'app/profile-student.html')
 
 def profile(request):
     return render(request, 'app/profile.html')
