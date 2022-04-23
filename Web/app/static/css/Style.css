@@ -470,6 +470,12 @@ footer {
     }
 }
 
+/******************************* course-tutor *****************************/
+
+.inputCourseDay input::placeholder{
+    color: rgb(218, 218, 218);
+}
+
 /******************************* star rating ********************************/
 
 .star-rating {
@@ -550,7 +556,7 @@ table.table td div{
     position: absolute;
     top: 0;
     left: 0;
-    height: 63px;
+    height: 46px;
     z-index: 100;
 }
 
@@ -562,6 +568,11 @@ table.table td img.starpic{
     z-index: 110;
 }
 
+.star-line{
+    width: 240px;
+    top: 10px;
+}
+
 /**************** star-height *****************/
 
 @media only screen and (max-width : 1400px){
@@ -570,7 +581,7 @@ table.table td img.starpic{
         position: absolute;
         top: 0;
         left: 0;
-        height: 54px;
+        height: 46px;
         z-index: 100;
     }
 }
@@ -581,7 +592,7 @@ table.table td img.starpic{
         position: absolute;
         top: 0;
         left: 0;
-        height: 44px;
+        height: 46px;
         z-index: 100;
     }
 }
@@ -592,8 +603,12 @@ table.table td img.starpic{
         position: absolute;
         top: 0;
         left: 0;
-        height: 32px;
+        height: 46px;
         z-index: 100;
+    }
+
+    .star-line{
+        top: 20px;
     }
 }
 
@@ -603,12 +618,97 @@ table.table td img.starpic{
         position: absolute;
         top: 0;
         left: 0;
-        height: 24px;
+        height: 39px;
+        z-index: 100;
+    }
+
+    .star-line{
+        top: 30px;
+    }
+}
+
+@media only screen and (max-width : 575px){
+    table.table td div{
+        background-color: gold;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 46px;
         z-index: 100;
     }
 }
 
-@media only screen and (max-width : 465px){
+@media only screen and (max-width : 560px){
+    table.table td div{
+        background-color: gold;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 42px;
+        z-index: 100;
+    }
+}
+
+@media only screen and (max-width : 540px){
+    table.table td div{
+        background-color: gold;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 36px;
+        z-index: 100;
+    }
+}
+
+@media only screen and (max-width : 525px){
+    table.table td div{
+        background-color: gold;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 36px;
+        z-index: 100;
+    }
+}
+
+@media only screen and (max-width : 500px){
+    table.table td div{
+        background-color: gold;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 31px;
+        z-index: 100;
+    }
+
+    .star-line{
+        top: 40px;
+    }
+}
+
+@media only screen and (max-width : 480px){
+    table.table td div{
+        background-color: gold;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 26px;
+        z-index: 100;
+    }
+}
+
+@media only screen and (max-width : 460px){
+    table.table td div{
+        background-color: gold;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 23px;
+        z-index: 100;
+    }
+}
+
+@media only screen and (max-width : 440px){
     table.table td div{
         background-color: gold;
         position: absolute;
@@ -625,19 +725,38 @@ table.table td img.starpic{
         position: absolute;
         top: 0;
         left: 0;
-        height: 17px;
+        height: 16px;
         z-index: 100;
+    }
+
+    .star-line{
+        top: 45px;
     }
 }
 
-@media only screen and (max-width : 410px){
+@media only screen and (max-width : 420px){
     table.table td div{
         background-color: gold;
         position: absolute;
         top: 0;
         left: 0;
-        height: 14px;
+        height: 16px;
         z-index: 100;
+    }
+}
+
+@media only screen and (max-width : 400px){
+    table.table td div{
+        background-color: gold;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 12px;
+        z-index: 100;
+    }
+
+    .star-line{
+        top: 50px;
     }
 }
 

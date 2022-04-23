@@ -48,7 +48,7 @@
                             <a class="nav-link text-black-50" href="/yourself-tutor">แนะนำตัว</a>
                         </li>
                         <li class="nav-item nav-item text-center mt-4 fs-5">
-                            <a class="nav-link text-dark" href="/course-tutor">ลงคอร์สที่จะสอน</a>
+                            <a class="nav-link text-dark" href="/course-tutor">คอร์สของคุณ</a>
                         </li>
                         <li class="nav-item nav-item text-center mt-4 fs-5 mb-4">
                             <a class="nav-link text-black-50" href="/calendar">ตารางเวลา</a>
@@ -112,7 +112,7 @@
                                                 <label class="col-form-label text-black-50">ภาษาที่สอน:</label>
                                                 <select class="form-select" name="language" required>
                                                     <!-- <option selected value="{{ a.language }}"></option> -->
-                                                    <option selected disabled>เลือกภาษาที่สอน</option>
+                                                    <!-- <option selected disabled>เลือกภาษาที่สอน</option> -->
                                                     <option value="ภาษาอังกฤษ">ภาษาอังกฤษ</option>
                                                     <option value="ภาษาเกาหลี">ภาษาเกาหลี</option>
                                                     <option value="ภาษาจีน">ภาษาจีน</option>
@@ -123,7 +123,7 @@
 
                                             <div class="mb-3">
                                                 <label class="col-form-label text-black-50">ชื่อคอร์ส:</label>
-                                                <input type="text" class="form-control" name="courseTitle" required>
+                                                <input type="text" class="form-control" name="courseTitle" maxlength="100" required>
                                             </div>
 
                                             <div class="mb-3">
@@ -134,13 +134,13 @@
 
                                             <div class="mb-3">
                                                 <label class="col-form-label text-black-50">เวลาเรียน (ชั่วโมง):</label>
-                                                <input type="number" class="form-control form-input" min="1" max="10"
+                                                <input type="number" class="form-control form-input" min="1" max="20"
                                                     name="courseHours" required>
                                             </div>
 
-                                            <div class="mb-3">
+                                            <div class="inputCourseDay mb-3">
                                                 <label class="col-form-label text-black-50">วันที่ติวเตอร์สะดวก:</label>
-                                                <input type="text" class="form-control" name="courseDay" required>
+                                                <input type="text" class="form-control" name="courseDay" placeholder="จันทร์ อังคาร" maxlength="30"required>
                                             </div>
 
                                             <div class="mb-3">

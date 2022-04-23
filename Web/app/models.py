@@ -44,8 +44,8 @@ class YourselfTutor(models.Model):
     user = models.ForeignKey(Profile, on_delete=CASCADE, blank=True, null=True)
     video = models.FileField(upload_to='Video/', null=True, blank=True, default='#.mp4', storage=VideoMediaCloudinaryStorage(), validators=[validate_video])
     introduce = models.TextField()
-    line = models.CharField(max_length=10, blank=True)
-    facebook = models.CharField(max_length=20, blank=True)
+    line = models.CharField(max_length=30, blank=True)
+    facebook = models.CharField(max_length=50, blank=True)
 
     def __str__(self):
         return '%s' % (self.user)
@@ -58,7 +58,7 @@ class Course(models.Model):
     courseTitle = models.CharField(max_length=100)
     courseDesc = models.TextField()
     courseHours = models.CharField(max_length=2, blank=True, null=True)
-    courseDay = models.CharField(max_length=20, blank=True, null=True)
+    courseDay = models.CharField(max_length=30, blank=True, null=True)
     courseTime = models.TimeField(max_length=30, blank=True, null=True)
     coursePrice = models.IntegerField(default=0, blank=True, null=True)
     courseRating = models.DecimalField(default=0, max_digits=5, decimal_places=1,null=True, blank=True)
@@ -90,8 +90,8 @@ class Rating (models.Model):
 # calendar
 class Event(models.Model):
     user = models.ForeignKey(Profile, on_delete=CASCADE, blank=True, null=True)
-    title = models.CharField(max_length=50)
-    description = models.TextField(max_length=100)
+    title = models.CharField(max_length=300)
+    description = models.TextField(max_length=900)
     start_time = models.DateTimeField()
     end_time = models.DateTimeField()
 

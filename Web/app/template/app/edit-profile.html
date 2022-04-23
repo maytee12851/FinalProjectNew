@@ -63,7 +63,7 @@
                         </div>
     
                         <div class="col-4 text-center">
-                            <input type="text" class="form-control text-profiletutor" name="name" value="{{ user.profile.name }}">
+                            <input type="text" class="form-control text-profiletutor" name="name" value="{{ user.profile.name }}" maxlength="100">
                         </div>
                     </div>
     
@@ -75,7 +75,7 @@
                         </div>
     
                         <div class="col-4 text-center">
-                            <input type="text" class="form-control text-profiletutor" name="surname" value="{{ user.profile.surname }}">
+                            <input type="text" class="form-control text-profiletutor" name="surname" value="{{ user.profile.surname }}" maxlength="100">
                         </div>
                     </div>
     
@@ -87,7 +87,7 @@
                         </div>
     
                         <div class="col-4 text-center">
-                            <input type="text" class="form-control text-profiletutor" name="nickname" value="{{ user.profile.nickname }}">
+                            <input type="text" class="form-control text-profiletutor" name="nickname" value="{{ user.profile.nickname }}" maxlength="100">
                         </div>
                     </div>
     
@@ -111,8 +111,8 @@
                         </div>
     
                         <div class="col-4 text-center">
-                            <input type="email" class="form-control text-profiletutor" name="email" value="{{ user.email }}">
-                        </div>  
+                            <input type="email" class="form-control text-profiletutor" name="email" value="{{ user.email }}" maxlength="100">
+                        </div>
                     </div>
     
                     <div class="col-12 d-flex mt-5">
@@ -128,7 +128,7 @@
                                 <!-- <option selected disabled>เพศ</option> -->
                                 <option value="ชาย">ชาย</option>
                                 <option value="หญิง">หญิง</option>
-                                <option value="เพศทางเลือก">เพศทางเลือก</option>
+                                <!-- <option value="เพศทางเลือก">เพศทางเลือก</option> -->
                             </select>
                         </div>
                     </div>

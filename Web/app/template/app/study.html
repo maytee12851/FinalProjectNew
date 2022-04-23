@@ -157,7 +157,7 @@
                             <td class="pt-3 pb-3">{{n.tutor.courseTime}}</td>
                             <td class="pt-3 pb-3">{{n.tutor.language}}</td>
                             <td class="pt-3 pb-3">{{n.tutor.courseTitle}}</td>
-                            <td class="pt-3 pb-3 text-center w-25">
+                            <td class="star-line pt-3 pb-3 text-center">
                                 <div style="width: calc(20% * {{ n.rating }})"></div>
                                 <img class="starpic" src="{% static 'pic/star.png' %}" alt="{{ n.rating }}"
                                     title="{{ n.rating }}">
@@ -170,7 +170,6 @@
             </div>
         </div>
     </div>
-
 
 </body>
 {% endblock content%}

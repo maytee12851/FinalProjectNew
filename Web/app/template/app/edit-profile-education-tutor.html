@@ -48,7 +48,7 @@
                             <a class="nav-link text-black-50" href="/yourself-tutor">แนะนำตัว</a>
                         </li>
                         <li class="nav-item nav-item text-center mt-4 fs-5">
-                            <a class="nav-link text-black-50" href="/course-tutor">ลงคอร์สที่จะสอน</a>
+                            <a class="nav-link text-black-50" href="/course-tutor">คอร์สของคุณ</a>
                         </li>
                         <li class="nav-item nav-item text-center mt-4 fs-5 mb-4">
                             <a class="nav-link text-black-50" href="/calendar">ตารางเวลา</a>
@@ -95,7 +95,7 @@
                                 </div>
                                 
                                 <div class="col-4 text-center">
-                                    <input type="text-profiletutor text" class="form-control" name="school" id="school" value="{{ n.school }}">
+                                    <input type="text-profiletutor text" class="form-control" name="school" id="school" value="{{ n.school }}" maxlength="100">
                                 </div>
                             </div>
     
@@ -107,7 +107,7 @@
                                 </div>
     
                                 <div class="col-4 text-center">
-                                    <input type="text-profiletutor text" class="form-control" name="schoolProgram" id="schoolProgram" value="{{ n.schoolProgram }}">
+                                    <input type="text-profiletutor text" class="form-control" name="schoolProgram" id="schoolProgram" value="{{ n.schoolProgram }}" maxlength="100">
                                 </div>
                             </div>
     
@@ -131,11 +131,11 @@
                                 </div>
     
                                 <div class="col-4 text-center">                   
-                                    <input type="text-profiletutor text" class="form-control" name="university" id="university" value="{{ n.university }}">              
+                                    <input type="text-profiletutor text" class="form-control" name="university" id="university" value="{{ n.university }}" maxlength="100">              
                                 </div>
                             </div>
     
-                            <div class="col-12 d-flex mt-5">
+                            <!-- <div class="col-12 d-flex mt-5">
                                 <div class="col-6 col-md-5">
                                     <h5 class="text-profiletutor text-start text-black-50 ms-5">
                                         ระดับการศึกษา
@@ -145,7 +145,7 @@
                                 <div class="col-4 text-center">
                                     <input type="text-profiletutor text" class="form-control" name="degree" id="degree" value="{{ n.degree }}">                                   
                                 </div>
-                            </div>
+                            </div> -->
     
                             <div class="col-12 d-flex mt-5">
                                 <div class="col-6 col-md-5">
@@ -155,7 +155,7 @@
                                 </div>
     
                                 <div class="col-4 text-center">                               
-                                    <input type="text-profiletutor text" class="form-control" name="faculty" id="faculty" value="{{ n.faculty }}">                                   
+                                    <input type="text-profiletutor text" class="form-control" name="faculty" id="faculty" value="{{ n.faculty }}" maxlength="100">                                   
                                 </div>
                             </div>
     
@@ -167,7 +167,7 @@
                                 </div>
     
                                 <div class="col-4 text-center">
-                                    <input type="text-profiletutor text" class="form-control" name="major" id="major" value="{{ n.major }}">                                    
+                                    <input type="text-profiletutor text" class="form-control" name="major" id="major" value="{{ n.major }}" maxlength="100">                                    
                                 </div>
                             </div>
     

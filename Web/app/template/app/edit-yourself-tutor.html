@@ -48,7 +48,7 @@
                             <a class="nav-link text-dark" href="/yourself-tutor">แนะนำตัว</a>
                         </li>
                         <li class="nav-item nav-item text-center mt-4 fs-5">
-                            <a class="nav-link text-black-50" href="/course-tutor">ลงคอร์สที่จะสอน</a>
+                            <a class="nav-link text-black-50" href="/course-tutor">คอร์สของคุณ</a>
                         </li>
                         <li class="nav-item nav-item text-center mt-4 fs-5 mb-4">
                             <a class="nav-link text-black-50" href="/calendar">ตารางเวลา</a>
@@ -130,7 +130,7 @@
                                 </div>
     
                                 <div class="col-4 text-center">
-                                    <input type="text-profiletutor text" class="form-control" name="line" value="{{ y.line }}"></input>
+                                    <input type="text-profiletutor text" class="form-control" name="line" value="{{ y.line }}" maxlength="30"></input>
                                 </div>
                             </div>
 
@@ -142,7 +142,7 @@
                                 </div>
     
                                 <div class="col-4 text-center">
-                                    <input type="text-profiletutor text" class="form-control" name="facebook" value="{{ y.facebook }}"></input>
+                                    <input type="text-profiletutor text" class="form-control" name="facebook" value="{{ y.facebook }}" maxlength="50"></input>
                                 </div>
                             </div>
     

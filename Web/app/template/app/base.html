@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tutor</title>
+    <title>T-Language</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@200;300;500;600;700;800&display=swap"
         rel="stylesheet">
@@ -59,12 +59,23 @@
                     {% if user.profile.photo %}
                     <li class="nav-item me-3">
                         <img src="{{ user.profile.photo.url }}" width="35" height="35" class="rounded-circle">
-                    </li>    
+                    </li>
                     {% endif %}
 
+                    {% if user.profile.userType == 'student' %}
                     <li class="nav-item me-3">
-                        <p class="nav-link text-info">{{user.username}} : {{user.profile.userType}}</p>
+                        <a href="/profile">
+                            <p class="nav-link text-info">{{user.username}} : {{user.profile.userType}}</p>
+                        </a>
                     </li>
+
+                    {% elif user.profile.userType == 'tutor' %}
+                    <li class="nav-item me-3">
+                        <a href="/profile-tutor">
+                            <p class="nav-link text-info">{{user.username}} : {{user.profile.userType}}</p>
+                        </a>
+                    </li>
+                    {% endif %}
 
                     <a href="{% url 'logout' %}"><button class="btn btn-outline-secondary"
                             type="submit">Logout</button></a>
@@ -127,19 +138,23 @@
 
                     <ul class="list-footer list-unstyled">
                         <li>
-                            <a href="/finding-tutor/?language=ภาษาอังกฤษ&price=&rating=" class="text-light">ภาษาอังกฤษ</a>
+                            <a href="/finding-tutor/?language=ภาษาอังกฤษ&price=&rating="
+                                class="text-light">ภาษาอังกฤษ</a>
                         </li>
                         <li>
                             <a href="/finding-tutor/?language=ภาษาจีน&price=&rating=" class="text-light">ภาษาจีน</a>
                         </li>
                         <li>
-                            <a href="/finding-tutor/?language=ภาษาญี่ปุ่น&price=&rating=" class="text-light">ภาษาญี่ปุ่น</a>
+                            <a href="/finding-tutor/?language=ภาษาญี่ปุ่น&price=&rating="
+                                class="text-light">ภาษาญี่ปุ่น</a>
                         </li>
                         <li>
-                            <a href="/finding-tutor/?language=ภาษาเกาหลี&price=&rating=" class="text-light">ภาษาเกาหลี</a>
+                            <a href="/finding-tutor/?language=ภาษาเกาหลี&price=&rating="
+                                class="text-light">ภาษาเกาหลี</a>
                         </li>
                         <li>
-                            <a href="/finding-tutor/?language=ภาษาเยอรมัน&price=&rating=" class="text-light">ภาษาเยอรมัน</a>
+                            <a href="/finding-tutor/?language=ภาษาเยอรมัน&price=&rating="
+                                class="text-light">ภาษาเยอรมัน</a>
                         </li>
                     </ul>
                 </div>
@@ -166,7 +181,8 @@
 
                     <ul class="list-footer list-unstyled">
                         <li>
-                            <a href="https://docs.google.com/forms/d/1_qEj0JocPeHkYd7j6tFUGdUYK-dWW8OeQ9uO-umONRI/viewform?edit_requested=true" target="_blank" class="text-light">Feedback</a>
+                            <a href="https://docs.google.com/forms/d/1_qEj0JocPeHkYd7j6tFUGdUYK-dWW8OeQ9uO-umONRI/viewform?edit_requested=true"
+                                target="_blank" class="text-light">Feedback</a>
                         </li>
                     </ul>
                 </div>
