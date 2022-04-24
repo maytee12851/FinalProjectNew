@@ -403,7 +403,6 @@ def editProfileEducationTutor(request):
         schoolProgram = data.get('schoolProgram')
         schoolYear = data.get('schoolYear')
         university = data.get('university')
-        degree = data.get('degree')
         faculty = data.get('faculty')
         major = data.get('major')
         universityYear = data.get('universityYear')
@@ -415,7 +414,6 @@ def editProfileEducationTutor(request):
         newEducation.schoolProgram = schoolProgram
         newEducation.schoolYear = schoolYear
         newEducation.university = university
-        newEducation.degree = degree
         newEducation.faculty = faculty
         newEducation.major = major
         newEducation.universityYear = universityYear

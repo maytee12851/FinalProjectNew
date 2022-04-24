@@ -32,7 +32,6 @@ class ProfileEducationTutor(models.Model):
     schoolProgram = models.CharField(max_length=100, blank=True)
     schoolYear = models.CharField(max_length=4, blank=True)
     university = models.CharField(max_length=100, blank=True)
-    degree = models.CharField(max_length=100, blank=True)
     faculty = models.CharField(max_length=100, blank=True)
     major = models.CharField(max_length=100, blank=True)
     universityYear = models.CharField(max_length=4, blank=True)
