@@ -119,7 +119,7 @@
                                 </div>
 
                                 <div class="col-4 text-center">
-                                    <input type="text" class="form-control" name="name" value="{{ user.profile.name }}" maxlength="100">
+                                    <input type="text" class="form-control" name="name" value="{{ user.profile.name }}" maxlength="100" required>
                                 </div>
                             </div>
 
@@ -132,7 +132,7 @@
 
                                 <div class="col-4 text-center">
                                     <input type="text" class="text-profiletutor form-control" name="surname"
-                                        value="{{ user.profile.surname }}" maxlength="100">
+                                        value="{{ user.profile.surname }}" maxlength="100" required>
                                 </div>
                             </div>
 
@@ -145,7 +145,7 @@
 
                                 <div class="col-4 text-center">
                                     <input type="text" class="text-profiletutor form-control" name="nickname"
-                                        value="{{ user.profile.nickname }}" maxlength="100">
+                                        value="{{ user.profile.nickname }}" maxlength="100" required>
                                 </div>
                             </div>
 
@@ -158,7 +158,7 @@
 
                                 <div class="col-4 text-center">
                                     <input type="tel" class="text-profiletutor form-control" maxlength="10" name="tel"
-                                        value="{{ user.profile.tel }}">
+                                        value="{{ user.profile.tel }}" required>
                                 </div>
                             </div>
 
@@ -170,7 +170,7 @@
                                 </div>
 
                                 <div class="col-4 text-center">
-                                    <input type="email" class="text-profiletutor form-control" name="email" value="{{ user.email }}" maxlength="100">
+                                    <input type="email" class="text-profiletutor form-control" name="email" value="{{ user.email }}" maxlength="100" required>
                                 </div>
                             </div>
 

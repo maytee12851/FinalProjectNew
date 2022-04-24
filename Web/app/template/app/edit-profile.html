@@ -63,7 +63,7 @@
                         </div>
     
                         <div class="col-4 text-center">
-                            <input type="text" class="form-control text-profiletutor" name="name" value="{{ user.profile.name }}" maxlength="100">
+                            <input type="text" class="form-control text-profiletutor" name="name" value="{{ user.profile.name }}" maxlength="100" required>
                         </div>
                     </div>
     
@@ -75,7 +75,7 @@
                         </div>
     
                         <div class="col-4 text-center">
-                            <input type="text" class="form-control text-profiletutor" name="surname" value="{{ user.profile.surname }}" maxlength="100">
+                            <input type="text" class="form-control text-profiletutor" name="surname" value="{{ user.profile.surname }}" maxlength="100" required>
                         </div>
                     </div>
     
@@ -87,7 +87,7 @@
                         </div>
     
                         <div class="col-4 text-center">
-                            <input type="text" class="form-control text-profiletutor" name="nickname" value="{{ user.profile.nickname }}" maxlength="100">
+                            <input type="text" class="form-control text-profiletutor" name="nickname" value="{{ user.profile.nickname }}" maxlength="100" required>
                         </div>
                     </div>
     
@@ -99,7 +99,7 @@
                         </div>
     
                         <div class="col-4 text-center">
-                            <input type="tel" class="form-control text-profiletutor" maxlength="10" name="tel" value="{{ user.profile.tel }}">
+                            <input type="tel" class="form-control text-profiletutor" maxlength="10" name="tel" value="{{ user.profile.tel }}" required>
                         </div>
                     </div>
     
@@ -111,7 +111,7 @@
                         </div>
     
                         <div class="col-4 text-center">
-                            <input type="email" class="form-control text-profiletutor" name="email" value="{{ user.email }}" maxlength="100">
+                            <input type="email" class="form-control text-profiletutor" name="email" value="{{ user.email }}" maxlength="100" required>
                         </div>
                     </div>
     
@@ -123,7 +123,7 @@
                         </div>
     
                         <div class="col-4 text-center">
-                            <select class="form-select" name="sex">
+                            <select class="form-select" name="sex" required>
                                 <option selected value="{{ user.profile.sex }}">{{ user.profile.sex }}</option>
                                 <!-- <option selected disabled>เพศ</option> -->
                                 <option value="ชาย">ชาย</option>
