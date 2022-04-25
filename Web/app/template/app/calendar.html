@@ -76,12 +76,13 @@
 
             <div class="col-md-9">
                 <div class="profile-bg row bg-white justify-content-center">
-                    <div class="col-12">
+                    <div class="col-12">         
                         <div class="clearfix">
                             <a class="btn btn-outline-info left text-dark" href="{% url 'calendar' %}?{{ prev_month }}"> เดือนก่อนหน้า </a>
                             <a class="btn btn-outline-info right text-dark" href="{% url 'calendar' %}?{{ next_month }}"> เดือนถัดไป </a>
                             <a class="btnAddEvent btn btn-outline-info right text-dark me-2" href="{% url 'event_new' %}"> เพิ่มกิจกรรม </a>
                         </div>
+                        <div class="text-calendar mt-4 ms-3 me-3 text-center fs-5 mb-4" style="color: #35a1aa; font-size: 100%;">**ตารางเวลาจะเป็นการบันทึกกิจกรรมของติวเตอร์เอง จะไม่มีการเผยแพร่ให้ผู้อื่นได้เห็น**</div>
                         <div class="table-responsive">
                             {{ calendar }}
                         </div>                
