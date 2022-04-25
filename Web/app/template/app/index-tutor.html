@@ -110,16 +110,16 @@
                         {% if user.is_authenticated %}
                         {% if user.profile.userType == 'student' %}
                         <a href="#"><button type="submit"
-                                class="textsearch btn btn-block btn-lg btn-info">สมัครเป็นติวเตอร์</button></a>
+                                class="textsearch btn btn-block btn-lg btn-info">คุณสมัครเป็นนักเรียนแล้ว</button></a>
                         {% elif user.profile.userType == 'tutor' %}
                         <a href="#"><button type="submit"
                             class="textsearch btn btn-block btn-lg btn-info">คุณสมัครเป็นติวเตอร์แล้ว</button></a>
+                        {% endif %}
 
                         {% else %}
 
                         <a href="/register-tutor"><button type="submit"
                                 class="textsearch btn btn-block btn-lg btn-info">สมัครเป็นติวเตอร์</button></a>
-                        {% endif %}
                         {% endif %}
                     </div>
                 </div>
