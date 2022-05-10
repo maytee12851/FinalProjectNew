@@ -99,7 +99,7 @@ def is_valid_queryparam(param):
 @login_required
 def findingTutor(request):
 
-    course = Course.objects.all().order_by('user__approve')
+    course = Course.objects.all().order_by('-courseRating')
 
     language = request.GET.get('language')
     sex = request.GET.get('sex')
